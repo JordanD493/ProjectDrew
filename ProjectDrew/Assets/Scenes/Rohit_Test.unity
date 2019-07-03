@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Message: {fileID: 1992834311}
-  Acceleration: 1000
+  Acceleration: 500
 --- !u!1 &1918725451
 GameObject:
   m_ObjectHideFlags: 0
