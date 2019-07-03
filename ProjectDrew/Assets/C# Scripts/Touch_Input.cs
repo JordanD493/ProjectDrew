@@ -15,7 +15,8 @@ public class Touch_Input : MonoBehaviour {
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+
+     rb = GetComponent<Rigidbody>();
 #if UNITY_EDITOR
         Message.text = "On Windows";
 #endif
@@ -23,7 +24,19 @@ public class Touch_Input : MonoBehaviour {
 #if UNITY_IOS
         Message.text = "On IOS";
 #endif
+
     }
+
+#if UNITY_EDITOR
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown("m"))
+        {
+            rb.AddForce(new Vector3(0, 0, 1) * Acceleration);
+
+        }
+    }
+#endif
 
 #if UNITY_IOS
     private void OnMouseDown()
@@ -34,13 +47,5 @@ public class Touch_Input : MonoBehaviour {
 
     }
 #endif
-    //private void OnMouseDrag()
-    //{
-    //    rb.transform.position = new Vector3(1, 1, 1);
-    //}
-
-    //private void OnMouseOver()
-    //{
-    //    Message.text = "HoverOver";
-    //}
+   
 }
