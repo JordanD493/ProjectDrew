@@ -21,17 +21,20 @@ public class Touch_Input : MonoBehaviour {
 
 #if UNITY_IOS
         Message.text = "On IOS";
+
 #endif
     }
 
-    //private void OnMouseDown()
-    //{
-    //    Message.text = "Got Touched";
+#if UNITY_IOS
 
-    //    rb.AddForce(new Vector3(0, 0, 1) * Acceleration);
+    private void OnMouseDown()
+    {
+        Message.text = "Got Touched";
 
-    //}
+        rb.AddForce(new Vector3(0, 0, 1) * Acceleration);
+    }
 
+#endif
     //private void OnMouseDrag()
     //{
     //    rb.transform.position = new Vector3(1, 1, 1);
