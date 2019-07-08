@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Touch_Input : MonoBehaviour {
+public class Touch_Input : MonoBehaviour
+{
 
     [SerializeField]
     private Text Message;
@@ -26,7 +27,7 @@ public class Touch_Input : MonoBehaviour {
     private void Start()
     {
 
-     rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
 #if UNITY_EDITOR
         Message.text = "On Windows";
 #endif
@@ -44,26 +45,27 @@ public class Touch_Input : MonoBehaviour {
         {
             //rb.AddForce(new Vector3(0, 0, 1) * Acceleration);
 
-             Instantiate(Mutan, new Vector3(Random.Range(-5, 1), 1.24f, Random.Range(-4.8f, 4.8f)), Quaternion.identity);
+            Instantiate(Mutan, new Vector3(Random.Range(-5, 1), 1.24f, Random.Range(-4.8f, 4.8f)), Quaternion.identity);
 
             InstantiateNumber += 1;
 
-          
+
 
         }
 
         Message.text = InstantiateNumber.ToString();
-        
+
     }
 
-    //private void Update()
-    //{
-    //    deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
-    //    float fps = 1.0f / deltaTime;
-    //    FPSMessage.text = Mathf.Ceil(fps).ToString();
+    private void Update()
+    {
+        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+        float fps = 1.0f / deltaTime;
+        FPSMessage.text = Mathf.Ceil(fps).ToString();
 
-    //}
+    }
 #endif
+}
 
 #if UNITY_IOS
     private void Update()
