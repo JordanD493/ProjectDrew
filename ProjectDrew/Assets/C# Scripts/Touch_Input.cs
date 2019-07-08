@@ -8,6 +8,11 @@ public class Touch_Input : MonoBehaviour {
     [SerializeField]
     private Text Message;
 
+    [SerializeField]
+    private Text FPSMessage;
+
+    public float deltaTime;
+
     Rigidbody rb;
 
     [SerializeField]
@@ -48,6 +53,15 @@ public class Touch_Input : MonoBehaviour {
         }
 
         Message.text = InstantiateNumber.ToString();
+        
+    }
+
+    private void Update()
+    {
+        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+        float fps = 1.0f / deltaTime;
+        FPSMessage.text = Mathf.Ceil(fps).ToString();
+
     }
 #endif
 
