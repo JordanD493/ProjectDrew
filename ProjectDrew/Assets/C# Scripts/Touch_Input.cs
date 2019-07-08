@@ -13,6 +13,11 @@ public class Touch_Input : MonoBehaviour {
     [SerializeField]
     private float Acceleration;
 
+    [SerializeField]
+    private GameObject Mutan;
+
+    private int InstantiateNumber = 1;
+
     private void Start()
     {
 
@@ -32,9 +37,17 @@ public class Touch_Input : MonoBehaviour {
     {
         if (Input.GetKeyDown("m"))
         {
-            rb.AddForce(new Vector3(0, 0, 1) * Acceleration);
+            //rb.AddForce(new Vector3(0, 0, 1) * Acceleration);
+
+             Instantiate(Mutan, new Vector3(Random.Range(-5, 1), 1.24f, Random.Range(-4.8f, 4.8f)), Quaternion.identity);
+
+            InstantiateNumber += 1;
+
+          
 
         }
+
+        Message.text = InstantiateNumber.ToString();
     }
 #endif
 
@@ -55,12 +68,15 @@ public class Touch_Input : MonoBehaviour {
 
                     if (raycastHit.collider.tag == "Player")
                     {
-                        rb.AddForce(new Vector3(0, 0, 1) * Acceleration);
+                        Instantiate(Mutan, new Vector3(Random.Range(-5, 1), 1.24f, Random.Range(-4.8f, 4.8f)), Quaternion.identity);
+                        InstantiateNumber += 1;
                     }
 
                 }
             }
         }
+
+        Message.text = InstantiateNumber.ToString();
     }
 #endif
 
