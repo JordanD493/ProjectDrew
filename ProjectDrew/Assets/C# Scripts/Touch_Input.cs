@@ -56,13 +56,13 @@ public class Touch_Input : MonoBehaviour {
         
     }
 
-    private void Update()
-    {
-        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
-        float fps = 1.0f / deltaTime;
-        FPSMessage.text = Mathf.Ceil(fps).ToString();
+    //private void Update()
+    //{
+    //    deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+    //    float fps = 1.0f / deltaTime;
+    //    FPSMessage.text = Mathf.Ceil(fps).ToString();
 
-    }
+    //}
 #endif
 
 #if UNITY_IOS
@@ -74,23 +74,29 @@ public class Touch_Input : MonoBehaviour {
 
             if (touch.phase == TouchPhase.Began)
             {
-                Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-                RaycastHit raycastHit;
-                if (Physics.Raycast(raycast, out raycastHit))
-                {
-                    Message.text = "Something Got Hit";
+                //Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+                //RaycastHit raycastHit;
+                //if (Physics.Raycast(raycast, out raycastHit))
+                //{
+                    //Message.text = "Something Got Hit";
 
-                    if (raycastHit.collider.tag == "Player")
-                    {
+                    //if (raycastHit.collider.tag == "Player")
+                    //{
                         Instantiate(Mutan, new Vector3(Random.Range(-5, 1), 1.24f, Random.Range(-4.8f, 4.8f)), Quaternion.identity);
                         InstantiateNumber += 1;
-                    }
+                    //}
 
                 }
             }
-        }
+        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+        float fps = 1.0f / deltaTime;
+        FPSMessage.text = Mathf.Ceil(fps).ToString();
+
 
         Message.text = InstantiateNumber.ToString();
+    }
+
+        
     }
 #endif
 
@@ -102,4 +108,4 @@ public class Touch_Input : MonoBehaviour {
 
     //}
 
-}
+
