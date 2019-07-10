@@ -57,6 +57,11 @@ public class Touch_Input : MonoBehaviour
 
     }
 
+    private void OnMouseOver()
+    {
+        
+    }
+
     private void Update()
     {
         deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
@@ -66,6 +71,8 @@ public class Touch_Input : MonoBehaviour
     }
 #endif
 }
+
+
 
 #if UNITY_IOS
     private void Update()
@@ -100,14 +107,17 @@ public class Touch_Input : MonoBehaviour
 
         
     }
+
 #endif
 
-    //private void OnMouseDown()
-    //{
-    //    Message.text = "Got Touched";
 
-    //    rb.AddForce(new Vector3(0, 0, 1) * Acceleration);
 
-    //}
+//private void OnMouseDown()
+//{
+//    Message.text = "Got Touched";
+
+//    rb.AddForce(new Vector3(0, 0, 1) * Acceleration);
+
+//}
 
 
