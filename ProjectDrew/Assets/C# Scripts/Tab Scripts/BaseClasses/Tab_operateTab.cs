@@ -7,7 +7,7 @@ public class Tab_operateTab : MonoBehaviour
 
     public enum TabInputDirection { Horizontal, Vertical };
 
-    protected bool selected = false;
+    public bool selected { get; private set; }
 
     // highlight object when selected
     private Renderer objectRenderer;
