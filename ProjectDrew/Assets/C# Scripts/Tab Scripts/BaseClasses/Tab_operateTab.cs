@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tab_operateTab : MonoBehaviour
+public abstract class Tab_operateTab : MonoBehaviour
 {
 
     public enum TabInputDirection { Horizontal, Vertical };
@@ -25,7 +25,7 @@ public class Tab_operateTab : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 selected = true;
-                //objectRenderer.material.color = highlightColor;
+                objectRenderer.material.color = highlightColor;
                 meshRenderer.material.SetColor("_EmissionColor", highlightColor * 2);
             }
         }
@@ -41,6 +41,7 @@ public class Tab_operateTab : MonoBehaviour
                 selected = false;
                 objectRenderer.material.color = initialColor;
                 meshRenderer.material.SetColor("_EmissionColor", highlightColor * 0.5f);
+                OnSelectionRelease();
             }
         }
     }
@@ -53,8 +54,10 @@ public class Tab_operateTab : MonoBehaviour
         meshRenderer = GetComponent<MeshRenderer>();
     }
 
+    protected abstract void OnSelectionRelease();
+
 
     public float tabMovement { get; protected set; }
     public float TabMovementPercentage { get; protected set; }
-
+    
 }

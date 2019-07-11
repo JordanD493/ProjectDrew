@@ -6,11 +6,10 @@ public class Tab_slideTab : Tab_operateTab
 {
     private enum StartLimit { Limit1, Limit2 }
     // ------------------------------------------------------------------------------------------------------ INSPECTOR INTERFACE - YOU CAN SAFELY TWEAK THESE VALUES
-
+    
     // This is the max range value for the tab movement that will be suggested in the inspector
     private const float MAX_OFFSET = 5;
-
-    [Header("")]
+    
     [SerializeField]
     public TabInputDirection inputDirection = TabInputDirection.Horizontal;
 
@@ -27,6 +26,9 @@ public class Tab_slideTab : Tab_operateTab
     [Tooltip("How far the tab moves relative to mouse movement.")]
     [SerializeField, Range(0.1f, 2.0f)]
     private float mouseSensitivity = 1;
+    
+    [SerializeField]
+    private bool snapOnRelease = true;
 
     /*
     [SerializeField] private bool interpolationActive;
@@ -39,6 +41,8 @@ public class Tab_slideTab : Tab_operateTab
     // these are used to draw the gizmos and to check if we're going beyond boundaries
     private Vector3 limit1;
     private Vector3 limit2;
+
+    private List<float> snapPoints;
 
     /*
     // An easing function will be used to slowly move tab toward the target
@@ -81,11 +85,47 @@ public class Tab_slideTab : Tab_operateTab
         Gizmos.DrawRay(transform.position, Vector3.up * 5);
     }
 
+    private float GetClosestSnapPoint()
+    {
+        float smallestDifference = 1;
+        int closestSnapPoint = 0;
+
+        for (int i = 0; i < snapPoints.Count; i++)
+        {
+            float differenceFromThisPoint = Mathf.Abs(snapPoints[i] - TabMovementPercentage);
+            if (differenceFromThisPoint < smallestDifference)
+            {
+                smallestDifference = differenceFromThisPoint;
+                closestSnapPoint = i;
+            }
+        }
+        return snapPoints[closestSnapPoint];
+    }
+
+    protected override void OnSelectionRelease()
+    {
+    }
+    IEnumerator InterpolateToClosestSnapPoint(Transform snapToMe, float time)
+    {
+        float elapsedTime = 0;
+        Vector3 startingPos = transform.position;
+        Vector3 startingRotation = transform.eulerAngles;
+        while (elapsedTime < time)
+        {
+            transform.position = Vector3.Lerp(startingPos, snapToMe.position, (elapsedTime / time));
+            transform.eulerAngles = Vector3.Lerp(startingRotation, snapToMe.eulerAngles, (elapsedTime / time));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+    }
+
     // Use this for initialization
     new void Start()
     {
         base.Start();
         updateLimitsPositions();
+        snapPoints.Add(0);
+        snapPoints.Add(1);
 
         /*
         if (interpolationActive)
