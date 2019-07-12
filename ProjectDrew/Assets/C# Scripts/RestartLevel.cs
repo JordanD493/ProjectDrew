@@ -25,6 +25,7 @@ public class RestartLevel : MonoBehaviour {
         {
             
             Debug.Log("player hit Restart Point");
+            // Try-catch this. I believe there is an exception this can throw. Very rare but just in case - Chris
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

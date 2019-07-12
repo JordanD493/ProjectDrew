@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 public class Tab_slideTab : Tab_operateTab
 {
@@ -9,7 +11,9 @@ public class Tab_slideTab : Tab_operateTab
     
     // This is the max range value for the tab movement that will be suggested in the inspector
     private const float MAX_OFFSET = 5;
+
     
+
     [SerializeField]
     public TabInputDirection inputDirection = TabInputDirection.Horizontal;
 
@@ -104,7 +108,11 @@ public class Tab_slideTab : Tab_operateTab
 
     protected override void OnSelectionRelease()
     {
+
     }
+
+    
+
     IEnumerator InterpolateToClosestSnapPoint(Transform snapToMe, float time)
     {
         float elapsedTime = 0;
