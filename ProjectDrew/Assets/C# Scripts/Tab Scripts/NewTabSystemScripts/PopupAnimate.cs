@@ -15,7 +15,8 @@ public class PopupAnimate : MonoBehaviour {
 	void Start () {
         tab.TabMove += OnTabMove;
         anim = GetComponent<Animator>();
-	}
+        anim.Play(0, 0, anim.GetCurrentAnimatorClipInfo(0).Length * tab.TabMovementPercentage);
+    }
 
     protected virtual void OnTabMove(object source, EventArgs args)
     {
