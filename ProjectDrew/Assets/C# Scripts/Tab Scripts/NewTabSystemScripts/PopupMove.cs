@@ -20,6 +20,6 @@ public class PopupMove : MonoBehaviour
     {
         transform.position = Vector3.Lerp(beginLimit.position, endLimit.position, tab.TabMovementPercentage);
         transform.eulerAngles = Vector3.Lerp(beginLimit.eulerAngles, endLimit.eulerAngles, tab.TabMovementPercentage);
-        Debug.Log("hello");
+        Debug.Log(tab.TabMovementPercentage);
     }
 }
