@@ -129,7 +129,7 @@ public class CameraFollow : MonoBehaviour
 
         tParam = 0f;
 
-        waytoGO -= 1;
+        waytoGO += 1;
 
         if (waytoGO > wayPoints.Length - 1)
         {
