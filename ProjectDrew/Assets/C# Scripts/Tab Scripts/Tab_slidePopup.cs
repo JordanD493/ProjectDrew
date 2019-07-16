@@ -37,7 +37,7 @@ public class Tab_slidePopup : Tab_operatePopup
     private Vector3 limit2;
 
     // update limits positions based on the object's position
-    void updateLimitsPositions()
+    void UpdateLimitsPositions()
     {
         limit1 = slideMe[0].position;
         limit2 = slideMe[0].position;
@@ -62,7 +62,7 @@ public class Tab_slidePopup : Tab_operatePopup
         {
             if (!Application.isPlaying)
             {
-                updateLimitsPositions();
+                UpdateLimitsPositions();
             }
             Gizmos.color = Color.yellow;
             Gizmos.DrawRay(limit1, Vector3.up * 5);
@@ -76,7 +76,7 @@ public class Tab_slidePopup : Tab_operatePopup
     {
         if (fixedLimits)
         {
-            updateLimitsPositions();
+            UpdateLimitsPositions();
         }
         // retrieve the component from which we will read the input
         operateTabScript = GetComponent<Tab_operateTab>();

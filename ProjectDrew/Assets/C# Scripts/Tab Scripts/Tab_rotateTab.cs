@@ -36,6 +36,11 @@ public class Tab_rotateTab : Tab_operateTab
         limit2 = transform.rotation.y + limitOffset2;
     }
 
+    protected override void OnSelectionRelease()
+    {
+        
+    }
+
     // draw gizmos for limits and object centre. only update limits' position if the Application is not running (edit mode)
     void OnDrawGizmosSelected()
     {

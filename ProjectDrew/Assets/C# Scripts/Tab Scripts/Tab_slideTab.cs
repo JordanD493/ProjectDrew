@@ -1,20 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 public class Tab_slideTab : Tab_operateTab
 {
+    private enum StartLimit { Limit1, Limit2 }
     // ------------------------------------------------------------------------------------------------------ INSPECTOR INTERFACE - YOU CAN SAFELY TWEAK THESE VALUES
-
+    
     // This is the max range value for the tab movement that will be suggested in the inspector
     private const float MAX_OFFSET = 5;
 
-    [Header("")]
-    [SerializeField] public TabInputDirection inputDirection = TabInputDirection.Horizontal;
-    [SerializeField, Range(0, -MAX_OFFSET)] private float limitOffset1 = -1;
-    [SerializeField, Range(0, MAX_OFFSET)] private float limitOffset2 = 1;
+    
+
+    [SerializeField]
+    public TabInputDirection inputDirection = TabInputDirection.Horizontal;
+
+    [SerializeField, Range(0, -MAX_OFFSET)]
+    private float limitOffset1 = -1;
+
+    [SerializeField, Range(0, MAX_OFFSET)]
+    private float limitOffset2 = 1;
+
+    [Tooltip("Where's the Tab located when it starts?")]
+    [SerializeField]
+    private StartLimit startLimit;
+
     [Tooltip("How far the tab moves relative to mouse movement.")]
-    [SerializeField] private float mouseSensitivity = 10;
+    [SerializeField, Range(0.1f, 2.0f)]
+    private float mouseSensitivity = 1;
+    
+    [SerializeField]
+    private bool snapOnRelease = true;
 
     /*
     [SerializeField] private bool interpolationActive;
@@ -27,6 +45,8 @@ public class Tab_slideTab : Tab_operateTab
     // these are used to draw the gizmos and to check if we're going beyond boundaries
     private Vector3 limit1;
     private Vector3 limit2;
+
+    private List<float> snapPoints;
 
     /*
     // An easing function will be used to slowly move tab toward the target
@@ -69,11 +89,51 @@ public class Tab_slideTab : Tab_operateTab
         Gizmos.DrawRay(transform.position, Vector3.up * 5);
     }
 
+    private float GetClosestSnapPoint()
+    {
+        float smallestDifference = 1;
+        int closestSnapPoint = 0;
+
+        for (int i = 0; i < snapPoints.Count; i++)
+        {
+            float differenceFromThisPoint = Mathf.Abs(snapPoints[i] - TabMovementPercentage);
+            if (differenceFromThisPoint < smallestDifference)
+            {
+                smallestDifference = differenceFromThisPoint;
+                closestSnapPoint = i;
+            }
+        }
+        return snapPoints[closestSnapPoint];
+    }
+
+    protected override void OnSelectionRelease()
+    {
+
+    }
+
+    
+
+    IEnumerator InterpolateToClosestSnapPoint(Transform snapToMe, float time)
+    {
+        float elapsedTime = 0;
+        Vector3 startingPos = transform.position;
+        Vector3 startingRotation = transform.eulerAngles;
+        while (elapsedTime < time)
+        {
+            transform.position = Vector3.Lerp(startingPos, snapToMe.position, (elapsedTime / time));
+            transform.eulerAngles = Vector3.Lerp(startingRotation, snapToMe.eulerAngles, (elapsedTime / time));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+    }
+
     // Use this for initialization
     new void Start()
     {
         base.Start();
         updateLimitsPositions();
+        snapPoints.Add(0);
+        snapPoints.Add(1);
 
         /*
         if (interpolationActive)
@@ -101,8 +161,9 @@ public class Tab_slideTab : Tab_operateTab
         tabMovement = 0;
         switch (inputDirection)
         {
+
             case TabInputDirection.Horizontal:
-                tabMovement = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+                tabMovement = Input.GetAxis("Mouse X") * mouseSensitivity;
                 transform.position += new Vector3(tabMovement, 0, 0);
                 // check horizontal limits
                 if (transform.position.x < limit1.x)
@@ -116,31 +177,33 @@ public class Tab_slideTab : Tab_operateTab
                     tabMovement = 0;
                 }
                 TabMovementPercentage = (transform.position.x - limit1.x) / (limit2.x - limit1.x);
-                
                 break;
 
+
             case TabInputDirection.Vertical:
-                if (transform.position.z >= limit1.z && transform.position.z <= limit2.z)
+                tabMovement = Input.GetAxis("Mouse Y") * mouseSensitivity;
+                transform.position += new Vector3(0, 0, tabMovement);
+                // check vertical limits
+                if (transform.position.z < limit1.z)
                 {
-                    tabMovement = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-                    transform.position += new Vector3(0, 0, tabMovement);
-                    // check vertical limits
-                    if (transform.position.z < limit1.z)
-                    {
-                        transform.position = limit1;
-                        tabMovement = 0;
-                    }
-                    if (transform.position.z > limit2.z)
-                    {
-                        transform.position = limit2;
-                        tabMovement = 0;
-                    }
-                    TabMovementPercentage = (transform.position.z - limit1.z) / (limit2.z - limit1.z);
+                    transform.position = limit1;
+                    tabMovement = 0;
                 }
+                if (transform.position.z > limit2.z)
+                {
+                    transform.position = limit2;
+                    tabMovement = 0;
+                }
+                TabMovementPercentage = (transform.position.z - limit1.z) / (limit2.z - limit1.z);
                 break;
         }
+
+        if (startLimit == StartLimit.Limit2)
+        {
+            TabMovementPercentage = 1 - TabMovementPercentage;
+        }
     }
-    
+
 
 
     /*
