@@ -42,11 +42,20 @@ Material:
         m_Texture: {fileID: 2800000, guid: eac62692d3dbdc24fbc0a271ab8f0f1c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_25DB2055_Out:
+        m_Texture: {fileID: 2800000, guid: 5ef5cebbfe1414b4baffea79c307a72b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_D3D63D49_Out:
+        m_Texture: {fileID: 2800000, guid: eac62692d3dbdc24fbc0a271ab8f0f1c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_DAE5C31C_Out:
         m_Texture: {fileID: 2800000, guid: eac62692d3dbdc24fbc0a271ab8f0f1c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_53DE4C52: 1
+    - Vector1_68D012FF: 1.65
     - Vector1_9C077583: 1
     m_Colors: []
