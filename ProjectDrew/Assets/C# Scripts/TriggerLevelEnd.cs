@@ -26,7 +26,7 @@ public class TriggerLevelEnd : MonoBehaviour
         {
             player.GetComponent<Animator>().SetBool("ReachedEnd", true);
             Debug.Log("player hit end");
-            SceneManager.LoadScene("Digital_Prototype--LVL2"); ;
+            SceneManager.LoadScene("LVL1.1"); ;
         }
     }
 }
