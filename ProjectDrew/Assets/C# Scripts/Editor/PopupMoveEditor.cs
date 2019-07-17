@@ -12,12 +12,12 @@ public class PopupMoveEditor : Editor
 
         if (GUILayout.Button("Snap to begin limit"))
         {
-            //popupMove
+            popupMove.SnapToBegin();
         }
 
         if (GUILayout.Button("Snap to end limit"))
         {
-            //popupMove
+            popupMove.SnapToEnd();
         }
     }
 }

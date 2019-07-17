@@ -14,6 +14,7 @@ public class PopupMove : MonoBehaviour
     void Start()
     {
         tab.TabMove += OnTabMove;
+        transform.position = endLimit.position;
     }
 
     protected virtual void OnTabMove(object source, EventArgs args)
@@ -22,4 +23,18 @@ public class PopupMove : MonoBehaviour
         transform.eulerAngles = Vector3.Lerp(beginLimit.eulerAngles, endLimit.eulerAngles, tab.TabMovementPercentage);
         Debug.Log(tab.TabMovementPercentage);
     }
+
+    // ------------------------------------------------- EDITOR
+    public void SnapToBegin()
+    {
+        transform.position = beginLimit.position;
+        transform.rotation = beginLimit.rotation;
+    }
+
+    public void SnapToEnd()
+    {
+        transform.position = endLimit.position;
+        transform.rotation = endLimit.rotation;
+    }
+
 }

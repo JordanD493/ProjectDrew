@@ -30,6 +30,8 @@ public class TabVFX : MonoBehaviour {
 
         material = GetComponent<Renderer>().material;
         initialColor = material.color;
+
+        movementParticleEffect.Stop();
     }
 
     protected void OnSelectionBegin(object source, EventArgs args)
