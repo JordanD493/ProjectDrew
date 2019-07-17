@@ -60,6 +60,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_53DE4C52: 1
-    - Vector1_68D012FF: 0.13
-    - Vector1_9C077583: 4.31
+    - Vector1_68D012FF: 1
+    - Vector1_9C077583: 1
     m_Colors: []
