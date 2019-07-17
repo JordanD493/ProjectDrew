@@ -34,3 +34,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+ProjectDrew/Assets/C# Scripts/CamButtonClick.cs.meta
+ProjectDrew/Assets/C# Scripts/CameraFollow.cs.meta
+ProjectDrew/Assets/C# Scripts/WayPoint.cs.meta
