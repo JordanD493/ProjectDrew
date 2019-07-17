@@ -102,7 +102,7 @@ public class Player_Movement : MonoBehaviour
 
         }
 
-        else if(Input.GetKeyDown("m"))
+         if(Input.GetKeyDown("m"))
         {
             movementActivated = true;
             anim.SetBool("isWalking", true);

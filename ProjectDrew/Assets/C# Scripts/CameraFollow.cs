@@ -74,7 +74,7 @@ public class CameraFollow : MonoBehaviour
 
         cam.transform.LookAt(Target);
         camCurrentPosition = cam.transform.position;
-        CamPositionText.text = camCurrentPosition.ToString();
+        //CamPositionText.text = camCurrentPosition.ToString();
 
 
     }
