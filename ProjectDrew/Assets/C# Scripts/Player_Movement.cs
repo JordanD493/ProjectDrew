@@ -78,11 +78,34 @@ public class Player_Movement : MonoBehaviour
 
 
         Scene scene = SceneManager.GetActiveScene();
-        if (Input.GetKeyDown("m"))
+        //if ( Input.touchCount > 0)
+        //{
+        //    Touch touch = Input.GetTouch(0);
+
+        //    if (touch.phase == TouchPhase.Began)
+        //    {
+        //        Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+        //        RaycastHit raycastHit;
+        //        if (Physics.Raycast(raycast, out raycastHit))
+        //        {
+                   
+
+        //            if (raycastHit.collider.tag == "Player")
+        //            {
+        //                    movementActivated = true;
+        //                    anim.SetBool("isWalking", true);
+                       
+        //            }
+
+        //        }
+        //    }
+
+        //}
+
+         if(Input.GetKeyDown("m"))
         {
             movementActivated = true;
             anim.SetBool("isWalking", true);
-
         }
 
         if (Input.GetKeyDown("r"))
@@ -153,7 +176,12 @@ public class Player_Movement : MonoBehaviour
     {
         anim.SetBool("isJumping", false);
     }
-  
+
+    private void OnMouseDown()
+    {
+        movementActivated = true;
+        anim.SetBool("isWalking", true);
+    }
 
     //private void OnCollisionExit(Collision collision)
     //{
