@@ -9,10 +9,6 @@ public class TabVFX : MonoBehaviour {
     
     [SerializeField] private Color selectedColor;
     [SerializeField] private Color snappingColor;
-    [SerializeField] private ParticleSystem snapReachedParticleEffect;
-    [SerializeField] private ParticleSystem movementParticleEffect;
-    [SerializeField] private ParticleSystem releaseParticleEffect;
-
 
     private Material material;
     private Color initialColor;
@@ -35,19 +31,15 @@ public class TabVFX : MonoBehaviour {
     protected void OnSelectionBegin(object source, EventArgs args)
     {
         material.color = selectedColor;
-        movementParticleEffect.Play();
     }
 
     protected void OnSelectionRelease(object source, EventArgs args)
     {
         material.color = snappingColor;
-        releaseParticleEffect.Play();
     }
 
     protected void OnSnapReached(object source, EventArgs args)
     {
         material.color = initialColor;
-        snapReachedParticleEffect.Play();
-        movementParticleEffect.Stop();
     }
 }

@@ -102,17 +102,4 @@ public class TabMovement : MonoBehaviour
             yield return null;
         }
     }
-
-    // ------------------------------------------------- EDITOR
-    public void SnapToBegin()
-    {
-        transform.position = beginLimit.position;
-        transform.rotation = beginLimit.rotation;
-    }
-
-    public void SnapToEnd()
-    {
-        transform.position = endLimit.position;
-        transform.rotation = endLimit.rotation;
-    }
 }
