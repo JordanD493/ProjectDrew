@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33347160426191078}
   - component: {fileID: 23626366041647254}
   - component: {fileID: 95748593261550804}
+  - component: {fileID: 68976793459224796}
   m_Layer: 0
   m_Name: Throne
   m_TagString: Untagged
@@ -35,9 +36,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1373410398290324}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
-  m_LocalPosition: {x: -3.79, y: 1.03, z: 1.17}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -3.79, y: 1.03, z: 0.82}
+  m_LocalScale: {x: 0.01, y: 0.0100000035, z: 0.0100000035}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,6 +85,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1373410398290324}
   m_Mesh: {fileID: 4300000, guid: bf2054a217ff4474ca92201d1dfd476a, type: 3}
+--- !u!68 &68976793459224796
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373410398290324}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 7435c77b3863fa7498510b9c45a86a3b, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -117.24844, y: 4.1630015}
+  - {x: -134.19542, y: 211.68022}
+  - {x: -49.968433, y: 339.0103}
+  - {x: 48.93725, y: 365.12024}
+  - {x: 102.42183, y: 345.2423}
+  - {x: 20.442009, y: 312.9482}
+  - {x: 1.6097784, y: 242.58223}
+  - {x: 106.068756, y: 154.27058}
+  - {x: 202.79248, y: -2.2063725}
 --- !u!95 &95748593261550804
 Animator:
   serializedVersion: 3
