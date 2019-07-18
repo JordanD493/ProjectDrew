@@ -15,9 +15,13 @@ public class CandleSSSIntensity : MonoBehaviour {
 
     private float random;
 
+    Color initialIntensity;
+
     // Use this for initialization
     void Start () {
         random = Random.Range(0.0f, 65535.0f);
+        scatterIntensity = 0;
+        initialIntensity = candleMat.GetColor("_EmissionColor");
     }
 	
 	// Update is called once per frame
@@ -28,4 +32,10 @@ public class CandleSSSIntensity : MonoBehaviour {
         float noise = Mathf.PerlinNoise(random, Time.time);
         _candleLight.intensity = Mathf.Lerp(minIntensity, maxIntensity, noise);
     }
+
+    private void OnApplicationQuit()
+    {
+        candleMat.SetColor("_EmissionColor", initialIntensity);
+    }
+
 }

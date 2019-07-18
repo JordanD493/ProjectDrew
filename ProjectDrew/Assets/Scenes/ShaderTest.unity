@@ -613,6 +613,10 @@ MonoBehaviour:
   scatterMultiplier: 100
   minIntensity: 1.5
   maxIntensity: 2.5
+--- !u!4 &1398540685 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 4461ee184204f494695870bd1a9fa809, type: 3}
+  m_PrefabInternal: {fileID: 179863683}
 --- !u!1 &1451974671
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,8 +654,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1494406766}
   - component: {fileID: 1494406765}
-  - component: {fileID: 1494406767}
-  - component: {fileID: 1494406768}
   m_Layer: 0
   m_Name: CandleLight
   m_TagString: Untagged
@@ -701,35 +703,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1494406764}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.981, y: 14.087, z: 4.049}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.000000021855696, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.00068613194, y: 0.11046768, z: 0.00002939414}
+  m_LocalScale: {x: 0.049009636, y: 0.049009625, z: 0.049009625}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1398540685}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!122 &1494406767
-Halo:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1494406764}
-  m_Enabled: 1
-  m_Color:
-    serializedVersion: 2
-    rgba: 4278240255
-  m_Size: 46.58
---- !u!114 &1494406768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1494406764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7560e6a77f888a4abcb2a08032b1eb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2097357607
 GameObject:
   m_ObjectHideFlags: 0
