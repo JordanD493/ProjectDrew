@@ -11,11 +11,14 @@ public class MaterialColor : MonoBehaviour
     private float time;
 
     private float ShaderColorValue;
+
+    private float MaxShaderVaue;
    
     // Use this for initialization
     void Start ()
     {
-        ShaderColorValue = -0.75f;
+        ShaderColorValue = -75f;
+        MaxShaderVaue = 100f;
 	}
 	
 	// Update is called once per frame
@@ -24,12 +27,23 @@ public class MaterialColor : MonoBehaviour
        
         time = Time.deltaTime;
         time++;
-        ShaderColorValue = Time.deltaTime;
-        ShaderColorValue++;
+        
 
         if(time >= 1)
         {
-            Mat.SetFloat("Vector1_A2F82978", ShaderColorValue);
+            ShaderColorValue++;
+            Mat.SetFloat("Vector1_A2F82978", ShaderColorValue/MaxShaderVaue);
+
+            if(ShaderColorValue >=100f)
+            {
+                ShaderColorValue = 100f;
+            }
         }
 	}
+
+    private void OnApplicationQuit()
+    {
+        Mat.SetFloat("Vector1_A2F82978", -0.75f);
+
+    }
 }

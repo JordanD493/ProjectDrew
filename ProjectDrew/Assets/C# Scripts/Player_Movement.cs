@@ -78,7 +78,7 @@ public class Player_Movement : MonoBehaviour
 
 
         Scene scene = SceneManager.GetActiveScene();
-        //if ( Input.touchCount > 0)
+        //if (Input.touchCount > 0)
         //{
         //    Touch touch = Input.GetTouch(0);
 
@@ -88,13 +88,13 @@ public class Player_Movement : MonoBehaviour
         //        RaycastHit raycastHit;
         //        if (Physics.Raycast(raycast, out raycastHit))
         //        {
-                   
+
 
         //            if (raycastHit.collider.tag == "Player")
         //            {
-        //                    movementActivated = true;
-        //                    anim.SetBool("isWalking", true);
-                       
+        //                movementActivated = true;
+        //                anim.SetBool("isWalking", true);
+
         //            }
 
         //        }
@@ -102,7 +102,7 @@ public class Player_Movement : MonoBehaviour
 
         //}
 
-         if(Input.GetKeyDown("m"))
+        if (Input.GetKeyDown("m"))
         {
             movementActivated = true;
             anim.SetBool("isWalking", true);
