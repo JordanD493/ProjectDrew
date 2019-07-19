@@ -22,4 +22,17 @@ public class PopupMove : MonoBehaviour
         transform.eulerAngles = Vector3.Lerp(beginLimit.eulerAngles, endLimit.eulerAngles, tab.TabMovementPercentage);
         Debug.Log("hello");
     }
+
+    // ------------------------------------------------- EDITOR
+    public void SnapToBegin()
+    {
+        transform.position = beginLimit.position;
+        transform.rotation = beginLimit.rotation;
+    }
+
+    public void SnapToEnd()
+    {
+        transform.position = endLimit.position;
+        transform.rotation = endLimit.rotation;
+    }
 }
