@@ -11032,9 +11032,10 @@ GameObject:
   - component: {fileID: 640428227}
   - component: {fileID: 640428226}
   - component: {fileID: 640428229}
+  - component: {fileID: 640428230}
   m_Layer: 0
   m_Name: Goal
-  m_TagString: Untagged
+  m_TagString: EndGoal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11120,12 +11121,25 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 640428224}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e34834d9c3ab2b54c886c3b1b93646dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2016967867}
+--- !u!114 &640428230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 640428224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa85fc27f1d2bf94fb3bec027f68d1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mat: {fileID: 2100000, guid: 02a2f22b2471c38419d16bf07c407e4e, type: 2}
+  AnimationMaxMatTime: 2
 --- !u!1 &645356542
 GameObject:
   m_ObjectHideFlags: 0
@@ -26102,6 +26116,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1679542480}
     m_Modifications:
+    - target: {fileID: 13700000, guid: bfe0d0d1bffe14d48ad6d381e1efe652, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: bfe0d0d1bffe14d48ad6d381e1efe652, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.35
@@ -26160,7 +26178,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: bfe0d0d1bffe14d48ad6d381e1efe652, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90.701004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: bfe0d0d1bffe14d48ad6d381e1efe652, type: 3}
       propertyPath: m_LocalScale.x
@@ -26206,6 +26224,38 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0ec7f95c8b5d503488da9e6fecb2538c, type: 2}
+    - target: {fileID: 400014, guid: bfe0d0d1bffe14d48ad6d381e1efe652, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: bfe0d0d1bffe14d48ad6d381e1efe652, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0.082454145
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: bfe0d0d1bffe14d48ad6d381e1efe652, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 7.01671e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: bfe0d0d1bffe14d48ad6d381e1efe652, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: bfe0d0d1bffe14d48ad6d381e1efe652, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: bfe0d0d1bffe14d48ad6d381e1efe652, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 5.790559e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: bfe0d0d1bffe14d48ad6d381e1efe652, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: bfe0d0d1bffe14d48ad6d381e1efe652, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfe0d0d1bffe14d48ad6d381e1efe652, type: 3}
   m_IsPrefabParent: 0
@@ -36955,6 +37005,14 @@ Prefab:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4148996266706384, guid: ef48913e6be296140a8d7ef1a2a30b9e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981825657289150, guid: ef48913e6be296140a8d7ef1a2a30b9e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -87.11819
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef48913e6be296140a8d7ef1a2a30b9e, type: 2}
   m_IsPrefabParent: 0
@@ -37877,10 +37935,6 @@ MonoBehaviour:
   RampSpeed: 0
   SlowDownSpeed: 0
   pageAnim: {fileID: 0}
-  Popups: {fileID: 0}
-  Tabs: {fileID: 0}
-  WitchWond: {fileID: 0}
-  Magic: {fileID: 0}
 --- !u!50 &2016967873
 Rigidbody2D:
   serializedVersion: 4
