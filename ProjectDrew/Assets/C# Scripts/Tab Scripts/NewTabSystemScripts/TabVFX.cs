@@ -6,17 +6,23 @@ using System;
 [RequireComponent(typeof(TabInput))]
 [RequireComponent(typeof(TabMovement))]
 public class TabVFX : MonoBehaviour {
-    
-    [SerializeField] private Color selectedColor;
-    [SerializeField] private Color snappingColor;
-    [SerializeField] private ParticleSystem snapReachedParticleEffect;
-    [SerializeField] private ParticleSystem movementParticleEffect;
-    [SerializeField] private ParticleSystem releaseParticleEffect;
 
+    [Header("Particles")]
+    //[SerializeField] private Color selectedColor;
+    //[SerializeField] private Color snappingColor;
+    [SerializeField] private ParticleSystem onSnapReached;
+    [SerializeField] private ParticleSystem onMovement;
+    [SerializeField] private ParticleSystem onRelease;
+    [SerializeField] private ParticleSystem onChargeReady;
 
-    private Material material;
-    private Color initialColor;
-    
+    [Header("")]
+    [SerializeField] private CameraShake cameraShake;
+    [SerializeField] private float shakeDuration = 0.5f;
+    [SerializeField] private float shakeMagnitude = 1.0f;
+
+    //private Material material;
+    //private Color initialColor;
+
     private TabInput tabInput;
     private TabMovement tabMovement;
     // Use this for initialization
@@ -26,28 +32,35 @@ public class TabVFX : MonoBehaviour {
 
         tabInput.SelectionBegin += OnSelectionBegin;
         tabInput.SelectionRelease += OnSelectionRelease;
+        tabInput.ChargeReady += OnChargeReady;
         tabMovement.SnapReached += OnSnapReached;
 
-        material = GetComponent<Renderer>().material;
-        initialColor = material.color;
+        //material = GetComponent<Renderer>().material;
+        //initialColor = material.color;
     }
 
     protected void OnSelectionBegin(object source, EventArgs args)
     {
-        material.color = selectedColor;
-        movementParticleEffect.Play();
+        //material.color = selectedColor;
+        onMovement.Play();
+    }
+
+    protected void OnChargeReady(object source, EventArgs args)
+    {
+        onChargeReady.Play();
+        cameraShake.Shake(shakeDuration, shakeMagnitude);
     }
 
     protected void OnSelectionRelease(object source, EventArgs args)
     {
-        material.color = snappingColor;
-        releaseParticleEffect.Play();
+        //material.color = snappingColor;
+        onRelease.Play();
     }
 
     protected void OnSnapReached(object source, EventArgs args)
     {
-        material.color = initialColor;
-        snapReachedParticleEffect.Play();
-        movementParticleEffect.Stop();
+        //material.color = initialColor;
+        onSnapReached.Play();
+        onMovement.Stop();
     }
 }
