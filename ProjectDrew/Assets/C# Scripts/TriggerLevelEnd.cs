@@ -22,12 +22,12 @@ public class TriggerLevelEnd : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
-        {
-            //player.GetComponent<Animator>().SetBool("ReachedEnd", true);
-            Debug.Log("player hit end");
-            SceneManager.LoadScene("LVL1.1"); ;
-        }
+        //if (collision.tag == "Player")
+        //{
+        //    //player.GetComponent<Animator>().SetBool("ReachedEnd", true);
+        //    Debug.Log("player hit end");
+        //    SceneManager.LoadScene("LVL1.1"); ;
+        //}
         
     }
     //private void OnTriggerEnter(Collider other)
