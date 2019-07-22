@@ -17,8 +17,9 @@ public class TabVFX : MonoBehaviour {
 
     [Header("")]
     [SerializeField] private CameraShake cameraShake;
-    [SerializeField] private float shakeDuration = 0.5f;
-    [SerializeField] private float shakeMagnitude = 1.0f;
+    [SerializeField] private float shakeDuration = 0.1f;
+    [SerializeField] private float shakeMagnitude = 0.1f;
+    [SerializeField] private float shakeSpeed = 1.0f;
 
     //private Material material;
     //private Color initialColor;
@@ -48,7 +49,6 @@ public class TabVFX : MonoBehaviour {
     protected void OnChargeReady(object source, EventArgs args)
     {
         onChargeReady.Play();
-        cameraShake.Shake(shakeDuration, shakeMagnitude);
     }
 
     protected void OnSelectionRelease(object source, EventArgs args)
@@ -62,5 +62,6 @@ public class TabVFX : MonoBehaviour {
         //material.color = initialColor;
         onSnapReached.Play();
         onMovement.Stop();
+        StartCoroutine(cameraShake.Shake(shakeDuration, shakeMagnitude, shakeSpeed));
     }
 }
