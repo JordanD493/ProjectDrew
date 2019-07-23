@@ -44,6 +44,7 @@ public class Tab_animatePopup : Tab_operatePopup
                 if (allowLooping)
                 {
                     anim.Play(0, 0, anim.GetCurrentAnimatorStateInfo(0).normalizedTime + (tabMovement * animationSpeed));
+                
                 }
                 else
                 {

@@ -11,23 +11,28 @@ public class Drag_Objects_Ipad : MonoBehaviour
 
     }
 
-#if UNITY_IOS
-    // Update is called once per frame
-    void Update()
+//#if UNITY_IOS
+//    // Update is called once per frame
+//    void Update()
+//    {
+//        if (Input.touchCount > 0)
+//        {
+//            Touch touch = Input.GetTouch(0);
+
+//            // Move the cube if the screen has the finger moving.
+//            if (touch.phase == TouchPhase.Moved)
+//            {
+               
+//            }
+
+//        }
+//    }
+//#endif
+
+    private void OnMouseOver()
     {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
+        Vector3 touchedPos = Camera.main.ScreenToWorldPoint(new Vector3(this.transform.position.x, this.transform.position.y, 10));
 
-            // Move the cube if the screen has the finger moving.
-            if (touch.phase == TouchPhase.Moved)
-            {
-                Vector3 touchedPos = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 10));
-
-                transform.position = Vector3.Lerp(transform.position, touchedPos, Time.deltaTime);
-            }
-
-        }
+        transform.position = Vector3.Lerp(transform.position, touchedPos, Time.deltaTime);
     }
-#endif
 }
