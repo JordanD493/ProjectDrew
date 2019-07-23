@@ -11,17 +11,14 @@ public class TabMovement : MonoBehaviour
 
     // ------------------------------------------------------------------------------------------------------ INSPECTOR INTERFACE - YOU CAN SAFELY TWEAK THESE VALUES
     #region INSPECTOR 
-    [SerializeField]
-    private Transform beginLimit;
-    [SerializeField]
-    private Transform endLimit;
-    [SerializeField]
-    private float slideSpeed = 1;
-    [SerializeField]
+    [SerializeField] private Transform beginLimit;
+    [SerializeField] private Transform endLimit;
+    [SerializeField] private float slideSpeed = 1;
     [Tooltip("What percentage of the way between the two limits is the tab? I.e. if the tab is at the same position as beginLimit, insert 0. If same position as endLimit, insert 1. Halfway, insert 0.5. I might try to calculate this in code in the future, but for now you'll have to do it. :)")]
-    private float initialPosition = 0;
-    [SerializeField]
-    private float snapSpeed = 1;
+    [SerializeField] private float initialPosition = 0;
+    [SerializeField] private bool snapOnRelease = true;
+    [ConditionalHide("snappingOn", true, false)]
+    [SerializeField] private float snapSpeed = 1;
     #endregion
     // --------------------------------------------------------------------------------------------------------------------------------------- INSPECTOR INTERFACE END
 
@@ -40,13 +37,16 @@ public class TabMovement : MonoBehaviour
 
     protected void OnTabDrag(object source, TabDragEventArgs args)
     {
-        TabMovementPercentage = Mathf.Clamp(TabMovementPercentage + (args.mouseMovementMagnitude * slideSpeed * 0.05f), 0, 1);
+        TabMovementPercentage = Mathf.Clamp(TabMovementPercentage + (args.MouseMovementMagnitude * slideSpeed * 0.05f), 0, 1);
         UpdateTabTransform();
     }
-    
+
     protected void OnSelectionRelease(object source, EventArgs args)
     {
-        SnapToClosest();
+        if (snapOnRelease)
+        {
+            StartCoroutine(InterpolateToClosestSnapPoint());
+        }
     }
 
     protected virtual void OnTabMove()
@@ -59,11 +59,6 @@ public class TabMovement : MonoBehaviour
     {
         if (SnapReached != null)
             SnapReached(this, EventArgs.Empty);
-    }
-
-    private void SnapToClosest()
-    {
-        StartCoroutine(InterpolateToClosestSnapPoint());
     }
 
     private void UpdateTabTransform()

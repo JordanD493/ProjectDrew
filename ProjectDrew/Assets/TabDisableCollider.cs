@@ -23,7 +23,14 @@ public class TabDisableCollider : MonoBehaviour {
     {
         foreach (Collider2D c in popupColliders2D)
         {
-            c.enabled = !c.enabled;
+            if (tabMovement.TabMovementPercentage == 1)
+            {
+                c.enabled = true;
+            }
+            else
+            {
+                c.enabled = false;
+            }
         }
     }
 }
