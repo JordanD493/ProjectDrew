@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: BAll1
+  m_Name: BAll2
   m_Shader: {fileID: 4800000, guid: 23964fc068216c947945db8e015e3c53, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -104,16 +104,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_1CD72048: 0.1
-    - Vector1_2D8F842F: 50
-    - Vector1_31F4E290: 82.25
+    - Vector1_2D8F842F: 1
+    - Vector1_31F4E290: 155.82
     - Vector1_849744D5: 0.05
     - Vector1_9309EAA0: 0.4
-    - Vector1_983BF045: 0.84
+    - Vector1_983BF045: 0.15
     - Vector1_9919E26D: 10
     - Vector1_9E46FB01: 0.3
-    - Vector1_C05C1A74: 4.45
+    - Vector1_C05C1A74: -0.1
     - Vector1_CACDC555: 20
-    - Vector1_DB44E46C: 0.03
+    - Vector1_DB44E46C: 0.82
     - Vector1_DD03B5D3: 0.03
     - _AlphaClip: 0
     - _Blend: 0
@@ -138,12 +138,12 @@ Material:
     m_Colors:
     - Color_1472EEA3: {r: 0.025490196, g: 0.009803922, b: 0.04901961, a: 0}
     - Color_1B4EC6D8: {r: 0.11561601, g: 0.071911715, b: 0.1509434, a: 0}
-    - Color_528B12E7: {r: 0, g: 0.7342432, b: 1, a: 0}
+    - Color_528B12E7: {r: 0.06594875, g: 0.28588897, b: 0.3584906, a: 0}
     - Color_68DB8479: {r: 0.36078432, g: 0, b: 0.9882353, a: 1}
     - Color_8A30CFFE: {r: 0.2675655, g: 3.24901, b: 0, a: 1}
     - Color_8B0BCA67: {r: 0.036489826, g: 0.036694247, b: 0.03773582, a: 1}
     - Color_D0D45F29: {r: 0.29673815, g: 0.002491996, b: 0.5283019, a: 0}
-    - Color_F832C437: {r: 0.1635368, g: 0.5460024, b: 0.990566, a: 0}
+    - Color_F832C437: {r: 0.11080456, g: 0.2667181, b: 0.2830189, a: 1}
     - _Color: {r: 0.6177679, g: 1, b: 0.051886797, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
