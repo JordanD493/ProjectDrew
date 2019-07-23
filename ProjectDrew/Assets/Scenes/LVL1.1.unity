@@ -704,7 +704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccaef932d01a81e45a68b46e91329281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomValueZ: -2
+  zoomValue: {x: -5, y: -5, z: -7}
 --- !u!1 &563534176
 GameObject:
   m_ObjectHideFlags: 0
@@ -6021,6 +6021,11 @@ Prefab:
     - target: {fileID: 1109100854348040, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20887499968347632, guid: 5b57257f45b7f3e4aab9ae4355092060,
+        type: 2}
+      propertyPath: field of view
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114588387092103922, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
