@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class TabManager : MonoBehaviour {
+public class TabsManager : MonoBehaviour {
     
     [SerializeField] private CrystallBallInput crystalBall;
     [Header("")]
