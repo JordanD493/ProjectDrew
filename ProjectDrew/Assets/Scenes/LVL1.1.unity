@@ -705,6 +705,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomValue: {x: -5, y: -5, z: -7}
+  CamMaxZoomValue: {x: 10.88, y: 11.55, z: -13.02}
+  CamMinZoomValue: {x: 1.95, y: 6.49, z: -2.38}
 --- !u!114 &537340331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6037,6 +6039,18 @@ Prefab:
         type: 2}
       propertyPath: field of view
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028057264068854, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028057264068854, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 11.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028057264068854, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -13.02
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114588387092103922, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
