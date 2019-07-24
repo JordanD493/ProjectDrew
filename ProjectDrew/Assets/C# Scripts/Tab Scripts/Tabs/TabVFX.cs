@@ -5,7 +5,8 @@ using System;
 
 [RequireComponent(typeof(TabInput))]
 [RequireComponent(typeof(TabMovement))]
-public class TabVFX : MonoBehaviour {
+public class TabVFX : MonoBehaviour
+{
 
     [Header("Particles")]
     //[SerializeField] private Color selectedColor;
@@ -28,7 +29,8 @@ public class TabVFX : MonoBehaviour {
     private TabInput tabInput;
     private TabMovement tabMovement;
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         tabInput = GetComponent<TabInput>();
         tabMovement = GetComponent<TabMovement>();
 
