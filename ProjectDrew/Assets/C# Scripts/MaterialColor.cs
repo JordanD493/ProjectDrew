@@ -55,6 +55,8 @@ public class MaterialColor : MonoBehaviour
             ShaderColorValue++;
             Mat.SetFloat("Vector1_A2F82978", ShaderColorValue / MaxShaderVaue);
 
+            
+
             if (ShaderColorValue >= 100f)
             {
                 ShaderColorValue = 100f;
