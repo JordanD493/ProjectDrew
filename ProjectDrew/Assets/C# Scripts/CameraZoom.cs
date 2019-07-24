@@ -57,14 +57,14 @@ public class CameraZoom : MonoBehaviour
 
             float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
 
-            if(deltaMagnitudeDiff > 0)
+            if(deltaMagnitudeDiff < 0)
             {
                 Camera.main.transform.position = new Vector3(transform.position.x + zoomValue.x * Time.deltaTime,
                                                         transform.position.y + zoomValue.y * Time.deltaTime,
                                                         transform.position.z - zoomValue.z * Time.deltaTime);
             }
 
-            if(deltaMagnitudeDiff < 0)
+            if(deltaMagnitudeDiff > 0)
             {
                 Camera.main.transform.position = new Vector3(transform.position.x - zoomValue.x * Time.deltaTime,
                                                          transform.position.y - zoomValue.y * Time.deltaTime,
