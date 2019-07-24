@@ -636,15 +636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 252c2a0a1109b004eb8aac3a60b724ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSnapReached: {fileID: 0}
-  onMovement: {fileID: 0}
-  onRelease: {fileID: 0}
-  onChargeReady: {fileID: 0}
-  onHint: {fileID: 0}
-  cameraShake: {fileID: 0}
-  shakeDuration: 0.1
-  shakeMagnitude: 0.1
-  shakeSpeed: 1
 --- !u!114 &278580183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,7 +651,7 @@ MonoBehaviour:
   endLimit: {fileID: 0}
   slideSpeed: 1
   initialPosition: 0
-  snapOnRelease: 1
+  snapPoints: []
   snapSpeed: 1
 --- !u!114 &278580184
 MonoBehaviour:
@@ -1813,11 +1804,6 @@ Transform:
   m_Father: {fileID: 1791724571}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180.00002}
---- !u!198 &1061659937 stripped
-ParticleSystem:
-  m_PrefabParentObject: {fileID: 198743121555505492, guid: 2fe484fb1a7d98c4eadc399ec15d0a66,
-    type: 2}
-  m_PrefabInternal: {fileID: 1957203034}
 --- !u!1 &1147845341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,11 +1885,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 14.136001, y: -26.227001, z: 0.002}
---- !u!198 &1268766219 stripped
-ParticleSystem:
-  m_PrefabParentObject: {fileID: 198743121555505492, guid: 2fe484fb1a7d98c4eadc399ec15d0a66,
-    type: 2}
-  m_PrefabInternal: {fileID: 278937627}
 --- !u!1 &1273659056
 GameObject:
   m_ObjectHideFlags: 0
@@ -2439,15 +2420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 252c2a0a1109b004eb8aac3a60b724ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSnapReached: {fileID: 1061659937}
-  onMovement: {fileID: 1061659937}
-  onRelease: {fileID: 1061659937}
-  onChargeReady: {fileID: 1061659937}
-  onHint: {fileID: 1061659937}
-  cameraShake: {fileID: 0}
-  shakeDuration: 0.1
-  shakeMagnitude: 0.1
-  shakeSpeed: 1
 --- !u!114 &1374535471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2477,7 +2449,12 @@ MonoBehaviour:
   endLimit: {fileID: 809448596}
   slideSpeed: -1
   initialPosition: 0
-  snapOnRelease: 0
+  snapPoints:
+  - 0
+  - 0.33
+  - 0.5
+  - 0.67
+  - 1
   snapSpeed: 1
 --- !u!1 &1376976141
 GameObject:
@@ -2637,15 +2614,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 252c2a0a1109b004eb8aac3a60b724ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSnapReached: {fileID: 1061659937}
-  onMovement: {fileID: 1061659937}
-  onRelease: {fileID: 1061659937}
-  onChargeReady: {fileID: 1061659937}
-  onHint: {fileID: 1061659937}
-  cameraShake: {fileID: 0}
-  shakeDuration: 0.1
-  shakeMagnitude: 0.1
-  shakeSpeed: 1
 --- !u!114 &1464679542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2661,7 +2629,10 @@ MonoBehaviour:
   endLimit: {fileID: 1819725122}
   slideSpeed: 0.7
   initialPosition: 0
-  snapOnRelease: 1
+  snapPoints:
+  - 0
+  - 0.77
+  - 1
   snapSpeed: 1
 --- !u!114 &1464679543
 MonoBehaviour:
@@ -2970,7 +2941,7 @@ MonoBehaviour:
   endLimit: {fileID: 1744392748}
   slideSpeed: -1.15
   initialPosition: 0
-  snapOnRelease: 1
+  snapPoints: []
   snapSpeed: 1
 --- !u!4 &1690814683
 Transform:
@@ -2996,15 +2967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 252c2a0a1109b004eb8aac3a60b724ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSnapReached: {fileID: 1268766219}
-  onMovement: {fileID: 1268766219}
-  onRelease: {fileID: 1268766219}
-  onChargeReady: {fileID: 1268766219}
-  onHint: {fileID: 1268766219}
-  cameraShake: {fileID: 0}
-  shakeDuration: 0.1
-  shakeMagnitude: 0.1
-  shakeSpeed: 1
 --- !u!114 &1690814685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3367,15 +3329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 252c2a0a1109b004eb8aac3a60b724ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSnapReached: {fileID: 0}
-  onMovement: {fileID: 0}
-  onRelease: {fileID: 0}
-  onChargeReady: {fileID: 0}
-  onHint: {fileID: 0}
-  cameraShake: {fileID: 0}
-  shakeDuration: 0.1
-  shakeMagnitude: 0.1
-  shakeSpeed: 1
 --- !u!114 &1819725124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3391,7 +3344,7 @@ MonoBehaviour:
   endLimit: {fileID: 0}
   slideSpeed: 1
   initialPosition: 0
-  snapOnRelease: 1
+  snapPoints: []
   snapSpeed: 1
 --- !u!114 &1819725125
 MonoBehaviour:
