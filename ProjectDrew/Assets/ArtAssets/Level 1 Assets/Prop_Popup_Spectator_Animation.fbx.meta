@@ -20,7 +20,22 @@ ModelImporter:
     4300002: Human
     7400000: CrowdUnfold
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clothes
+    second: {fileID: 2100000, guid: bb43a953e35c2854e916106978d3bef1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Golden
+    second: {fileID: 2100000, guid: 4e56d3ed68cdee748ace5b175ff28787, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: 2c2ce124fc6e0274bb5e35c180d3195a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
