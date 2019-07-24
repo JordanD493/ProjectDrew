@@ -32,7 +32,7 @@ public class Tab_slideTab : Tab_operateTab
     private float mouseSensitivity = 1;
     
     [SerializeField]
-    private bool snapOnRelease = true;
+    //private bool snapOnRelease = true;
 
     /*
     [SerializeField] private bool interpolationActive;

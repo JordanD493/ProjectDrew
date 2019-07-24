@@ -8,7 +8,7 @@ public class ChangeAlphaLevel : MonoBehaviour
    private float alphaLevel;
 
    private float time;
-   private bool is_Timing = true;
+   //private bool is_Timing = true;
 
     //Variable that changes the anim time and when it reaches that time then it reaches Zero value
     [SerializeField]
@@ -19,10 +19,10 @@ public class ChangeAlphaLevel : MonoBehaviour
 
    private float childrenSize;
 
-    AnimationTrigger Trigger;
-    MeshRenderer children;
+    //AnimationTrigger Trigger;
+    //MeshRenderer children;
     
-    Material[] mats;
+    //Material[] mats;
 
     Renderer[] rends;
    
@@ -30,9 +30,9 @@ public class ChangeAlphaLevel : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        Trigger = FindObjectOfType<AnimationTrigger>();
-        children= GetComponentInChildren<MeshRenderer>();
-        mats = GetComponentInChildren<Renderer>().materials;
+        //Trigger = FindObjectOfType<AnimationTrigger>();
+        //children= GetComponentInChildren<MeshRenderer>();
+        //mats = GetComponentInChildren<Renderer>().materials;
         rends = GetComponentsInChildren<Renderer>();
     }
 
