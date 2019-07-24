@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PopupsHelper : MonoBehaviour {
+public class PopupsManager : MonoBehaviour {
 
 	public void FoldAllPopups()
     {
