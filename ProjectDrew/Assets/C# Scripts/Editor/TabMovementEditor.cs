@@ -7,9 +7,10 @@ public class TabMovementEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        base.OnInspectorGUI();
 
         TabMovement tabMovement = (TabMovement)target;
+
+        GUILayout.BeginHorizontal();
 
         if (GUILayout.Button("Snap to begin"))
         {
@@ -20,5 +21,10 @@ public class TabMovementEditor : Editor
         {
             tabMovement.SnapToEnd();
         }
+
+        GUILayout.EndHorizontal();
+
+
+        base.OnInspectorGUI();
     }
 }

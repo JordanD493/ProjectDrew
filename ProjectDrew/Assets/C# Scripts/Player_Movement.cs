@@ -35,25 +35,15 @@ public class Player_Movement : MonoBehaviour
     [SerializeField]
     private Animator pageAnim;
 
-    [SerializeField]
-    private GameObject Popups;
-
-    [SerializeField]
-    private GameObject Tabs;
-
-    [SerializeField]
-    private GameObject WitchWond;
-
-    [SerializeField]
-    private GameObject Magic;
-
+    private MaterialColor Mat;
+    
     // Use this for initialization
     void Start()
     {
         movementActivated = false;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
+        Mat = FindObjectOfType<MaterialColor>();
     }
 
     // Use this for physics related code
@@ -78,11 +68,34 @@ public class Player_Movement : MonoBehaviour
 
 
         Scene scene = SceneManager.GetActiveScene();
+        //if (Input.touchCount > 0)
+        //{
+        //    Touch touch = Input.GetTouch(0);
+
+        //    if (touch.phase == TouchPhase.Began)
+        //    {
+        //        Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+        //        RaycastHit raycastHit;
+        //        if (Physics.Raycast(raycast, out raycastHit))
+        //        {
+
+
+        //            if (raycastHit.collider.tag == "Player")
+        //            {
+        //                movementActivated = true;
+        //                anim.SetBool("isWalking", true);
+
+        //            }
+
+        //        }
+        //    }
+
+        //}
+
         if (Input.GetKeyDown("m"))
         {
             movementActivated = true;
             anim.SetBool("isWalking", true);
-
         }
 
         if (Input.GetKeyDown("r"))
@@ -136,15 +149,12 @@ public class Player_Movement : MonoBehaviour
             print("Jumped");
         }
 
-        if(collision.gameObject.tag == "EndGoal")
+        if (collision.gameObject.tag == "EndGoal")
         {
             print("Reached End");
-            pageAnim.enabled = true;
+            //pageAnim.enabled = true;
+            Mat.IsFading = true;
             this.gameObject.SetActive(false);
-            Popups.SetActive(false);
-            Tabs.SetActive(false);
-            WitchWond.SetActive(false);
-            Magic.SetActive(false);
         }
     }
 
@@ -153,7 +163,12 @@ public class Player_Movement : MonoBehaviour
     {
         anim.SetBool("isJumping", false);
     }
-  
+
+    private void OnMouseDown()
+    {
+        movementActivated = true;
+        anim.SetBool("isWalking", true);
+    }
 
     //private void OnCollisionExit(Collision collision)
     //{
