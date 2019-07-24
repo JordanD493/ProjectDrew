@@ -705,6 +705,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomValue: {x: -5, y: -5, z: -7}
+--- !u!114 &537340331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 537340325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990464b78ee935a47a15c3e4b58234cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &563534176
 GameObject:
   m_ObjectHideFlags: 0
@@ -6468,6 +6479,51 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0ec7f95c8b5d503488da9e6fecb2538c, type: 2}
+    - target: {fileID: 114665917423846840, guid: 44c57b4471fc53f44b751f0b8f896822,
+        type: 2}
+      propertyPath: onSnapReached
+      value: 
+      objectReference: {fileID: 277421593}
+    - target: {fileID: 114665917423846840, guid: 44c57b4471fc53f44b751f0b8f896822,
+        type: 2}
+      propertyPath: onMovement
+      value: 
+      objectReference: {fileID: 936989140}
+    - target: {fileID: 114665917423846840, guid: 44c57b4471fc53f44b751f0b8f896822,
+        type: 2}
+      propertyPath: onRelease
+      value: 
+      objectReference: {fileID: 936989140}
+    - target: {fileID: 114665917423846840, guid: 44c57b4471fc53f44b751f0b8f896822,
+        type: 2}
+      propertyPath: onChargeReady
+      value: 
+      objectReference: {fileID: 936989140}
+    - target: {fileID: 114665917423846840, guid: 44c57b4471fc53f44b751f0b8f896822,
+        type: 2}
+      propertyPath: onHint
+      value: 
+      objectReference: {fileID: 936989140}
+    - target: {fileID: 114665917423846840, guid: 44c57b4471fc53f44b751f0b8f896822,
+        type: 2}
+      propertyPath: cameraShake
+      value: 
+      objectReference: {fileID: 537340331}
+    - target: {fileID: 114665917423846840, guid: 44c57b4471fc53f44b751f0b8f896822,
+        type: 2}
+      propertyPath: shakeDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114804114281511454, guid: 44c57b4471fc53f44b751f0b8f896822,
+        type: 2}
+      propertyPath: chargeNeeded
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114804114281511454, guid: 44c57b4471fc53f44b751f0b8f896822,
+        type: 2}
+      propertyPath: deadZone
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44c57b4471fc53f44b751f0b8f896822, type: 2}
   m_IsPrefabParent: 0
