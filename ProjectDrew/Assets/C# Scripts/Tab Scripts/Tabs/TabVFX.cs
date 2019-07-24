@@ -14,6 +14,7 @@ public class TabVFX : MonoBehaviour {
     [SerializeField] private ParticleSystem onMovement;
     [SerializeField] private ParticleSystem onRelease;
     [SerializeField] private ParticleSystem onChargeReady;
+    [SerializeField] private ParticleSystem onHint;
 
     [Header("")]
     [SerializeField] private CameraShake cameraShake;
@@ -63,5 +64,10 @@ public class TabVFX : MonoBehaviour {
         onSnapReached.Play();
         onMovement.Stop();
         StartCoroutine(cameraShake.Shake(shakeDuration, shakeMagnitude, shakeSpeed));
+    }
+
+    public void HighlightAsHint()
+    {
+        onHint.Play();
     }
 }
