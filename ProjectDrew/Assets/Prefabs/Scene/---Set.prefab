@@ -133,6 +133,8 @@ GameObject:
   - component: {fileID: 20887499968347632}
   - component: {fileID: 81225400728855010}
   - component: {fileID: 114303970164165166}
+  - component: {fileID: 114007520642172076}
+  - component: {fileID: 114731490814029628}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -515,7 +517,6 @@ GameObject:
   - component: {fileID: 33510785569694454}
   - component: {fileID: 23535140627365108}
   - component: {fileID: 58607114877850148}
-  - component: {fileID: 114588387092103922}
   - component: {fileID: 114059884168500554}
   m_Layer: 0
   m_Name: Goal
@@ -1901,7 +1902,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: dc2e937b2a5f15543b1f1aee4964df7c, type: 2}
+  - {fileID: 2100000, guid: 25550eee8539a8b41861bc7d3ff35193, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2287,7 +2288,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: dc2e937b2a5f15543b1f1aee4964df7c, type: 2}
+  - {fileID: 2100000, guid: 25550eee8539a8b41861bc7d3ff35193, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2427,7 +2428,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: dc2e937b2a5f15543b1f1aee4964df7c, type: 2}
+  - {fileID: 2100000, guid: 25550eee8539a8b41861bc7d3ff35193, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3026,6 +3027,20 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 1.47
   m_ShadowAngle: 0
+--- !u!114 &114007520642172076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1185955802492894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccaef932d01a81e45a68b46e91329281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomValue: {x: -5, y: -5, z: -7}
+  CamMaxZoomValue: {x: 10.88, y: 11.55, z: -13.02}
+  CamMinZoomValue: {x: 1.95, y: 6.49, z: -2.38}
 --- !u!114 &114059884168500554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3052,7 +3067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _candleLight: {fileID: 108980172996804608}
   scatterIntensity: 0
-  candleMat: {fileID: 2100000, guid: dc2e937b2a5f15543b1f1aee4964df7c, type: 2}
+  candleMat: {fileID: 2100000, guid: 25550eee8539a8b41861bc7d3ff35193, type: 2}
   scatterMultiplier: 90
   minIntensity: 1.5
   maxIntensity: 2.5
@@ -3094,29 +3109,28 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1244486103691346}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3aa387775ad6a4745ab14ca8a71df6de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _candleLight: {fileID: 108980172996804608}
   scatterIntensity: 0
-  candleMat: {fileID: 2100000, guid: dc2e937b2a5f15543b1f1aee4964df7c, type: 2}
+  candleMat: {fileID: 2100000, guid: 25550eee8539a8b41861bc7d3ff35193, type: 2}
   scatterMultiplier: 90
   minIntensity: 1.5
   maxIntensity: 2.5
---- !u!114 &114588387092103922
+--- !u!114 &114731490814029628
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1555560146783042}
-  m_Enabled: 0
+  m_GameObject: {fileID: 1185955802492894}
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e34834d9c3ab2b54c886c3b1b93646dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 990464b78ee935a47a15c3e4b58234cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!114 &114970529882279512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3130,7 +3144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _candleLight: {fileID: 108980172996804608}
   scatterIntensity: 0
-  candleMat: {fileID: 2100000, guid: dc2e937b2a5f15543b1f1aee4964df7c, type: 2}
+  candleMat: {fileID: 2100000, guid: 25550eee8539a8b41861bc7d3ff35193, type: 2}
   scatterMultiplier: 90
   minIntensity: 1.5
   maxIntensity: 2.5

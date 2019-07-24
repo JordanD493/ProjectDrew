@@ -13,49 +13,71 @@ public class CameraZoom : MonoBehaviour
     [SerializeField]
     private Vector3 CamMinZoomValue;
    
-    private Vector3 pos;
+
 
 	// Use this for initialization
 	void Start ()
     {
-      
-	}
-	
-	// Update is called once per frame
-	void Update ()
+       
+
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         cameraZoom();
 
         //TouchInput();
 	}
 
+   
+
     void cameraZoom()
     {
-        pos = Camera.main.transform.position;
+       Vector3 pos = transform.position;
+
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
-            
-            pos = new Vector3(transform.position.x + zoomValue.x*Time.deltaTime, 
-                              transform.position.y + zoomValue.y*Time.deltaTime, 
-                              transform.position.z - zoomValue.z*Time.deltaTime);
-                                             
+
+
+            transform.position = new Vector3(transform.position.x + zoomValue.x*Time.deltaTime,
+                                                         transform.position.y + zoomValue.y*Time.deltaTime,
+                                                         transform.position.z - zoomValue.z*Time.deltaTime);
+
+            //pos.z = Mathf.Clamp(pos.z, CamMinZoomValue.z, CamMaxZoomValue.z);
+            //pos.y = Mathf.Clamp(pos.y, CamMinZoomValue.y, CamMaxZoomValue.y);
+            //pos.x = Mathf.Clamp(pos.x, CamMinZoomValue.x, CamMaxZoomValue.x);
+
+            //transform.position = pos;
+
+           
         }
 
         if(Input.GetAxis("Mouse ScrollWheel") < 0)
         {
 
-           pos = new Vector3(transform.position.x - zoomValue.x * Time.deltaTime,
-                             transform.position.y - zoomValue.y * Time.deltaTime,
-                             transform.position.z + zoomValue.z * Time.deltaTime);
+
+            transform.position = new Vector3(transform.position.x - zoomValue.x * Time.deltaTime,
+                                                          transform.position.y - zoomValue.y * Time.deltaTime,
+                                                          transform.position.z + zoomValue.z * Time.deltaTime);
+
+
+            pos.z = Mathf.Clamp(transform.position.z, CamMinZoomValue.z, CamMaxZoomValue.z);
+            pos.y = Mathf.Clamp(transform.position.y, CamMinZoomValue.y, CamMaxZoomValue.y);
+            pos.x = Mathf.Clamp(transform.position.x, CamMinZoomValue.x, CamMaxZoomValue.x);
+
+            //transform.position = pos;
+
 
         }
 
-        pos.z = Mathf.Clamp(transform.position.z, CamMinZoomValue.z, CamMaxZoomValue.z);
-        pos.y = Mathf.Clamp(transform.position.y, CamMinZoomValue.y, CamMaxZoomValue.y);
-        pos.x = Mathf.Clamp(transform.position.x, CamMinZoomValue.x, CamMaxZoomValue.x);
+
+
+
 
     }
 
+   
     void TouchInput()
     {
         if(Input.touchCount == 2)

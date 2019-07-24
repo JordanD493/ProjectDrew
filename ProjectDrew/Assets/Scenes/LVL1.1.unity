@@ -688,36 +688,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &537340325 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1185955802492894, guid: 5b57257f45b7f3e4aab9ae4355092060,
+--- !u!114 &537340331 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114731490814029628, guid: 5b57257f45b7f3e4aab9ae4355092060,
     type: 2}
   m_PrefabInternal: {fileID: 1042760275}
---- !u!114 &537340330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 537340325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccaef932d01a81e45a68b46e91329281, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoomValue: {x: -5, y: -5, z: -7}
-  CamMaxZoomValue: {x: 10.88, y: 11.55, z: -13.02}
-  CamMinZoomValue: {x: 1.95, y: 6.49, z: -2.38}
---- !u!114 &537340331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 537340325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 990464b78ee935a47a15c3e4b58234cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &563534176
 GameObject:
   m_ObjectHideFlags: 0
@@ -6026,34 +6002,37 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114588387092103922, guid: 5b57257f45b7f3e4aab9ae4355092060,
+    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
         type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2016967867}
-    - target: {fileID: 1109100854348040, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20887499968347632, guid: 5b57257f45b7f3e4aab9ae4355092060,
-        type: 2}
-      propertyPath: field of view
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 4028057264068854, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
-      propertyPath: m_LocalPosition.x
+      propertyPath: CamMaxZoomValue.x
       value: 10.88
       objectReference: {fileID: 0}
-    - target: {fileID: 4028057264068854, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
-      propertyPath: m_LocalPosition.y
+    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
+        type: 2}
+      propertyPath: CamMaxZoomValue.y
       value: 11.55
       objectReference: {fileID: 0}
-    - target: {fileID: 4028057264068854, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
-      propertyPath: m_LocalPosition.z
+    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
+        type: 2}
+      propertyPath: CamMaxZoomValue.z
       value: -13.02
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114588387092103922, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
+    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
+        type: 2}
+      propertyPath: CamMinZoomValue.x
+      value: 1.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
+        type: 2}
+      propertyPath: CamMinZoomValue.y
+      value: 6.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
+        type: 2}
+      propertyPath: CamMinZoomValue.z
+      value: -2.38
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1091726545
