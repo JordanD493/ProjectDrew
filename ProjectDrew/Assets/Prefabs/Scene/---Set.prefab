@@ -1775,7 +1775,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 1
@@ -3039,8 +3039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomValue: {x: -5, y: -5, z: -7}
-  CamMaxZoomValue: {x: 10.88, y: 11.55, z: -13.02}
-  CamMinZoomValue: {x: 1.95, y: 6.49, z: -2.38}
+  CamMaxZoomValue: {x: 10.88, y: 11.55, z: -2.38}
+  CamMinZoomValue: {x: 1.95, y: 6.49, z: -13.02}
 --- !u!114 &114059884168500554
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -33,8 +33,6 @@ public class CameraFollow : MonoBehaviour
 
     private float TimeStartLerping;
 
-    private float timeTakenDuringLerp = 1f;
-
     private Vector3 p0;
 
     private Vector3 p3;
