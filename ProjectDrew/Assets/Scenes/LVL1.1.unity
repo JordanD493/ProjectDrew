@@ -279,6 +279,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 338594122}
+--- !u!114 &382781245 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114303970164165166, guid: 5b57257f45b7f3e4aab9ae4355092060,
+    type: 2}
+  m_PrefabInternal: {fileID: 1042760275}
+  m_Script: {fileID: 11500000, guid: 5a9de9eca30a8894eb5d319b92a07d99, type: 3}
 --- !u!1001 &385016192
 Prefab:
   m_ObjectHideFlags: 0
@@ -609,7 +615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &528506878
 RectTransform:
   m_ObjectHideFlags: 0
@@ -688,34 +694,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &537340325 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1185955802492894, guid: 5b57257f45b7f3e4aab9ae4355092060,
+--- !u!114 &537340331 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114731490814029628, guid: 5b57257f45b7f3e4aab9ae4355092060,
     type: 2}
   m_PrefabInternal: {fileID: 1042760275}
---- !u!114 &537340330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 537340325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccaef932d01a81e45a68b46e91329281, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoomValue: {x: -5, y: -5, z: -7}
---- !u!114 &537340331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 537340325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 990464b78ee935a47a15c3e4b58234cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &563534176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,6 +1100,7 @@ GameObject:
   - component: {fileID: 893439006}
   - component: {fileID: 893439005}
   - component: {fileID: 893439004}
+  - component: {fileID: 893439008}
   m_Layer: 0
   m_Name: TurnLeft
   m_TagString: Untagged
@@ -1139,7 +1124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -575, y: -410}
+  m_AnchoredPosition: {x: -171, y: -174}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893439004
@@ -1180,18 +1165,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 893439006}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 893439005}
-        m_MethodName: OnRightClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &893439005
@@ -1238,6 +1212,53 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 893439002}
+--- !u!114 &893439008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 893439002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 893439005}
+          m_MethodName: OnRightClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 893439005}
+          m_MethodName: OnRightClickUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &906580900
 Prefab:
   m_ObjectHideFlags: 0
@@ -6024,22 +6045,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114588387092103922, guid: 5b57257f45b7f3e4aab9ae4355092060,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2016967867}
-    - target: {fileID: 1109100854348040, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 20887499968347632, guid: 5b57257f45b7f3e4aab9ae4355092060,
         type: 2}
-      propertyPath: field of view
-      value: 70
+      propertyPath: far clip plane
+      value: 1000
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114588387092103922, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
+    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
+        type: 2}
+      propertyPath: cam_follow
+      value: 
+      objectReference: {fileID: 382781245}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1091726545
@@ -6748,7 +6764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1608153457
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6886,6 +6902,7 @@ GameObject:
   - component: {fileID: 1723688361}
   - component: {fileID: 1723688360}
   - component: {fileID: 1723688359}
+  - component: {fileID: 1723688363}
   m_Layer: 0
   m_Name: TurnRight
   m_TagString: Untagged
@@ -6909,7 +6926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 573, y: -410}
+  m_AnchoredPosition: {x: 171, y: -171}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1723688359
@@ -6950,18 +6967,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1723688361}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1723688360}
-        m_MethodName: OnLeftClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1723688360
@@ -7008,6 +7014,53 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1723688357}
+--- !u!114 &1723688363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1723688357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1723688360}
+          m_MethodName: OnLeftClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1723688360}
+          m_MethodName: OnLeftClickUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1736648228
 GameObject:
   m_ObjectHideFlags: 0

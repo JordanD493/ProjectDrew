@@ -10,10 +10,13 @@ public class CamButtonClick : MonoBehaviour
     internal float lastTvalue;
 
     CameraFollow camFollow;
+
+    private CameraZoom cam_zoom;
 	// Use this for initialization
 	void Start ()
     {
         camFollow = FindObjectOfType<CameraFollow>();
+        cam_zoom = FindObjectOfType<CameraZoom>();
         lastTvalue = 0;
 	}
 	
@@ -25,6 +28,8 @@ public class CamButtonClick : MonoBehaviour
 
     public void OnRightClick()
     {
+        cam_zoom.enabled = false;
+        camFollow.enabled = true;
         camFollow.IsMovementAllowedRight = true;
        
 
@@ -33,21 +38,31 @@ public class CamButtonClick : MonoBehaviour
     public void OnRightClickUp()
     {
         camFollow.IsMovementAllowedRight = false;
+
         lastTvalue = camFollow.tParam;
         camFollow.tParam = 1;
+
+        cam_zoom.enabled = true;
+        camFollow.enabled = false;
+
     }
 
     public void OnLeftClick()
     {
+        cam_zoom.enabled = false;
+        camFollow.enabled = true;
         camFollow.IsMovementAllowedLeft= true;
-       
 
     }
 
     public void OnLeftClickUp()
     {
         camFollow.IsMovementAllowedLeft = false;
+
         lastTvalue = camFollow.tParam;
         camFollow.tParam = 1;
+
+        cam_zoom.enabled = true;
+        camFollow.enabled = false;
     }
 }

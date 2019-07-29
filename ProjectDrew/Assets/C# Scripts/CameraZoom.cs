@@ -7,29 +7,49 @@ public class CameraZoom : MonoBehaviour
     [SerializeField]
     private Vector3 zoomValue;
 
+    [SerializeField]
+    private Vector3 CamMaxZoomValue;
+
+    [SerializeField]
+    private Vector3 CamMinZoomValue;
+
+    [SerializeField]
+    private CameraFollow cam_follow;
+
+    
 	// Use this for initialization
 	void Start ()
     {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        //cameraZoom();
+       
 
-        TouchInput();
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+        cameraZoom();
+
+        //TouchInput();
 	}
+
+   
 
     void cameraZoom()
     {
-        if(Input.GetAxis("Mouse ScrollWheel") > 0)
+       Vector3 pos = transform.position;
+
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
-            
-            Camera.main.transform.position = new Vector3(transform.position.x + zoomValue.x*Time.deltaTime, 
-                                                         transform.position.y + zoomValue.y*Time.deltaTime, 
-                                                         transform.position.z - zoomValue.z*Time.deltaTime);
-                                             
+
+
+          Camera.main.transform.position = new Vector3(transform.position.x + zoomValue.x*Time.deltaTime,
+                                                       transform.position.y + zoomValue.y*Time.deltaTime,
+                                                       transform.position.z - zoomValue.z*Time.deltaTime);
+
+            //Camera.main.fieldOfView -= 10f;
+
+            this.enabled = true;
+            cam_follow.enabled = false;
         }
 
         if(Input.GetAxis("Mouse ScrollWheel") < 0)
@@ -38,13 +58,30 @@ public class CameraZoom : MonoBehaviour
             Camera.main.transform.position = new Vector3(transform.position.x - zoomValue.x * Time.deltaTime,
                                                          transform.position.y - zoomValue.y * Time.deltaTime,
                                                          transform.position.z + zoomValue.z * Time.deltaTime);
+            this.enabled = true;
+
+            cam_follow.enabled = false;
+
 
         }
+
+        //cam_follow.enabled = true;
+
+        pos.y = Mathf.Clamp(transform.position.y, CamMinZoomValue.y, CamMaxZoomValue.y);
+        pos.x = Mathf.Clamp(transform.position.x, CamMinZoomValue.x, CamMaxZoomValue.x);
+        pos.z = Mathf.Clamp(transform.position.z, CamMinZoomValue.z, CamMaxZoomValue.z);
+
+        Camera.main.transform.position = pos;
+
+
+
     }
 
+   
     void TouchInput()
     {
-        if(Input.touchCount == 2)
+        Vector3 pos = transform.position;
+        if (Input.touchCount == 2)
         {
             Touch touchZero = Input.GetTouch(0);
             Touch touchOne =  Input.GetTouch(1);
@@ -62,6 +99,7 @@ public class CameraZoom : MonoBehaviour
                 Camera.main.transform.position = new Vector3(transform.position.x + zoomValue.x * Time.deltaTime,
                                                         transform.position.y + zoomValue.y * Time.deltaTime,
                                                         transform.position.z - zoomValue.z * Time.deltaTime);
+
             }
 
             if(deltaMagnitudeDiff > 0)
@@ -70,6 +108,12 @@ public class CameraZoom : MonoBehaviour
                                                          transform.position.y - zoomValue.y * Time.deltaTime,
                                                          transform.position.z + zoomValue.z * Time.deltaTime);
             }
+
+            pos.y = Mathf.Clamp(transform.position.y, CamMinZoomValue.y, CamMaxZoomValue.y);
+            pos.x = Mathf.Clamp(transform.position.x, CamMinZoomValue.x, CamMaxZoomValue.x);
+            pos.z = Mathf.Clamp(transform.position.z, CamMinZoomValue.z, CamMaxZoomValue.z);
+
+            Camera.main.transform.position = pos;
 
         }
     }
