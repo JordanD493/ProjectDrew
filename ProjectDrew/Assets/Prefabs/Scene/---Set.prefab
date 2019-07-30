@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 33347766632017530}
   - component: {fileID: 23850966868128524}
   - component: {fileID: 136258942135339398}
-  - component: {fileID: 114481961326645716}
+  - component: {fileID: 114648691321897840}
   m_Layer: 0
   m_Name: ProtoCandle
   m_TagString: Untagged
@@ -1902,7 +1902,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 25550eee8539a8b41861bc7d3ff35193, type: 2}
+  - {fileID: 2100000, guid: 3f5cf2dfaefaabf4ba28b65232919eeb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2288,7 +2288,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 25550eee8539a8b41861bc7d3ff35193, type: 2}
+  - {fileID: 2100000, guid: 3f5cf2dfaefaabf4ba28b65232919eeb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2428,7 +2428,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 25550eee8539a8b41861bc7d3ff35193, type: 2}
+  - {fileID: 2100000, guid: 3f5cf2dfaefaabf4ba28b65232919eeb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3038,9 +3038,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccaef932d01a81e45a68b46e91329281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomValue: {x: -5, y: -5, z: -7}
-  CamMaxZoomValue: {x: 10.88, y: 11.55, z: -2.38}
-  CamMinZoomValue: {x: 1.95, y: 6.49, z: -13.02}
+  zoomValue: 5
+  CamMaxZoomValue: 90
+  CamMinZoomValue: 10
+  cam_follow: {fileID: 114303970164165166}
 --- !u!114 &114059884168500554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3067,7 +3068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _candleLight: {fileID: 108980172996804608}
   scatterIntensity: 0
-  candleMat: {fileID: 2100000, guid: 25550eee8539a8b41861bc7d3ff35193, type: 2}
+  candleMat: {fileID: 2100000, guid: 3f5cf2dfaefaabf4ba28b65232919eeb, type: 2}
   scatterMultiplier: 90
   minIntensity: 1.5
   maxIntensity: 2.5
@@ -3103,21 +3104,21 @@ MonoBehaviour:
   - {fileID: 4235592732814016}
   - {fileID: 4967921877821084}
   - {fileID: 4093988936772768}
---- !u!114 &114481961326645716
+--- !u!114 &114648691321897840
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1244486103691346}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3aa387775ad6a4745ab14ca8a71df6de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _candleLight: {fileID: 108980172996804608}
+  _candleLight: {fileID: 108072231024273630}
   scatterIntensity: 0
-  candleMat: {fileID: 2100000, guid: 25550eee8539a8b41861bc7d3ff35193, type: 2}
-  scatterMultiplier: 90
+  candleMat: {fileID: 2100000, guid: 3f5cf2dfaefaabf4ba28b65232919eeb, type: 2}
+  scatterMultiplier: 0
   minIntensity: 1.5
   maxIntensity: 2.5
 --- !u!114 &114731490814029628
@@ -3144,7 +3145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _candleLight: {fileID: 108980172996804608}
   scatterIntensity: 0
-  candleMat: {fileID: 2100000, guid: 25550eee8539a8b41861bc7d3ff35193, type: 2}
+  candleMat: {fileID: 2100000, guid: 3f5cf2dfaefaabf4ba28b65232919eeb, type: 2}
   scatterMultiplier: 90
   minIntensity: 1.5
   maxIntensity: 2.5

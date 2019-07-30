@@ -279,12 +279,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 338594122}
---- !u!114 &382781245 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114303970164165166, guid: 5b57257f45b7f3e4aab9ae4355092060,
-    type: 2}
-  m_PrefabInternal: {fileID: 1042760275}
-  m_Script: {fileID: 11500000, guid: 5a9de9eca30a8894eb5d319b92a07d99, type: 3}
 --- !u!1001 &385016192
 Prefab:
   m_ObjectHideFlags: 0
@@ -6044,36 +6038,6 @@ Prefab:
     - target: {fileID: 4841174085583852, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20887499968347632, guid: 5b57257f45b7f3e4aab9ae4355092060,
-        type: 2}
-      propertyPath: far clip plane
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
-        type: 2}
-      propertyPath: cam_follow
-      value: 
-      objectReference: {fileID: 382781245}
-    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
-        type: 2}
-      propertyPath: zoomValue
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
-        type: 2}
-      propertyPath: zoomOutValue
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
-        type: 2}
-      propertyPath: CamMaxZoomValue
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
-        type: 2}
-      propertyPath: CamMinZoomValue
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}

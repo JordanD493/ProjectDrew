@@ -108,11 +108,11 @@ public class CameraFollow : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        
-           // p0 = camCurrentPosition;
-     
 
-        
+        // p0 = camCurrentPosition;
+
+
+
 
 
         //waytoGO += 1;
@@ -124,7 +124,7 @@ public class CameraFollow : MonoBehaviour
 
 
 
-        //IsMovementAllowed = true;
+        //IsMovementAllowedRight = true;
         //IsMovementAllowed = false;
 
         //// when player clicks right
@@ -179,14 +179,14 @@ public class CameraFollow : MonoBehaviour
 
        
 
-        waytoGO += 1;
+        //waytoGO += 1;
 
-        if (waytoGO > wayPoints.Length - 1)
-        {
-            waytoGO = 0;
-        }
+        //if (waytoGO > wayPoints.Length - 1)
+        //{
+        //    waytoGO = 0;
+        //}
 
-        //IsMovementAllowed = true;
+        //IsMovementAllowedLeft = true;
         //IsMovementAllowed = false;
 
     }
