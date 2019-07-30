@@ -6055,6 +6055,26 @@ Prefab:
       propertyPath: cam_follow
       value: 
       objectReference: {fileID: 382781245}
+    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
+        type: 2}
+      propertyPath: zoomValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
+        type: 2}
+      propertyPath: zoomOutValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
+        type: 2}
+      propertyPath: CamMaxZoomValue
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114007520642172076, guid: 5b57257f45b7f3e4aab9ae4355092060,
+        type: 2}
+      propertyPath: CamMinZoomValue
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
   m_IsPrefabParent: 0

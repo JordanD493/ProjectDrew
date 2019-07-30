@@ -5,13 +5,13 @@ using UnityEngine;
 public class CameraZoom : MonoBehaviour
 {    
     [SerializeField]
-    private Vector3 zoomValue;
+    private float zoomValue;
+   
+    [SerializeField]
+    private float CamMaxZoomValue;
 
     [SerializeField]
-    private Vector3 CamMaxZoomValue;
-
-    [SerializeField]
-    private Vector3 CamMinZoomValue;
+    private float CamMinZoomValue;
 
     [SerializeField]
     private CameraFollow cam_follow;
@@ -42,36 +42,38 @@ public class CameraZoom : MonoBehaviour
         {
 
 
-          Camera.main.transform.position = new Vector3(transform.position.x + zoomValue.x*Time.deltaTime,
-                                                       transform.position.y + zoomValue.y*Time.deltaTime,
-                                                       transform.position.z - zoomValue.z*Time.deltaTime);
+          //Camera.main.transform.position = new Vector3(transform.position.x + zoomValue.x*Time.deltaTime,
+          //                                             transform.position.y + zoomValue.y*Time.deltaTime,
+          //                                             transform.position.z - zoomValue.z*Time.deltaTime);
 
-            //Camera.main.fieldOfView -= 10f;
+            Camera.main.fieldOfView -= zoomValue;
 
-            this.enabled = true;
-            cam_follow.enabled = false;
+           
         }
 
         if(Input.GetAxis("Mouse ScrollWheel") < 0)
         {
 
-            Camera.main.transform.position = new Vector3(transform.position.x - zoomValue.x * Time.deltaTime,
-                                                         transform.position.y - zoomValue.y * Time.deltaTime,
-                                                         transform.position.z + zoomValue.z * Time.deltaTime);
-            this.enabled = true;
+            //Camera.main.transform.position = new Vector3(transform.position.x - zoomValue.x * Time.deltaTime,
+            //                                             transform.position.y - zoomValue.y * Time.deltaTime,
+            //                                             transform.position.z + zoomValue.z * Time.deltaTime);
+            //this.enabled = true;
 
-            cam_follow.enabled = false;
-
+            Camera.main.fieldOfView += zoomValue;
+           
 
         }
 
+
+        Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, CamMinZoomValue, CamMaxZoomValue);
+
         //cam_follow.enabled = true;
 
-        pos.y = Mathf.Clamp(transform.position.y, CamMinZoomValue.y, CamMaxZoomValue.y);
-        pos.x = Mathf.Clamp(transform.position.x, CamMinZoomValue.x, CamMaxZoomValue.x);
-        pos.z = Mathf.Clamp(transform.position.z, CamMinZoomValue.z, CamMaxZoomValue.z);
+        //pos.y = Mathf.Clamp(transform.position.y, CamMinZoomValue.y, CamMaxZoomValue.y);
+        //pos.x = Mathf.Clamp(transform.position.x, CamMinZoomValue.x, CamMaxZoomValue.x);
+        //pos.z = Mathf.Clamp(transform.position.z, CamMinZoomValue.z, CamMaxZoomValue.z);
 
-        Camera.main.transform.position = pos;
+        //Camera.main.transform.position = pos;
 
 
 
@@ -96,24 +98,16 @@ public class CameraZoom : MonoBehaviour
 
             if(deltaMagnitudeDiff < 0)
             {
-                Camera.main.transform.position = new Vector3(transform.position.x + zoomValue.x * Time.deltaTime,
-                                                        transform.position.y + zoomValue.y * Time.deltaTime,
-                                                        transform.position.z - zoomValue.z * Time.deltaTime);
+                Camera.main.fieldOfView -= zoomValue;
 
             }
 
             if(deltaMagnitudeDiff > 0)
             {
-                Camera.main.transform.position = new Vector3(transform.position.x - zoomValue.x * Time.deltaTime,
-                                                         transform.position.y - zoomValue.y * Time.deltaTime,
-                                                         transform.position.z + zoomValue.z * Time.deltaTime);
+                Camera.main.fieldOfView += zoomValue;
             }
 
-            pos.y = Mathf.Clamp(transform.position.y, CamMinZoomValue.y, CamMaxZoomValue.y);
-            pos.x = Mathf.Clamp(transform.position.x, CamMinZoomValue.x, CamMaxZoomValue.x);
-            pos.z = Mathf.Clamp(transform.position.z, CamMinZoomValue.z, CamMaxZoomValue.z);
-
-            Camera.main.transform.position = pos;
+            Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, CamMinZoomValue, CamMaxZoomValue);
 
         }
     }
