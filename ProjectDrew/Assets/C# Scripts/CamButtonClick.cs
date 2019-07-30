@@ -40,7 +40,7 @@ public class CamButtonClick : MonoBehaviour
         camFollow.IsMovementAllowedRight = false;
 
         lastTvalue = camFollow.tParam;
-        camFollow.tParam = 1;
+        //camFollow.tParam = 1;
 
         cam_zoom.enabled = true;
         camFollow.enabled = false;
@@ -60,9 +60,8 @@ public class CamButtonClick : MonoBehaviour
         camFollow.IsMovementAllowedLeft = false;
 
         lastTvalue = camFollow.tParam;
-        camFollow.tParam = 1;
+        //camFollow.tParam = 1;
 
-        cam_zoom.enabled = true;
-        camFollow.enabled = false;
+       
     }
 }

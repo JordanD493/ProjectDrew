@@ -81,7 +81,7 @@ public class CameraFollow : MonoBehaviour
 
     private IEnumerator FollowTheRightRoute(int wayPointNumber)
     {
-        IsMovementAllowedRight = false;
+        //IsMovementAllowedRight = false;
 
         Vector3 p0 = wayPoints[wayPointNumber].GetChild(0).position;
         Vector3 p1 = wayPoints[wayPointNumber].GetChild(1).position;
@@ -129,7 +129,7 @@ public class CameraFollow : MonoBehaviour
 
         //// when player clicks right
         //tParam += Time.deltaTime * camMovementSpeed;
-
+         
         //// when player clicks left
         //tParam -= Time.deltaTime * camMovementSpeed;
 
@@ -148,7 +148,7 @@ public class CameraFollow : MonoBehaviour
 
     private IEnumerator FollowTheLeftRoute(int wayPointNumber)
     {
-        IsMovementAllowedLeft = false;
+        //IsMovementAllowedLeft = false;
 
         if (wayPointNumber > 0)
         {
