@@ -12,25 +12,39 @@ public class CamButtonClick : MonoBehaviour
     CameraFollow camFollow;
 
     private CameraZoom cam_zoom;
-	// Use this for initialization
-	void Start ()
+
+    private float GlobalRightTValue;
+
+    private float GlobalLeftTValue;
+
+    private bool IS_Right_Clicked;
+
+    private bool IS_Left_Clicked;
+
+
+
+
+    // Use this for initialization
+    void Start ()
     {
         camFollow = FindObjectOfType<CameraFollow>();
         cam_zoom = FindObjectOfType<CameraZoom>();
         lastTvalue = 0;
+        GlobalRightTValue = 0;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		
-	}
+      
+
+    }
 
     public void OnRightClick()
     {
-        cam_zoom.enabled = false;
-        camFollow.enabled = true;
+       
         camFollow.IsMovementAllowedRight = true;
+
        
 
     }
@@ -39,19 +53,27 @@ public class CamButtonClick : MonoBehaviour
     {
         camFollow.IsMovementAllowedRight = false;
 
+
+       
+
+        lastTvalue = GlobalRightTValue;
+
         lastTvalue = camFollow.tParam;
+
+
         camFollow.tParam = 1;
 
-        cam_zoom.enabled = true;
-        camFollow.enabled = false;
-
+       
     }
 
     public void OnLeftClick()
     {
-        cam_zoom.enabled = false;
-        camFollow.enabled = true;
+        
         camFollow.IsMovementAllowedLeft= true;
+
+        lastTvalue = GlobalLeftTValue;
+
+     
 
     }
 
@@ -59,7 +81,15 @@ public class CamButtonClick : MonoBehaviour
     {
         camFollow.IsMovementAllowedLeft = false;
 
+      
+
+        lastTvalue = GlobalRightTValue;
+
+        //lastTvalue = camFollow.tParam;
+
         lastTvalue = camFollow.tParam;
+
+
         camFollow.tParam = 1;
 
        

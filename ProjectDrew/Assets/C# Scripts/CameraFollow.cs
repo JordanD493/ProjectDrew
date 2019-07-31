@@ -57,6 +57,12 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
+
+        if (IsMovementAllowedLeft)
+        {
+           StartCoroutine( FollowTheLeftRoute(waytoGO,  camButtonClick.lastTvalue));
+        }
+
         
 		if(IsMovementAllowedRight)
         {
@@ -66,12 +72,6 @@ public class CameraFollow : MonoBehaviour
 
         }
       
-
-        if (IsMovementAllowedLeft)
-        {
-           StartCoroutine( FollowTheLeftRoute(waytoGO,  camButtonClick.lastTvalue));
-        }
-
         cam.transform.LookAt(Target);
         camCurrentPosition = cam.transform.position;
         //CamPositionText.text = camCurrentPosition.ToString();
@@ -85,13 +85,16 @@ public class CameraFollow : MonoBehaviour
     {
         IsMovementAllowedRight = false;
 
+      
+
+
         Vector3 p0 = wayPoints[wayPointNumber].GetChild(0).position;
         Vector3 p1 = wayPoints[wayPointNumber].GetChild(1).position;
         Vector3 p2 = wayPoints[wayPointNumber].GetChild(2).position;
         Vector3 p3 = wayPoints[wayPointNumber].GetChild(3).position;
 
 
-        tParam = camButtonClick.lastTvalue;
+        tParam = wayPointValue;
       
         while (tParam < 1)
         {
@@ -150,7 +153,7 @@ public class CameraFollow : MonoBehaviour
         Vector3 p2 = wayPoints[wayPointNumber].GetChild(2).position;
         Vector3 p3 = wayPoints[wayPointNumber].GetChild(3).position;
 
-        tParam = wayPointValue;
+        tParam = wayPointValue; 
 
 
         while (tParam < 1)
