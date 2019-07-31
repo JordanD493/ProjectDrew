@@ -29,8 +29,8 @@ public class ChangeLevelAtEndGoal : MonoBehaviour {
     {
         if(collision.tag == "Player")
         {
-            
-           
+            SceneManager.LoadScene(LevelName, LoadSceneMode.Single);
+
         }
     }
 }
