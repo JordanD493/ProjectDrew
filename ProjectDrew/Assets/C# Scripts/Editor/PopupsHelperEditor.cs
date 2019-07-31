@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(PopupsHelper))]
+[CustomEditor(typeof(PopupsManager))]
 public class PopupsHelperEditor : Editor {
 
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
 
-        PopupsHelper popupHelper = (PopupsHelper)target;
+        PopupsManager popupHelper = (PopupsManager)target;
         
         if (GUILayout.Button("Fold all popups"))
         {

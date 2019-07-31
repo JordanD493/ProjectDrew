@@ -33,8 +33,6 @@ public class CameraFollow : MonoBehaviour
 
     private float TimeStartLerping;
 
-    private float timeTakenDuringLerp = 1f;
-
     private Vector3 p0;
 
     private Vector3 p3;
@@ -83,7 +81,7 @@ public class CameraFollow : MonoBehaviour
 
     private IEnumerator FollowTheRightRoute(int wayPointNumber)
     {
-        IsMovementAllowedRight = false;
+        //IsMovementAllowedRight = false;
 
         Vector3 p0 = wayPoints[wayPointNumber].GetChild(0).position;
         Vector3 p1 = wayPoints[wayPointNumber].GetChild(1).position;
@@ -110,11 +108,11 @@ public class CameraFollow : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        
-           // p0 = camCurrentPosition;
-     
 
-        
+        // p0 = camCurrentPosition;
+
+
+
 
 
         //waytoGO += 1;
@@ -126,12 +124,12 @@ public class CameraFollow : MonoBehaviour
 
 
 
-        //IsMovementAllowed = true;
+        //IsMovementAllowedRight = true;
         //IsMovementAllowed = false;
 
         //// when player clicks right
         //tParam += Time.deltaTime * camMovementSpeed;
-
+         
         //// when player clicks left
         //tParam -= Time.deltaTime * camMovementSpeed;
 
@@ -150,7 +148,7 @@ public class CameraFollow : MonoBehaviour
 
     private IEnumerator FollowTheLeftRoute(int wayPointNumber)
     {
-        IsMovementAllowedLeft = false;
+        //IsMovementAllowedLeft = false;
 
         if (wayPointNumber > 0)
         {
@@ -181,14 +179,14 @@ public class CameraFollow : MonoBehaviour
 
        
 
-        waytoGO += 1;
+        //waytoGO += 1;
 
-        if (waytoGO > wayPoints.Length - 1)
-        {
-            waytoGO = 0;
-        }
+        //if (waytoGO > wayPoints.Length - 1)
+        //{
+        //    waytoGO = 0;
+        //}
 
-        //IsMovementAllowed = true;
+        //IsMovementAllowedLeft = true;
         //IsMovementAllowed = false;
 
     }
