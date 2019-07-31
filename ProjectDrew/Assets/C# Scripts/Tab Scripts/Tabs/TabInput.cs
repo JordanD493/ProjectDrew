@@ -68,7 +68,7 @@ public class TabInput : MonoBehaviour
                 currentCharge += args.MouseMovementMagnitude;
                 if (Mathf.Abs(currentCharge) >= chargeNeeded)
                 {
-                    Debug.Log("charge ready!");
+                    //Debug.Log("charge ready!");
                     OnChargeReady();
                 }
             }
