@@ -18,6 +18,12 @@ public class CamMoveAtEndGoal : MonoBehaviour
     [SerializeField]
     private GameObject audio2;
 
+    [SerializeField]
+    private GameObject Player1;
+
+    [SerializeField]
+    private GameObject Player2;
+
 
     // Use this for initialization
     void Start ()
@@ -45,6 +51,9 @@ public class CamMoveAtEndGoal : MonoBehaviour
 
             audio1.SetActive(false);
             audio2.SetActive(true);
+
+            Player1.SetActive(false);
+            Player2.SetActive(true);
 
 
         }
