@@ -151,8 +151,7 @@ public class Player_Movement : MonoBehaviour
 
         if (collision.gameObject.tag == "EndGoal")
         {
-            print("Reached End");
-            //pageAnim.enabled = true;
+            print("Reached End");           
             Mat.IsFading = true;
             this.gameObject.SetActive(false);
         }

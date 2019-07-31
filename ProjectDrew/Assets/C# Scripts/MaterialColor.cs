@@ -18,6 +18,8 @@ public class MaterialColor : MonoBehaviour
     private float MaxShaderVaue;
 
     internal bool IsFading = false;
+
+    internal bool IsChangingScene = false;
    
     // Use this for initialization
     void Start ()
@@ -60,7 +62,8 @@ public class MaterialColor : MonoBehaviour
             if (ShaderColorValue >= 100f)
             {
                 ShaderColorValue = 100f;
-                //IsFading = false;
+                IsChangingScene = true;
+
             }
         }
     }

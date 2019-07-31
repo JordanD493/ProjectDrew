@@ -47,19 +47,21 @@ public class CameraFollow : MonoBehaviour
     
 
         waytoGO = 0;
-               
+        
+
 
     }
 
-  
+
 
     // Update is called once per frame
     void Update ()
     {
+        
 		if(IsMovementAllowedRight)
         {
             // only if mouse was relea
-            StartCoroutine( FollowTheRightRoute(waytoGO));
+            StartCoroutine( FollowTheRightRoute(waytoGO, camButtonClick.lastTvalue));
             
 
         }
@@ -67,7 +69,7 @@ public class CameraFollow : MonoBehaviour
 
         if (IsMovementAllowedLeft)
         {
-           StartCoroutine( FollowTheLeftRoute(waytoGO));
+           StartCoroutine( FollowTheLeftRoute(waytoGO,  camButtonClick.lastTvalue));
         }
 
         cam.transform.LookAt(Target);
@@ -79,17 +81,18 @@ public class CameraFollow : MonoBehaviour
 
    
 
-    private IEnumerator FollowTheRightRoute(int wayPointNumber)
+    private IEnumerator FollowTheRightRoute(int wayPointNumber, float wayPointValue)
     {
-        //IsMovementAllowedRight = false;
+        IsMovementAllowedRight = false;
 
         Vector3 p0 = wayPoints[wayPointNumber].GetChild(0).position;
         Vector3 p1 = wayPoints[wayPointNumber].GetChild(1).position;
         Vector3 p2 = wayPoints[wayPointNumber].GetChild(2).position;
         Vector3 p3 = wayPoints[wayPointNumber].GetChild(3).position;
 
-        tParam = camButtonClick.lastTvalue;
 
+        tParam = camButtonClick.lastTvalue;
+      
         while (tParam < 1)
         {
             tParam += Time.deltaTime * camMovementSpeed;
@@ -115,40 +118,26 @@ public class CameraFollow : MonoBehaviour
 
 
 
-        //waytoGO += 1;
+        waytoGO += 1;
 
-        //if (waytoGO > wayPoints.Length - 1)
-        //{
-        //    waytoGO = 0;
-        //}
+        if (waytoGO > wayPoints.Length - 1)
+        {
+            waytoGO = 0;
+            tParam = 0;
+
+        }
 
 
 
         //IsMovementAllowedRight = true;
         //IsMovementAllowed = false;
 
-        //// when player clicks right
-        //tParam += Time.deltaTime * camMovementSpeed;
-         
-        //// when player clicks left
-        //tParam -= Time.deltaTime * camMovementSpeed;
-
-        //Animator a = GetComponent<Animator>();
-
-        //a.Play(0, 0, a.GetCurrentAnimatorClipInfo(0).Length * PERCENTAGE_OF_THE_WAY)
-
-        //UpdatePOsition(tParam, new spline point position)
-        //  {
-        //    // new camera position = Vector3.Lerp(current position, spline point position, t)
-        //}
-
-
 
     }
 
-    private IEnumerator FollowTheLeftRoute(int wayPointNumber)
+    private IEnumerator FollowTheLeftRoute(int wayPointNumber, float wayPointValue)
     {
-        //IsMovementAllowedLeft = false;
+        IsMovementAllowedLeft = false;
 
         if (wayPointNumber > 0)
         {
@@ -161,30 +150,33 @@ public class CameraFollow : MonoBehaviour
         Vector3 p2 = wayPoints[wayPointNumber].GetChild(2).position;
         Vector3 p3 = wayPoints[wayPointNumber].GetChild(3).position;
 
-        tParam = camButtonClick.lastTvalue;
+        tParam = wayPointValue;
+
 
         while (tParam < 1)
         {
-            tParam += Time.deltaTime * camMovementSpeed;
+           
+            tParam -= Time.deltaTime * camMovementSpeed;
 
-            cam.transform.position = Mathf.Pow(1 - tParam, 3) * p3 +
-                            3 * Mathf.Pow(1 - tParam, 2) * tParam * p2 +
-                            3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p1 +
-                            Mathf.Pow(tParam, 3) * p0;
+            cam.transform.position = Mathf.Pow(1 - tParam, 3) * p0 +
+                            3 * Mathf.Pow(1 - tParam, 2) * tParam * p1 +
+                            3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p2 +
+                            Mathf.Pow(tParam, 3) * p3;
 
             
 
             yield return new WaitForEndOfFrame();
         }
 
-       
 
-        //waytoGO += 1;
 
-        //if (waytoGO > wayPoints.Length - 1)
-        //{
-        //    waytoGO = 0;
-        //}
+        waytoGO += 1;
+
+        if (waytoGO > wayPoints.Length - 1)
+        {
+            waytoGO = 0;
+            tParam = 0;
+        }
 
         //IsMovementAllowedLeft = true;
         //IsMovementAllowed = false;

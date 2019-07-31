@@ -7459,6 +7459,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4944178472632750, guid: 96ac8ae916deca441913aa16da359108,
     type: 2}
   m_PrefabInternal: {fileID: 1125390288}
+--- !u!1 &2093668687 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1555560146783042, guid: 5b57257f45b7f3e4aab9ae4355092060,
+    type: 2}
+  m_PrefabInternal: {fileID: 1042760275}
+--- !u!114 &2093668693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2093668687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c371af3f9b8451f428b18410f1224ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelName: JORDAN - LAB
 --- !u!4 &2097060258 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4944178472632750, guid: 96ac8ae916deca441913aa16da359108,
