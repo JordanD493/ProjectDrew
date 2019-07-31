@@ -90,7 +90,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3699,7 +3699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &534287731
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6210,7 +6210,7 @@ GameObject:
   - component: {fileID: 1060251620}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6246,7 +6246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22d270c83889a74988c2ea48e2ddb92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 1
+  maxSpeed: 3
   acceleration: 9
   jumpStrength: 0
   RampSpeed: 0
@@ -6697,7 +6697,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1147845341}
   m_LocalRotation: {x: -0.13705821, y: 0.103439115, z: -0.03237287, w: -0.9846154}
-  m_LocalPosition: {x: 4.5, y: 11.2, z: -16.5}
+  m_LocalPosition: {x: 5.08, y: 11.2, z: -16.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 196987278}
@@ -8401,7 +8401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1462043294
 Rigidbody2D:
   serializedVersion: 4
@@ -10098,7 +10098,7 @@ Transform:
   m_GameObject: {fileID: 1701157765}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
   m_LocalPosition: {x: -6.19, y: 1.48, z: 0.73}
-  m_LocalScale: {x: 2.243547, y: 2.7278795, z: 0.43030247}
+  m_LocalScale: {x: 2.4972086, y: 2.7278795, z: 0.43030247}
   m_Children: []
   m_Father: {fileID: 1791724571}
   m_RootOrder: 0
@@ -10202,6 +10202,28 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1708293436}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1729907723 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1105936581280594, guid: e6529e82b191167418a59f618ce68a6f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1783233231}
+--- !u!114 &1729907724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729907723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d806cee98cc924f41a0ea191089bc4ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cam: {fileID: 1147845344}
+  FinalCamPosition: {x: 26.97, y: 11.2, z: -16.5}
+  audio1: {fileID: 2072858078}
+  audio2: {fileID: 534287730}
+  Player1: {fileID: 1060251614}
+  Player2: {fileID: 1462043293}
 --- !u!4 &1731237747 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4417262780846628, guid: 2fe484fb1a7d98c4eadc399ec15d0a66,
@@ -10953,6 +10975,11 @@ Prefab:
     - target: {fileID: 1105936581280594, guid: e6529e82b191167418a59f618ce68a6f, type: 2}
       propertyPath: m_Name
       value: Goal (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 58326314799436176, guid: e6529e82b191167418a59f618ce68a6f,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6529e82b191167418a59f618ce68a6f, type: 2}
@@ -13059,7 +13086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &2072858079
 AudioSource:
   m_ObjectHideFlags: 0
