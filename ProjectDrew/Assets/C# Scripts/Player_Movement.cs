@@ -95,7 +95,7 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown("m"))
         {
             movementActivated = true;
-            anim.SetBool("isWalking", true);
+            //anim.SetBool("isWalking", true);
         }
 
         if (Input.GetKeyDown("r"))
@@ -149,12 +149,12 @@ public class Player_Movement : MonoBehaviour
             print("Jumped");
         }
 
-        if (collision.gameObject.tag == "EndGoal")
-        {
-            print("Reached End");           
-            Mat.IsFading = true;
-            this.gameObject.SetActive(false);
-        }
+        //if (collision.gameObject.tag == "EndGoal")
+        //{
+        //    print("Reached End");           
+        //    Mat.IsFading = true;
+        //    this.gameObject.SetActive(false);
+        //}
     }
 
 
@@ -166,7 +166,7 @@ public class Player_Movement : MonoBehaviour
     private void OnMouseDown()
     {
         movementActivated = true;
-        anim.SetBool("isWalking", true);
+       //anim.SetBool("isWalking", true);
     }
 
     //private void OnCollisionExit(Collision collision)

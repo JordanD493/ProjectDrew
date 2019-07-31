@@ -19,7 +19,7 @@ public class ChangeLevelAtEndGoal : MonoBehaviour {
     {
             if(Mat_Color.IsChangingScene == true)
             {
-                SceneManager.LoadScene(LevelName, LoadSceneMode.Single);
+               
 
             }
         
@@ -29,8 +29,8 @@ public class ChangeLevelAtEndGoal : MonoBehaviour {
     {
         if(collision.tag == "Player")
         {
-            
-           
+
+            SceneManager.LoadScene(LevelName, LoadSceneMode.Single);
         }
     }
 }
