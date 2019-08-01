@@ -7,7 +7,7 @@ public class TabsManager : MonoBehaviour {
     
     [SerializeField] private CrystallBallInput crystalBall;
     [Header("")]
-    [SerializeField] private List<TabVFX> importantTabs;
+    [SerializeField] private List<TabParticleEffects> importantTabs;
 
     // Use this for initialization
     void Start () {
@@ -16,7 +16,7 @@ public class TabsManager : MonoBehaviour {
 
     protected void OnCrystalBallTouch(object source, EventArgs args)
     {
-        foreach  (TabVFX tabVFX in importantTabs)
+        foreach  (TabParticleEffects tabVFX in importantTabs)
         {
             tabVFX.HighlightAsHint();
         }
