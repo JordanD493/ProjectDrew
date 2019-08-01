@@ -39,6 +39,8 @@ public class CameraFollow : MonoBehaviour
 
     private CamButtonClick camButtonClick;
 
+    private float WayPointValue;
+
     // Use this for initialization
     void Start ()
     {
@@ -47,8 +49,8 @@ public class CameraFollow : MonoBehaviour
     
 
         waytoGO = 0;
-        
 
+        
 
     }
 
@@ -74,12 +76,15 @@ public class CameraFollow : MonoBehaviour
       
         cam.transform.LookAt(Target);
         camCurrentPosition = cam.transform.position;
+
         //CamPositionText.text = camCurrentPosition.ToString();
 
+        WayPointValue = camButtonClick.lastTvalue;
+        
 
     }
 
-   
+
 
     private IEnumerator FollowTheRightRoute(int wayPointNumber, float wayPointValue)
     {
