@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: MAT_BookCoverGraph
+  m_Shader: {fileID: 4800000, guid: 31f362ce8fb648147b2f85c6fdf7b8b9, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _NormalCreate_4B480CA6_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalCreate_588AFA00_Texture:
+        m_Texture: {fileID: 2800000, guid: b8df60986b21aaf468f91cd3d35fa51b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalCreate_B84C3496_Texture:
+        m_Texture: {fileID: 2800000, guid: 4496faace4a3ae24a90b6df87699e1e2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_6C3FDE81_Texture:
+        m_Texture: {fileID: 2800000, guid: 01153151cbf31ae47a330f6a99ed27b3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_9254F54F_Texture:
+        m_Texture: {fileID: 2800000, guid: c968df319fbb64c4e95061ec22a04a95, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_EE560900_Texture:
+        m_Texture: {fileID: 2800000, guid: 0d14954091ec5fd40a1fb8afe2898a26, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
