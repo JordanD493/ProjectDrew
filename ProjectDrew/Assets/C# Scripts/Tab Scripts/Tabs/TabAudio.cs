@@ -12,7 +12,7 @@ public class TabAudio : MonoBehaviour
     [Header("On Snap Reached")]
     [SerializeField] private AudioClip clip1;
     [SerializeField, Range(0, 1)] private float volume1 = 1;
-    [Header("On Movement")]
+    [Header("On Selection Begin")]
     [SerializeField] private AudioClip clip2;
     [SerializeField, Range(0, 1)] private float volume2 = 1;
     [Header("On Release")]
