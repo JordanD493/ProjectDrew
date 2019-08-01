@@ -25,7 +25,17 @@ ModelImporter:
     9500000: //RootNode
     13700000: polySurface3
     13700002: polySurface4
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BLueFlag
+    second: {fileID: 2100000, guid: 60b312df9e6676b4c8d0329f726903c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pole
+    second: {fileID: 2100000, guid: 60b312df9e6676b4c8d0329f726903c3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
