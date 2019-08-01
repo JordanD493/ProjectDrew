@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - EndGoal
+  - Wall
+  - ResetWall
   layers:
   - Default
   - TransparentFX

@@ -35,6 +35,9 @@ public class Player_Movement : MonoBehaviour
     [SerializeField]
     private Animator pageAnim;
 
+    [SerializeField]
+    private float rotationSpeed;
+
     private MaterialColor Mat;
     
     // Use this for initialization
@@ -98,29 +101,7 @@ public class Player_Movement : MonoBehaviour
             anim.SetBool("isWalking", true);
         }
 
-        if (Input.GetKeyDown("r"))
-        {
-            //  DestroyAll();
-            foreach (GameObject gameobject  in allObjects)
-            {
-                do
-                {
-                    counter++;
-
-                    gameObject.transform.parent = null;
-                   print("Detaching");
-                } while (counter<=numberofTotalObjects);
-                   
-            }
-
-            if (counter >= numberofTotalObjects)
-            {
-                SceneManager.LoadScene(scene.name);
-
-            }
-            
-        }
-
+       
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -166,31 +147,29 @@ public class Player_Movement : MonoBehaviour
     private void OnMouseDown()
     {
         movementActivated = true;
-       anim.SetBool("isWalking", true);
+        anim.SetBool("isWalking", true);
     }
 
-    //private void OnCollisionExit(Collision collision)
-    //{
-    //    if(collision.gameObject.tag == "JumpObject" && hasAlreadyJumped == false)
-    //    {
-    //        hasAlreadyJumped = true;
-    //    }
-    //}
+   public void RotatePlayerAround()
+   {
+        transform.rotation = new Quaternion(0, -180, 0, 0);
 
-    /* Attempt to resolve animation skew on level reset
+        acceleration = 9;
+        rb.AddForce(new Vector2(1, 0) * acceleration);
 
-    private void DestroyAll()
-    {
-        Debug.Log("KillAll");
-        GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
+        anim.SetBool("isWalking", true);
 
-        for (int i = 0; i < GameObjects.Length; i++)
-        {
-            Destroy(GameObjects[i]);
-        }
     }
 
-    */
+   public void RotatePlayeToOrigialPosition()
+   {
+        transform.rotation = new Quaternion(0, 0, 0, 0);
+
+        acceleration = 0;
+
+        anim.SetBool("isWalking", false);
+
+   }
 
 }
     
