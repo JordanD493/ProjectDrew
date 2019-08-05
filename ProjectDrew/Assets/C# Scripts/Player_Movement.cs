@@ -7,7 +7,7 @@ public class Player_Movement : MonoBehaviour
 {
 
     internal Rigidbody2D rb;
-    private bool movementActivated;
+    internal bool movementActivated;
     //bool hasAlreadyJumped = false; - unity says this is assigned but never used? temporarily commented it out to get rid of it in the console - MB 
 
     [SerializeField]
@@ -52,14 +52,7 @@ public class Player_Movement : MonoBehaviour
     // Use this for physics related code
     void FixedUpdate()
     {
-        if (movementActivated)
-        {
-            if (rb.velocity.magnitude <= maxSpeed)
-            {
-                rb.AddForce(new Vector2(1, 0) * acceleration);
-
-            }
-        }
+       
     }
 
     // Update is called once per frame
@@ -95,9 +88,19 @@ public class Player_Movement : MonoBehaviour
 
         //}
 
+        if (movementActivated)
+        {
+            if (rb.velocity.magnitude <= maxSpeed)
+            {
+                rb.AddForce(new Vector2(1, 0) * acceleration);
+
+            }
+        }
+
         if (Input.GetKeyDown("m"))
         {
             movementActivated = true;
+            acceleration = -9; 
             anim.SetBool("isWalking", true);
         }
 
@@ -147,6 +150,7 @@ public class Player_Movement : MonoBehaviour
     private void OnMouseDown()
     {
         movementActivated = true;
+        acceleration = -9;
         anim.SetBool("isWalking", true);
     }
 
@@ -154,7 +158,7 @@ public class Player_Movement : MonoBehaviour
    {
         transform.rotation = new Quaternion(0, -180, 0, 0);
 
-        acceleration = 5;
+        acceleration = -(acceleration + 4);
         rb.AddForce(new Vector2(1, 0) * acceleration);
 
         anim.SetBool("isWalking", true);
@@ -163,14 +167,13 @@ public class Player_Movement : MonoBehaviour
 
    public void RotatePlayeToOrigialPosition()
    {
-        acceleration = 0;
-
-        rb.AddForce(new Vector2(1, 0) * acceleration);
+        movementActivated = false;
 
         transform.rotation = new Quaternion(0, 0, 0, 0);
 
         anim.SetBool("isWalking", false);
 
+        
     }
 
 }

@@ -19,7 +19,11 @@ public class RayCastForPlayer : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        Raycast();	
+        if(player.movementActivated == true)
+        {
+            Raycast();	
+
+        }
 	}
 
     private void RayEmitter()
@@ -59,7 +63,8 @@ public class RayCastForPlayer : MonoBehaviour
                 if (hit.collider.gameObject.tag == "ResetWall")
                 {
                     player.RotatePlayeToOrigialPosition();
-                    //Reached_Cliff = false;
+                    Reached_Cliff = false;
+                    
                 }
 
             }
