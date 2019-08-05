@@ -124,5 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa85fc27f1d2bf94fb3bec027f68d1b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mat: {fileID: 2100000, guid: 5cea1020275c0f8419263f27aa36863a, type: 2}
+  Mat: {fileID: 2100000, guid: 02a2f22b2471c38419d16bf07c407e4e, type: 2}
   AnimationMaxMatTime: 2

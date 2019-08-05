@@ -13025,7 +13025,9 @@ MonoBehaviour:
   endLimit: {fileID: 1258181389}
   slideSpeed: 1.7
   initialPosition: 0
-  snapPoints: []
+  snapPoints:
+  - 0
+  - 1
   snapSpeed: 1
 --- !u!4 &1077736047
 Transform:
@@ -20143,6 +20145,7 @@ GameObject:
   - component: {fileID: 1736907728}
   - component: {fileID: 1736907727}
   - component: {fileID: 1736907726}
+  - component: {fileID: 1736907730}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: ResetWall
@@ -20217,6 +20220,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1736907730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1736907725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6d2d9f9ace9074e86f4557e43502f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisControlsMe: {fileID: 1077736046}
+  activeWhenTabAt: 0
 --- !u!1 &1741883898
 GameObject:
   m_ObjectHideFlags: 0
@@ -24675,6 +24691,7 @@ GameObject:
   - component: {fileID: 2116543371}
   - component: {fileID: 2116543370}
   - component: {fileID: 2116543369}
+  - component: {fileID: 2116543373}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Wall
@@ -24749,6 +24766,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2116543373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2116543368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6d2d9f9ace9074e86f4557e43502f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisControlsMe: {fileID: 1077736046}
+  activeWhenTabAt: 0
 --- !u!1 &2129442964
 GameObject:
   m_ObjectHideFlags: 0
