@@ -154,7 +154,7 @@ public class Player_Movement : MonoBehaviour
    {
         transform.rotation = new Quaternion(0, -180, 0, 0);
 
-        acceleration = 9;
+        acceleration = 5;
         rb.AddForce(new Vector2(1, 0) * acceleration);
 
         anim.SetBool("isWalking", true);
@@ -163,13 +163,15 @@ public class Player_Movement : MonoBehaviour
 
    public void RotatePlayeToOrigialPosition()
    {
-        transform.rotation = new Quaternion(0, 0, 0, 0);
-
         acceleration = 0;
+
+        rb.AddForce(new Vector2(1, 0) * acceleration);
+
+        transform.rotation = new Quaternion(0, 0, 0, 0);
 
         anim.SetBool("isWalking", false);
 
-   }
+    }
 
 }
     

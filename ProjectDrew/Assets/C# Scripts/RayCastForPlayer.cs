@@ -8,6 +8,8 @@ public class RayCastForPlayer : MonoBehaviour
     private float distance;
 
     private Player_Movement player;
+
+    private bool Reached_Cliff = false;
 	// Use this for initialization
 	void Start ()
     {
@@ -31,30 +33,39 @@ public class RayCastForPlayer : MonoBehaviour
       
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, Vector3.left, out hit, distance))
+        if(Reached_Cliff == false)
         {
+            if (Physics.Raycast(transform.position, Vector3.left, out hit, distance))
+            {
            
 
-            if(hit.collider.gameObject.tag == "Wall")
-            {
-                player.RotatePlayerAround();
+                if(hit.collider.gameObject.tag == "Wall")
+                {
+                    player.RotatePlayerAround();
+
+                    Reached_Cliff = true;
+                }
+
+
             }
 
+        }
+        else         
+        {
+            if (Physics.Raycast(transform.position,-Vector3.left , out hit, distance))
+            {
+                print("Found an object - distance: " + hit.distance);
+
+                if (hit.collider.gameObject.tag == "ResetWall")
+                {
+                    player.RotatePlayeToOrigialPosition();
+                    //Reached_Cliff = false;
+                }
+
+            }
 
         }
-
-         
        
-        //if (Physics.Raycast(transform.position, , out hit, distance))
-        //{
-        //        print("Found an object - distance: " + hit.distance);
-
-        //        if (hit.collider.gameObject.tag == "ResetWall")
-        //        {
-        //            player.RotatePlayeToOrigialPosition();
-        //        }
-
-        //}
 
       
 
