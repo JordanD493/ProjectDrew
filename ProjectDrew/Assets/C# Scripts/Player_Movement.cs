@@ -92,7 +92,7 @@ public class Player_Movement : MonoBehaviour
         {
             if (rb.velocity.magnitude <= maxSpeed)
             {
-                rb.AddForce(new Vector2(1, 0) * acceleration);
+                rb.AddForce(new Vector2(-1, 0) * acceleration);
 
             }
         }
@@ -100,7 +100,7 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown("m"))
         {
             movementActivated = true;
-            acceleration = -9; 
+            acceleration = 9; 
             anim.SetBool("isWalking", true);
         }
 

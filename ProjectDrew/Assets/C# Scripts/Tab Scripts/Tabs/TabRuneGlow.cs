@@ -6,20 +6,23 @@ using System;
 
 [RequireComponent(typeof(TabInput))]
 [RequireComponent(typeof(TabMovement))]
-public class TabRuneGlow : MonoBehaviour {
+public class TabRuneGlow : MonoBehaviour
+{
 
     [SerializeField] private float runeGlowChangeSpeed = 2;
+    [SerializeField, Range(0, 1)] private float minGlow = 0.2f;
 
     private TabInput tabInput;
     private TabMovement tabMovement;
     private Material material;
 
     private bool lastSwitchAction = false;
-    private float runeGlowAmount = 0;
+    private float runeGlowAmount;
     private bool runeGlowMax = false;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         tabInput = GetComponent<TabInput>();
         tabMovement = GetComponent<TabMovement>();
         material = GetComponent<Renderer>().material;
@@ -29,6 +32,7 @@ public class TabRuneGlow : MonoBehaviour {
         tabInput.ChargeReady += OnChargeReady;
         tabMovement.SnapReached += OnSnapReached;
 
+        runeGlowAmount = minGlow;
         UpdateGlowAmount();
     }
 
@@ -58,13 +62,13 @@ public class TabRuneGlow : MonoBehaviour {
         else
         {
             runeGlowMax = false;
-            while (runeGlowAmount > 0 && lastSwitchAction == false)
+            while (runeGlowAmount > minGlow && lastSwitchAction == false)
             {
                 runeGlowAmount -= Time.deltaTime * runeGlowChangeSpeed;
                 UpdateGlowAmount();
                 yield return null;
             }
-            runeGlowAmount = 0;
+            runeGlowAmount = minGlow;
         }
         yield return null;
     }

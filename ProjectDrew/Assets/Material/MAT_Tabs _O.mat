@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: MAT_Tabs 1
+  m_Name: MAT_Tabs _O
   m_Shader: {fileID: 4800000, guid: 0a07df6f21b5c6048a35e92b34dcb420, type: 3}
   m_ShaderKeywords: BOOLEAN_6B53A9F_ON
   m_LightmapFlags: 4
@@ -23,7 +23,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture_A2F02F90:
-        m_Texture: {fileID: 2800000, guid: a8c67609c0a0e3f4e876b686977e364e, type: 3}
+        m_Texture: {fileID: 2800000, guid: d3b8f1c4928709942965a4c2d4678312, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture_AF899FEB:

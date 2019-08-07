@@ -28,7 +28,7 @@ public class RayCastForPlayer : MonoBehaviour
 
     private void RayEmitter()
     {
-        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * (distance), Color.red);
+        Debug.DrawRay(transform.position, transform.TransformDirection(-Vector3.left) * (distance), Color.red);
     }
 
     private void Raycast()
@@ -39,7 +39,7 @@ public class RayCastForPlayer : MonoBehaviour
 
         if(Reached_Cliff == false)
         {
-            if (Physics.Raycast(transform.position, Vector3.left, out hit, distance))
+            if (Physics.Raycast(transform.position, -Vector3.left, out hit, distance))
             {
            
 
@@ -56,7 +56,7 @@ public class RayCastForPlayer : MonoBehaviour
         }
         else         
         {
-            if (Physics.Raycast(transform.position,-Vector3.left , out hit, distance))
+            if (Physics.Raycast(transform.position,Vector3.left , out hit, distance))
             {
                 print("Found an object - distance: " + hit.distance);
 
