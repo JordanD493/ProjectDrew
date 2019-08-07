@@ -701,7 +701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beginLimit: {fileID: 349937917}
   endLimit: {fileID: 1618285427}
-  slideSpeed: 1
+  slideSpeed: 2.5
   initialPosition: 0
   snapPoints: []
   snapSpeed: 1
@@ -2386,7 +2386,7 @@ Prefab:
       objectReference: {fileID: 2075438988}
     - target: {fileID: 1325423666209116, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4657285320377266, guid: 5b57257f45b7f3e4aab9ae4355092060, type: 2}
       propertyPath: m_LocalPosition.y
