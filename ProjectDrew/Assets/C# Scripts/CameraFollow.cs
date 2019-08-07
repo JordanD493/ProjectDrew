@@ -79,7 +79,7 @@ public class CameraFollow : MonoBehaviour
 
         //CamPositionText.text = camCurrentPosition.ToString();
 
-        WayPointValue = camButtonClick.lastTvalue;
+        //WayPointValue = camButtonClick.lastTvalue;
         
 
     }

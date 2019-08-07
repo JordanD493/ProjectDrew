@@ -118,6 +118,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4751642138720930}
   - component: {fileID: 95403773308495090}
+  - component: {fileID: 114605228299823766}
+  - component: {fileID: 114580006484420080}
   m_Layer: 0
   m_Name: Musicians
   m_TagString: Untagged
@@ -294,8 +296,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1457088152043214}
   m_LocalRotation: {x: 6.123234e-17, y: 1, z: -6.123234e-17, w: -5.0532154e-16}
-  m_LocalPosition: {x: -4.68, y: 2.39, z: -13.82}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalPosition: {x: 2.33, y: 2.39, z: -14.08}
+  m_LocalScale: {x: -0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4194622453610480}
   m_Father: {fileID: 0}
@@ -599,3 +601,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114580006484420080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1457088152043214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e298051b5d87645bededaad39867bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114605228299823766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1457088152043214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 310ac7e3fdb913148aedee48dff7ce9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tab: {fileID: 0}
