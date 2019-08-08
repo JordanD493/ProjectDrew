@@ -16,7 +16,7 @@ MonoBehaviour:
   m_SupportsVertexLight: 1
   m_RequireDepthTexture: 1
   m_RequireSoftParticles: 1
-  m_SupportsHDR: 0
+  m_SupportsHDR: 1
   m_MSAA: 4
   m_RenderScale: 1
   m_ShadowType: 1
