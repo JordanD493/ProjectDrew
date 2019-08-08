@@ -23,11 +23,9 @@ public class TabParticleEffects : MonoBehaviour
     [SerializeField] private float shakeMagnitude = 0.1f;
     [SerializeField] private float shakeSpeed = 1.0f;
 
-    private Material material;
-
     private bool runeActive;
     private float visibilityValue = 0;
-    
+
     private TabInput tabInput;
     private TabMovement tabMovement;
 
@@ -41,35 +39,45 @@ public class TabParticleEffects : MonoBehaviour
         tabInput.SelectionRelease += OnSelectionRelease;
         tabInput.ChargeReady += OnChargeReady;
         tabMovement.SnapReached += OnSnapReached;
-
-        material = GetComponent<Renderer>().material;
-        //initialColor = material.color;
     }
 
     protected void OnSelectionBegin(object source, EventArgs args)
     {
-        //material.color = selectedColor;
-        onMovement.Play();
+        
         runeActive = true;
     }
 
     protected void OnChargeReady(object source, EventArgs args)
     {
-        onChargeReady.Play();
+        if (onChargeReady != null)
+        {
+            onChargeReady.Play();
+        }
+        if (onMovement != null)
+        {
+            onMovement.Play();
+        }
     }
 
     protected void OnSelectionRelease(object source, EventArgs args)
     {
-        //material.color = snappingColor;
-        onRelease.Play();
+        if (onRelease != null)
+        {
+            onRelease.Play();
+        }
 
     }
 
     protected void OnSnapReached(object source, EventArgs args)
     {
-        //material.color = initialColor;
-        onSnapReached.Play();
-        onMovement.Stop();
+        if (onSnapReached != null)
+        {
+            onSnapReached.Play();
+        }
+        if (onMovement != null)
+        {
+            onMovement.Stop();
+        }
 
         if (cameraShake != null)
         {
@@ -81,6 +89,9 @@ public class TabParticleEffects : MonoBehaviour
 
     public void HighlightAsHint()
     {
-        onHint.Play();
+        if (onHint != null)
+        {
+            onHint.Play();
+        }
     }
 }

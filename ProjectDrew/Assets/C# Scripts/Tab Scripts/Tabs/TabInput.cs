@@ -21,6 +21,7 @@ public class TabInput : MonoBehaviour
     [SerializeField] private float deadZone = 0.1f;
     [Tooltip("After you selected the tab, you need to move the mouse (no time limits) by this amount before the tab starts to move")]
     [SerializeField] private float chargeNeeded = 1.0f;
+    [SerializeField] private float maxInputSpeed = 1.0f;
 
     private float currentCharge = 0;
     private bool isCharged = false;
@@ -40,6 +41,11 @@ public class TabInput : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        maxInputSpeed = maxInputSpeed / 1;
+    }
+
     private void Update()
     {
         if (selected)
@@ -48,10 +54,16 @@ public class TabInput : MonoBehaviour
             switch (dragDirection)
             {
                 case DragDirection.Horizontal:
-                    args.MouseMovementMagnitude = Input.GetAxis("Mouse X");
+                    if (Input.GetAxis("Mouse X") >= 0)
+                        args.MouseMovementMagnitude = Mathf.Min(Input.GetAxis("Mouse X"), maxInputSpeed);
+                    else
+                        args.MouseMovementMagnitude = Mathf.Max(Input.GetAxis("Mouse X"), -maxInputSpeed);
                     break;
                 case DragDirection.Vertical:
-                    args.MouseMovementMagnitude = Input.GetAxis("Mouse Y");
+                    if (Input.GetAxis("Mouse Y") >= 0)
+                        args.MouseMovementMagnitude = Mathf.Min(Input.GetAxis("Mouse Y"), maxInputSpeed);
+                    else
+                        args.MouseMovementMagnitude = Mathf.Max(Input.GetAxis("Mouse Y"), -maxInputSpeed);
                     break;
             }
             if (Mathf.Abs(args.MouseMovementMagnitude) < deadZone)
