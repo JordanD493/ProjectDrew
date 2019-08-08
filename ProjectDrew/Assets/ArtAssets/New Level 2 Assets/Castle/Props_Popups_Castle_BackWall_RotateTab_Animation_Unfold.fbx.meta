@@ -1,19 +1,35 @@
 fileFormatVersion: 2
-guid: 202b928ef10e2bf4cb3f7d506abfd65d
+guid: 43332c39d51c86c4aba0eaec1f4bff42
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: FrontWallGroup
-    100002: joint10
-    100004: joint11
-    100006: joint9
-    100008: //RootNode
-    400000: FrontWallGroup
-    400002: joint10
-    400004: joint11
-    400006: joint9
-    400008: //RootNode
-    7400000: FrontWallFold
+    100000: CastleModel
+    100002: CrumbledCastleModel
+    100004: CrumbleGroup
+    100006: FlagGroup
+    100008: FlagModel
+    100010: //RootNode
+    100012: RotateTabGroup
+    100014: TowerGroup
+    400000: CastleModel
+    400002: CrumbledCastleModel
+    400004: CrumbleGroup
+    400006: FlagGroup
+    400008: FlagModel
+    400010: //RootNode
+    400012: RotateTabGroup
+    400014: TowerGroup
+    2100000: lambert1
+    2300000: CastleModel
+    2300002: CrumbledCastleModel
+    2300004: FlagModel
+    3300000: CastleModel
+    3300002: CrumbledCastleModel
+    3300004: FlagModel
+    4300000: CrumbledCastleModel
+    4300002: CastleModel
+    4300004: FlagModel
+    7400000: BackwallTabUnfold
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -44,7 +60,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: FrontWallFold
+      name: BackwallTabUnfold
       takeName: Take 001
       firstFrame: 0
       lastFrame: 134

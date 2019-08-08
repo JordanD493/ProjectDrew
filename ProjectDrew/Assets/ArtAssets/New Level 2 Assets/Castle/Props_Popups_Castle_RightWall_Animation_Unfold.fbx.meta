@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 202b928ef10e2bf4cb3f7d506abfd65d
+guid: 2dd3d4e7004d5314e9d4b42f6e80a044
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: FrontWallGroup
-    100002: joint10
-    100004: joint11
-    100006: joint9
-    100008: //RootNode
-    400000: FrontWallGroup
-    400002: joint10
-    400004: joint11
-    400006: joint9
-    400008: //RootNode
-    7400000: FrontWallFold
+    100000: //RootNode
+    100002: RightWallGroup
+    100004: RightWallModel
+    400000: //RootNode
+    400002: RightWallGroup
+    400004: RightWallModel
+    2100000: lambert1
+    2300000: RightWallModel
+    3300000: RightWallModel
+    4300000: RightWallModel
+    7400000: RightwallUnfold
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -44,7 +44,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: FrontWallFold
+      name: RightwallUnfold
       takeName: Take 001
       firstFrame: 0
       lastFrame: 134

@@ -1,20 +1,39 @@
 fileFormatVersion: 2
-guid: 202b928ef10e2bf4cb3f7d506abfd65d
+guid: 70dcb9de4e40f15418000a75da480050
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: FrontWallGroup
-    100002: joint10
-    100004: joint11
-    100006: joint9
-    100008: //RootNode
-    400000: FrontWallGroup
-    400002: joint10
-    400004: joint11
-    400006: joint9
-    400008: //RootNode
-    7400000: FrontWallFold
+    100000: BackWallGroup
+    100002: BackWallModel
+    100004: joint25
+    100006: joint26
+    100008: joint27
+    100010: joint28
+    100012: joint29
+    100014: joint30
+    100016: joint31
+    100018: joint32
+    100020: //RootNode
+    100022: PullTower
+    400000: BackWallGroup
+    400002: BackWallModel
+    400004: joint25
+    400006: joint26
+    400008: joint27
+    400010: joint28
+    400012: joint29
+    400014: joint30
+    400016: joint31
+    400018: joint32
+    400020: //RootNode
+    400022: PullTower
+    2100000: lambert1
+    4300000: BackWallModel
+    4300002: PullTower
+    7400000: Backwall Unfold
     9500000: //RootNode
+    13700000: BackWallModel
+    13700002: PullTower
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -44,7 +63,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: FrontWallFold
+      name: Backwall Unfold
       takeName: Take 001
       firstFrame: 0
       lastFrame: 134

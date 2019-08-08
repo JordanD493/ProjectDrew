@@ -35944,10 +35944,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beginLimit: {fileID: 1323221754}
   endLimit: {fileID: 886566167}
-  slideSpeed: 1.9
+  slideSpeed: 0.3
   initialPosition: 0
   snapPoints:
   - 0
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  - 0.5
+  - 0.6
+  - 0.7
+  - 0.8
+  - 0.9
   - 1
   snapSpeed: 1
 --- !u!114 &1550598650
