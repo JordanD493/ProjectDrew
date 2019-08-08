@@ -1,33 +1,15 @@
 fileFormatVersion: 2
-guid: 13240d148eef0cc4182302fbe77f575a
+guid: 753a96de008ccf64594a9eb5d87e7821
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: IB
-    100002: Page
-    100004: Page2
-    100006: Page3
-    100008: //RootNode
-    400000: IB
-    400002: Page
-    400004: Page2
-    400006: Page3
-    400008: //RootNode
-    2100000: Default_Material
-    2100002: Page_BG
-    2300000: IB
-    2300002: Page2
-    2300004: Page3
-    3300000: IB
-    3300002: Page2
-    3300004: Page3
-    4300000: Page2
-    4300002: Page
-    4300004: Page3
-    4300006: IB
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Page_BG
+    4300000: Page
     7400000: Take 001
     9500000: //RootNode
-    13700000: Page
+    13700000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
