@@ -8,28 +8,71 @@ public class MaterialColor : MonoBehaviour
     [SerializeField]
     private Material Mat;
 
+    [SerializeField]
+    private float AnimationMaxMatTime;
+
     private float time;
 
     private float ShaderColorValue;
+
+    private float MaxShaderVaue;
+
+    internal bool IsFading = false;
+
+    internal bool IsChangingScene = false;
    
     // Use this for initialization
     void Start ()
     {
-        ShaderColorValue = -0.75f;
+        ShaderColorValue = 100f;
+        MaxShaderVaue = 100f;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-       
-        time = Time.deltaTime;
-        time++;
-        ShaderColorValue = Time.deltaTime;
-        ShaderColorValue++;
 
-        if(time >= 1)
+
+
+        if (IsFading == false)
         {
-            Mat.SetFloat("Vector1_A2F82978", ShaderColorValue);
+            time += Time.deltaTime;
+            if (time >= AnimationMaxMatTime)
+            {
+                ShaderColorValue--;
+                
+            }
+            Mat.SetFloat("Vector1_A2F82978", ShaderColorValue / MaxShaderVaue);
+
+            if (ShaderColorValue <= -75f)
+            {
+                ShaderColorValue = -75f;
+                time = 0f;
+            }
+
         }
-	}
+
+        if (IsFading == true)
+        {
+            ShaderColorValue++;
+            Mat.SetFloat("Vector1_A2F82978", ShaderColorValue / MaxShaderVaue);
+
+            
+
+            if (ShaderColorValue >= 100f)
+            {
+                ShaderColorValue = 100f;
+                IsChangingScene = true;
+
+            }
+        }
+    }
+
+  
+
+    private void OnApplicationQuit()
+    {
+        Mat.SetFloat("Vector1_A2F82978", -0.75f);
+
+    }
 }

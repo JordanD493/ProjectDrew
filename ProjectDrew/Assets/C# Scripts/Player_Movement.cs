@@ -7,7 +7,7 @@ public class Player_Movement : MonoBehaviour
 {
 
     internal Rigidbody2D rb;
-    private bool movementActivated;
+    internal bool movementActivated;
     //bool hasAlreadyJumped = false; - unity says this is assigned but never used? temporarily commented it out to get rid of it in the console - MB 
 
     [SerializeField]
@@ -36,37 +36,23 @@ public class Player_Movement : MonoBehaviour
     private Animator pageAnim;
 
     [SerializeField]
-    private GameObject Popups;
+    private float rotationSpeed;
 
-    [SerializeField]
-    private GameObject Tabs;
-
-    [SerializeField]
-    private GameObject WitchWond;
-
-    [SerializeField]
-    private GameObject Magic;
-
+    private MaterialColor Mat;
+    
     // Use this for initialization
     void Start()
     {
         movementActivated = false;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
+        Mat = FindObjectOfType<MaterialColor>();
     }
 
     // Use this for physics related code
     void FixedUpdate()
     {
-        if (movementActivated)
-        {
-            if (rb.velocity.magnitude <= maxSpeed)
-            {
-                rb.AddForce(new Vector2(1, 0) * acceleration);
-
-            }
-        }
+       
     }
 
     // Update is called once per frame
@@ -78,7 +64,7 @@ public class Player_Movement : MonoBehaviour
 
 
         Scene scene = SceneManager.GetActiveScene();
-        //if ( Input.touchCount > 0)
+        //if (Input.touchCount > 0)
         //{
         //    Touch touch = Input.GetTouch(0);
 
@@ -88,13 +74,13 @@ public class Player_Movement : MonoBehaviour
         //        RaycastHit raycastHit;
         //        if (Physics.Raycast(raycast, out raycastHit))
         //        {
-                   
+
 
         //            if (raycastHit.collider.tag == "Player")
         //            {
-        //                    movementActivated = true;
-        //                    anim.SetBool("isWalking", true);
-                       
+        //                movementActivated = true;
+        //                anim.SetBool("isWalking", true);
+
         //            }
 
         //        }
@@ -102,35 +88,23 @@ public class Player_Movement : MonoBehaviour
 
         //}
 
-         if(Input.GetKeyDown("m"))
+        if (movementActivated)
+        {
+            if (rb.velocity.magnitude <= maxSpeed)
+            {
+                rb.AddForce(new Vector2(-1, 0) * acceleration);
+
+            }
+        }
+
+        if (Input.GetKeyDown("m"))
         {
             movementActivated = true;
+            acceleration = 9; 
             anim.SetBool("isWalking", true);
         }
 
-        if (Input.GetKeyDown("r"))
-        {
-            //  DestroyAll();
-            foreach (GameObject gameobject  in allObjects)
-            {
-                do
-                {
-                    counter++;
-
-                    gameObject.transform.parent = null;
-                   print("Detaching");
-                } while (counter<=numberofTotalObjects);
-                   
-            }
-
-            if (counter >= numberofTotalObjects)
-            {
-                SceneManager.LoadScene(scene.name);
-
-            }
-            
-        }
-
+       
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -159,16 +133,12 @@ public class Player_Movement : MonoBehaviour
             print("Jumped");
         }
 
-        if(collision.gameObject.tag == "EndGoal")
-        {
-            print("Reached End");
-            pageAnim.enabled = true;
-            this.gameObject.SetActive(false);
-            Popups.SetActive(false);
-            Tabs.SetActive(false);
-            WitchWond.SetActive(false);
-            Magic.SetActive(false);
-        }
+        //if (collision.gameObject.tag == "EndGoal")
+        //{
+        //    print("Reached End");           
+        //    Mat.IsFading = true;
+        //    this.gameObject.SetActive(false);
+        //}
     }
 
 
@@ -180,31 +150,31 @@ public class Player_Movement : MonoBehaviour
     private void OnMouseDown()
     {
         movementActivated = true;
+        acceleration = -9;
         anim.SetBool("isWalking", true);
     }
 
-    //private void OnCollisionExit(Collision collision)
-    //{
-    //    if(collision.gameObject.tag == "JumpObject" && hasAlreadyJumped == false)
-    //    {
-    //        hasAlreadyJumped = true;
-    //    }
-    //}
+   public void RotatePlayerAround()
+   {
+        transform.rotation = new Quaternion(0, -180, 0, 0);
 
-    /* Attempt to resolve animation skew on level reset
+        acceleration = -(acceleration + 4);
+        rb.AddForce(new Vector2(1, 0) * acceleration);
 
-    private void DestroyAll()
-    {
-        Debug.Log("KillAll");
-        GameObject[] GameObjects = (FindObjectsOfType<GameObject>() as GameObject[]);
+        anim.SetBool("isWalking", true);
 
-        for (int i = 0; i < GameObjects.Length; i++)
-        {
-            Destroy(GameObjects[i]);
-        }
     }
 
-    */
+   public void RotatePlayeToOrigialPosition()
+   {
+        movementActivated = false;
+
+        transform.rotation = new Quaternion(0, 0, 0, 0);
+
+        anim.SetBool("isWalking", false);
+
+        
+    }
 
 }
     

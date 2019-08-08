@@ -6,18 +6,23 @@ public class PopupMoveEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        base.OnInspectorGUI();
 
         PopupMove popupMove = (PopupMove)target;
+        
+        GUILayout.BeginHorizontal();
 
-        if (GUILayout.Button("Snap to begin limit"))
+        if (GUILayout.Button("Snap to begin"))
         {
-            //popupMove
+            popupMove.SnapToBegin();
         }
 
-        if (GUILayout.Button("Snap to end limit"))
+        if (GUILayout.Button("Snap to end"))
         {
-            //popupMove
+            popupMove.SnapToEnd();
         }
+
+        GUILayout.EndHorizontal();
+
+        base.OnInspectorGUI();
     }
 }
