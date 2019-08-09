@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 95757121898458468}
   - component: {fileID: 61790060775899024}
   - component: {fileID: 114869358356847024}
+  - component: {fileID: 61345066803170972}
   m_Layer: 0
   m_Name: SmallFlag
   m_TagString: Untagged
@@ -183,7 +184,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1691464238048598}
-  m_LocalRotation: {x: 0.9999894, y: -0.0046065864, z: 6.151376e-17, w: -6.094962e-17}
+  m_LocalRotation: {x: 0.02579691, y: 0.9996672, z: -5.963236e-17, w: -6.2791565e-17}
   m_LocalPosition: {x: -278.88455, y: 0.72249883, z: -6.176301e-14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -224,7 +225,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789632248235228}
-  m_LocalRotation: {x: 0.49935192, y: -0.5006473, z: -0.49935192, w: 0.5006473}
+  m_LocalRotation: {x: -0.0009159587, y: -0.70710623, z: 0.0009159587, w: 0.70710623}
   m_LocalPosition: {x: -2.624522e-32, y: 0.48071456, z: -6.505213e-18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -247,6 +248,31 @@ Transform:
   m_Father: {fileID: 4173129565789450}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61345066803170972
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1021773611283078}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.7936478, y: 498.70355}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 153.71098, y: 16.38379}
+  m_EdgeRadius: 0
 --- !u!61 &61790060775899024
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -316,7 +342,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: f5d350f7093251e4ea5f06eaddeb201e, type: 3}
+  - {fileID: 2100000, guid: b7cd08acacb585b45aab4ee632b7b12d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -366,7 +392,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: f5d350f7093251e4ea5f06eaddeb201e, type: 3}
+  - {fileID: 2100000, guid: b7cd08acacb585b45aab4ee632b7b12d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -23,7 +23,7 @@ public class MainMenuCamera : MonoBehaviour {
 
     Vector3 p0;
 
-    bool IsMovementAllowed;
+     internal bool IsMovementAllowed;
     // Use this for initialization
     void Start()
     {
@@ -32,8 +32,11 @@ public class MainMenuCamera : MonoBehaviour {
 
         waytoGO = 0;
 
-        IsMovementAllowed = true;
-        //cam.transform.rotation = Quaternion.LookRotation(p0);
+        cam.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        //Target = Camera.main.transform;
+        //cam.transform.LookAt(Target);
+        
     }
 
 
@@ -46,13 +49,14 @@ public class MainMenuCamera : MonoBehaviour {
         {
             StartCoroutine(FollowTheRightRoute(waytoGO));
 
-            //cam.transform.LookAt(Target);
 
         }
 
+      
 
 
-       
+        cam.transform.LookAt(Target);
+
 
         //cam.transform.rotation = Quaternion.LookRotation();
 
@@ -77,15 +81,27 @@ public class MainMenuCamera : MonoBehaviour {
         {
 
             tParam += Time.deltaTime * camMovementSpeed;
+            //cam.transform.LookAt(Target);
             //p0 = camCurrentPosition;
             cam.transform.position = Mathf.Pow(1 - tParam, 3) * p0 +
                                      3 * Mathf.Pow(1 - tParam, 2) * tParam * p1 +
                                      3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p2 +
                                      Mathf.Pow(tParam, 3) * p3;
 
-            //cam.transform.rotation = Quaternion.LookRotation(p0);
+            //cam.transform.rotation = Quaternion.Euler(0, 0, 0);
 
-           
+            cam.transform.rotation = Quaternion.LookRotation(p0);
+
+
+            //    //cam.transform.rotation = Target.rotation;
+
+
+            //if (tParam >= 0.02f)
+            //{
+
+            //}    
+
+
 
             yield return new WaitForEndOfFrame();
         }
