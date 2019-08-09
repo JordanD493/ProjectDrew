@@ -49,6 +49,10 @@ public class TabMovement : MonoBehaviour
         {
             StartCoroutine(InterpolateToSnapPoint(FindClosestSnapPoint()));
         }
+        else
+        {
+            OnSnapReached();
+        }
     }
 
     private float FindClosestSnapPoint()
