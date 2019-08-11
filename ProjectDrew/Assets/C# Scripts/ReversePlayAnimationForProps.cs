@@ -30,7 +30,7 @@ public class ReversePlayAnimationForProps : MonoBehaviour
 
         }
 
-        if(time >= 2f)
+        if(time >= 3f)
         {
             Transition.SetActive(true);
 
