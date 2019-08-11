@@ -9,6 +9,8 @@ public class OpenBookAnim : MonoBehaviour
 
     private MainMenuCamera cam;
 
+    private Collider col;
+
     [SerializeField]
     private GameObject Popups;
 
@@ -26,6 +28,8 @@ public class OpenBookAnim : MonoBehaviour
     {
         anim = GetComponentInParent<Animator>();
         cam = FindObjectOfType<MainMenuCamera>();
+        col = GetComponent<Collider>();
+
         anim.enabled = false;
 	}
 	
@@ -43,5 +47,7 @@ public class OpenBookAnim : MonoBehaviour
         Player.SetActive(true);
         Goal.SetActive(true);
         Particle.SetActive(false);
+
+        col.enabled = false;
     }
 }

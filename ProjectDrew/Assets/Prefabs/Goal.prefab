@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33794670418524752}
   - component: {fileID: 23203784462074042}
   - component: {fileID: 58238106105385994}
-  - component: {fileID: 114892736979350556}
   - component: {fileID: 114963796529673824}
   m_Layer: 0
   m_Name: Goal
@@ -30,7 +29,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4789635792870664
 Transform:
   m_ObjectHideFlags: 1
@@ -101,18 +100,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5
---- !u!114 &114892736979350556
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1105936581280594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c371af3f9b8451f428b18410f1224ae6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelName: JORDAN - LAB
 --- !u!114 &114963796529673824
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -17,11 +17,12 @@ public class ChangeLevelAtEndGoal : MonoBehaviour {
 
     private void Update()
     {
-            if(Mat_Color.IsChangingScene == true)
-            {
+            //if(Mat_Color.IsChangingScene == true)
+            //{
                
+            //    SceneManager.LoadScene(LevelName, LoadSceneMode.Single);
 
-            }
+            //}
         
     }
 
@@ -30,7 +31,6 @@ public class ChangeLevelAtEndGoal : MonoBehaviour {
         if(collision.tag == "Player")
         {
 
-            SceneManager.LoadScene(LevelName, LoadSceneMode.Single);
         }
     }
 }
