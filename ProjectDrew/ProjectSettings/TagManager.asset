@@ -10,6 +10,7 @@ TagManager:
   - Frog
   - SmokePlatform
   - Ramp
+  - CamCollider
   layers:
   - Default
   - TransparentFX
