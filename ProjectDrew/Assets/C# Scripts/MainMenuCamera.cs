@@ -71,7 +71,7 @@ public class MainMenuCamera : MonoBehaviour {
 
        if(Is_Cam_Rotating == true)
         {
-            cam.transform.rotation = Quaternion.Euler(RotX, RotY, RotZ);
+            cam.transform.rotation = Quaternion.Euler(RotX, RotY, RotZ );
         }
 
         //cam.transform.rotation = Quaternion.LookRotation();

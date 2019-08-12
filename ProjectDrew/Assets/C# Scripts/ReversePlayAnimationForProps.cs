@@ -25,7 +25,10 @@ public class ReversePlayAnimationForProps : MonoBehaviour
     {
         if(Mat.IsFolding == true)
         {
-            anim.SetBool("IS_Folding", true);            
+            anim.SetBool("IS_Folding", true);
+            //anim.Play(0, 0, 0);
+
+            anim.SetFloat("Speed", -1.0f);
             time += Time.deltaTime; 
 
         }
