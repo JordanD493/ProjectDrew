@@ -9,6 +9,7 @@ TagManager:
   - ResetWall
   - Frog
   - SmokePlatform
+  - Ramp
   layers:
   - Default
   - TransparentFX
