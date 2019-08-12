@@ -9,6 +9,8 @@ TagManager:
   - ResetWall
   - Frog
   - SmokePlatform
+  - Ramp
+  - CamCollider
   layers:
   - Default
   - TransparentFX
