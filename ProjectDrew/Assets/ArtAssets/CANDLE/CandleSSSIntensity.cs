@@ -35,7 +35,7 @@ public class CandleSSSIntensity : MonoBehaviour {
 
     private void OnApplicationQuit()
     {
-        candleMat.SetColor("_EmissionColor", initialIntensity);
+        //candleMat.SetColor("_EmissionColor", initialIntensity);
     }
 
 }
