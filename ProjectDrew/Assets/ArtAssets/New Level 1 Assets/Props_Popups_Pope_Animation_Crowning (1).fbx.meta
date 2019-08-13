@@ -1,22 +1,27 @@
 fileFormatVersion: 2
-guid: f1f60081841218a4ea307e18ced33af6
+guid: 425e9fae89d7ec34bbedb00988233e5a
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Pope 1
-    100002: Popearm
-    100004: //RootNode
-    400000: Pope 1
-    400002: Popearm
-    400004: //RootNode
+    100000: Crown
+    100002: Pope 1
+    100004: Popearm
+    100006: //RootNode
+    400000: Crown
+    400002: Pope 1
+    400004: Popearm
+    400006: //RootNode
     2100000: 'Material #29'
-    2300000: Pope 1
-    2300002: Popearm
-    3300000: Pope 1
-    3300002: Popearm
+    2300000: Crown
+    2300002: Pope 1
+    2300004: Popearm
+    3300000: Crown
+    3300002: Pope 1
+    3300004: Popearm
     4300000: Pope
     4300002: Popearm
-    7400000: Unfold
+    4300004: Crown
+    7400000: Crowning
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -47,7 +52,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Unfold
+      name: Crowning
       takeName: Take 001
       firstFrame: 0
       lastFrame: 118

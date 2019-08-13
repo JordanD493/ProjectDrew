@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61790060775899024}
   - component: {fileID: 114869358356847024}
   - component: {fileID: 61345066803170972}
+  - component: {fileID: 61856359303719666}
   m_Layer: 0
   m_Name: SmallFlag
   m_TagString: Untagged
@@ -170,7 +171,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1021773611283078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19999933, y: 2.071, z: -12.51}
+  m_LocalPosition: {x: -4.7040005, y: 2.071, z: -12.51}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4860126196535732}
@@ -298,6 +299,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 153.71098, y: 16.38379}
   m_EdgeRadius: 0
+--- !u!61 &61856359303719666
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1021773611283078}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.7936478, y: 498.70355}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 153.71098, y: 16.38379}
+  m_EdgeRadius: 0
 --- !u!95 &95757121898458468
 Animator:
   serializedVersion: 3
@@ -327,6 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e298051b5d87645bededaad39867bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Transition: {fileID: 0}
 --- !u!137 &137210256871450076
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -342,7 +369,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b7cd08acacb585b45aab4ee632b7b12d, type: 2}
+  - {fileID: 2100000, guid: a358177cb7e76ac42a3cb916afcb8b8e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -392,7 +419,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b7cd08acacb585b45aab4ee632b7b12d, type: 2}
+  - {fileID: 2100000, guid: a358177cb7e76ac42a3cb916afcb8b8e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

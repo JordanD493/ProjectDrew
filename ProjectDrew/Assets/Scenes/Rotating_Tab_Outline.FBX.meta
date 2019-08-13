@@ -1,23 +1,14 @@
 fileFormatVersion: 2
-guid: 66a832a5aa75a904da5faf24e192b1f4
+guid: 576bafad0155f114eb30b5cd53ec58ef
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Pope 1
-    100002: Popearm
-    100004: //RootNode
-    400000: Pope 1
-    400002: Popearm
-    400004: //RootNode
-    2100000: 'Material #29'
-    2300000: Pope 1
-    2300002: Popearm
-    3300000: Pope 1
-    3300002: Popearm
-    4300000: Pope
-    4300002: Popearm
-    7400000: Crowning
-    9500000: //RootNode
+    100000: //RootNode
+    400000: //RootNode
+    2100000: 'Material #2'
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cylinder003
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,35 +36,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Crowning
-      takeName: Take 001
-      firstFrame: 0
-      lastFrame: 118
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -121,7 +84,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
