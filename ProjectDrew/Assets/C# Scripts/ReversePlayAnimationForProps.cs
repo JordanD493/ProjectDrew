@@ -28,7 +28,7 @@ public class ReversePlayAnimationForProps : MonoBehaviour
             anim.SetBool("IS_Folding", true);
             //anim.Play(0, 0, 0);
 
-            anim.SetFloat("Speed", -0.1f);
+            anim.SetFloat("Speed", -0.01f);
             time += Time.deltaTime; 
 
         }
