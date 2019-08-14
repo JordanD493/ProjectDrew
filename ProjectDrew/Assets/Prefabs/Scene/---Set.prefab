@@ -333,6 +333,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1566152996992626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4838587327669282}
+  - component: {fileID: 108249293255196952}
+  m_Layer: 0
+  m_Name: Directional Light (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1575218403479602
 GameObject:
   m_ObjectHideFlags: 1
@@ -541,7 +557,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1244486103691346}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6800003, y: -4.56, z: -0.12999916}
+  m_LocalPosition: {x: 0.7, y: -4.56, z: -0.19}
   m_LocalScale: {x: 36.250298, y: 36.25034, z: 36.25034}
   m_Children: []
   m_Father: {fileID: 4168265093522238}
@@ -794,6 +810,19 @@ Transform:
   m_Father: {fileID: 4841174085583852}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -179.962, z: 0}
+--- !u!4 &4838587327669282
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1566152996992626}
+  m_LocalRotation: {x: -0.00016362037, y: -0.87282217, z: 0.48803827, w: 0.00029262356}
+  m_LocalPosition: {x: 0, y: 111.7, z: 70.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4841174085583852}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 58.423004, y: -179.927, z: 0.063}
 --- !u!4 &4841174085583852
 Transform:
   m_ObjectHideFlags: 1
@@ -814,6 +843,7 @@ Transform:
   - {fileID: 4935052673366950}
   - {fileID: 4043352910504324}
   - {fileID: 4287116046841410}
+  - {fileID: 4838587327669282}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -1250,7 +1280,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.74580836, b: 0.2028302, a: 1}
   m_Intensity: 34
-  m_Range: 14.8
+  m_Range: 4
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1286,7 +1316,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.74580836, b: 0.2028302, a: 1}
   m_Intensity: 34
-  m_Range: 14.8
+  m_Range: 4
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1322,7 +1352,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.74580836, b: 0.2028302, a: 1}
   m_Intensity: 34
-  m_Range: 14.8
+  m_Range: 4
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1347,6 +1377,42 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!108 &108249293255196952
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1566152996992626}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 1, g: 0.72172207, b: 0.39215684, a: 1}
+  m_Intensity: 0.12
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: 3
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.1
+    m_NormalBias: 0.4
+    m_NearPlane: 0.1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 90
 --- !u!108 &108493309572111614
 Light:
   m_ObjectHideFlags: 1
@@ -1394,7 +1460,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.74580836, b: 0.2028302, a: 1}
   m_Intensity: 34
-  m_Range: 14.8
+  m_Range: 4
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1459,8 +1525,8 @@ MonoBehaviour:
   - {fileID: 0}
   Target: {fileID: 4411838412362712}
   camMovementSpeed: 0.3
-  RotX: 36.8
-  RotY: -18.01
+  RotX: 30.06
+  RotY: -13
   RotZ: 0
 --- !u!114 &114158322419705988
 MonoBehaviour:
@@ -18904,7 +18970,7 @@ ParticleSystem:
     light: {fileID: 108072231024273630}
     randomDistribution: 1
     color: 1
-    range: 1
+    range: 0
     intensity: 1
     rangeCurve:
       serializedVersion: 2
@@ -23516,7 +23582,7 @@ ParticleSystem:
     light: {fileID: 108980172996804608}
     randomDistribution: 1
     color: 1
-    range: 1
+    range: 0
     intensity: 1
     rangeCurve:
       serializedVersion: 2
@@ -28128,7 +28194,7 @@ ParticleSystem:
     light: {fileID: 108046938051927130}
     randomDistribution: 1
     color: 1
-    range: 1
+    range: 0
     intensity: 1
     rangeCurve:
       serializedVersion: 2
@@ -37280,7 +37346,7 @@ ParticleSystem:
     light: {fileID: 108031647058527870}
     randomDistribution: 1
     color: 1
-    range: 1
+    range: 0
     intensity: 1
     rangeCurve:
       serializedVersion: 2
