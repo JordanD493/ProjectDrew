@@ -36,6 +36,15 @@ public class TabRuneGlow : MonoBehaviour
         UpdateGlowAmount();
     }
 
+    private void Update()
+    {
+        if (runeGlowMax)
+        {
+            runeGlowAmount = 0.8f + (Mathf.Sin(Time.time * runeGlowChangeSpeed) / 5);
+            UpdateGlowAmount();
+        }
+    }
+
     private void UpdateGlowAmount()
     {
         material.SetFloat("Vector1_96B6E2AB", runeGlowAmount);
@@ -45,13 +54,13 @@ public class TabRuneGlow : MonoBehaviour
     {
         if (switchedOn)
         {
-            while (runeGlowAmount < 1 && lastSwitchAction == true)
+            while (runeGlowAmount < 0.9f && lastSwitchAction == true)
             {
                 runeGlowAmount += Time.deltaTime * runeGlowChangeSpeed;
                 UpdateGlowAmount();
                 yield return null;
             }
-            if (runeGlowAmount >= 1)
+            if (runeGlowAmount >= 0.9f)
             {
                 runeGlowMax = true;
 
