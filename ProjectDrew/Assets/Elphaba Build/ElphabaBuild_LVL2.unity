@@ -91,7 +91,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 112000002, guid: 4249310a6d062bf4ea14086166891161,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -152,14 +152,6 @@ Prefab:
     - target: {fileID: 4670074477587422, guid: cf836b254a073584f86c81081b8bab45, type: 2}
       propertyPath: m_RootOrder
       value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4670074477587422, guid: cf836b254a073584f86c81081b8bab45, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 1411097821577940, guid: cf836b254a073584f86c81081b8bab45, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf836b254a073584f86c81081b8bab45, type: 2}
@@ -55241,7 +55233,6 @@ GameObject:
   - component: {fileID: 1283422949}
   - component: {fileID: 1283422948}
   - component: {fileID: 1283422947}
-  - component: {fileID: 1283422951}
   - component: {fileID: 1283422950}
   m_Layer: 0
   m_Name: Main Camera
@@ -55378,21 +55369,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &1283422951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1283422945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccaef932d01a81e45a68b46e91329281, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoomValue: 6.7
-  CamMaxZoomValue: 0
-  CamMinZoomValue: 0
-  cam_follow: {fileID: 0}
 --- !u!1001 &1284029450
 Prefab:
   m_ObjectHideFlags: 0

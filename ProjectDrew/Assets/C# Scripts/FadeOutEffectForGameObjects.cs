@@ -8,7 +8,7 @@ public class FadeOutEffectForGameObjects : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        rend = GetComponentInChildren<MeshRenderer>();
+        rend = GetComponentInChildren<MeshRenderer>(); 
 	}
 	
 	// Update is called once per frame

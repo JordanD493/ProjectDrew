@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: BOOK
+  m_Name: OtherLevelBook
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Blend
@@ -27,13 +27,13 @@ AnimatorController:
     m_IKPass: 1
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &1102373927760116544
+--- !u!1102 &1102225102002835414
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Main Unfold
+  m_Name: OpenBook
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -46,7 +46,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6f6ae8d2115403f44a69750970638dce, type: 3}
+  m_Motion: {fileID: 7400000, guid: 85cd6d9633e1b94499fd0dd14ffdf2d1, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -61,8 +61,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 1102373927760116544}
-    m_Position: {x: 264, y: 276, z: 0}
+    m_State: {fileID: 1102225102002835414}
+    m_Position: {x: 303.3925, y: 343.3081, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -72,4 +72,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 60, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1102373927760116544}
+  m_DefaultState: {fileID: 1102225102002835414}
