@@ -5969,7 +5969,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1411097821577940, guid: cf836b254a073584f86c81081b8bab45, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23344746211849598, guid: cf836b254a073584f86c81081b8bab45,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf836b254a073584f86c81081b8bab45, type: 2}
@@ -34663,7 +34668,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 9a10fdda994e3344d8318f9b7f6764e3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
