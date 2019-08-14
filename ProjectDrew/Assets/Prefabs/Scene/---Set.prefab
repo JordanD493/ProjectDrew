@@ -924,7 +924,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 3f5cf2dfaefaabf4ba28b65232919eeb, type: 2}
+  - {fileID: 2100000, guid: 0d20d3384464cc249b4fe6b101569f30, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1064,7 +1064,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 3f5cf2dfaefaabf4ba28b65232919eeb, type: 2}
+  - {fileID: 2100000, guid: 0d20d3384464cc249b4fe6b101569f30, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1438,7 +1438,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1163806881087090}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c371af3f9b8451f428b18410f1224ae6, type: 3}
   m_Name: 
@@ -1475,7 +1475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _candleLight: {fileID: 108046938051927130}
   scatterIntensity: 0
-  candleMat: {fileID: 2100000, guid: 3f5cf2dfaefaabf4ba28b65232919eeb, type: 2}
+  candleMat: {fileID: 2100000, guid: 0d20d3384464cc249b4fe6b101569f30, type: 2}
   scatterMultiplier: 90
   minIntensity: 1.5
   maxIntensity: 2.5
@@ -1509,7 +1509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _candleLight: {fileID: 108046938051927130}
   scatterIntensity: 0
-  candleMat: {fileID: 2100000, guid: 3f5cf2dfaefaabf4ba28b65232919eeb, type: 2}
+  candleMat: {fileID: 2100000, guid: 0d20d3384464cc249b4fe6b101569f30, type: 2}
   scatterMultiplier: 90
   minIntensity: 1.5
   maxIntensity: 2.5
@@ -1537,7 +1537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _candleLight: {fileID: 108046938051927130}
   scatterIntensity: 0
-  candleMat: {fileID: 0}
+  candleMat: {fileID: 2100000, guid: 0d20d3384464cc249b4fe6b101569f30, type: 2}
   scatterMultiplier: 90
   minIntensity: 1.5
   maxIntensity: 2.5
@@ -38350,7 +38350,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_RenderMode: 0
+  m_RenderMode: 3
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
