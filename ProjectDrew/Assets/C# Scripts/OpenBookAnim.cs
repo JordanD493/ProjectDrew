@@ -9,6 +9,8 @@ public class OpenBookAnim : MonoBehaviour
 
     private MainMenuCamera cam;
 
+    private Collider col;
+
     [SerializeField]
     private GameObject Popups;
 
@@ -21,11 +23,16 @@ public class OpenBookAnim : MonoBehaviour
     [SerializeField]
     private GameObject Particle;
 
+    private AudioSource audio;
+
     // Use this for initialization
     void Start ()
     {
         anim = GetComponentInParent<Animator>();
         cam = FindObjectOfType<MainMenuCamera>();
+        col = GetComponent<Collider>();
+        audio = GetComponentInParent<AudioSource>();
+
         anim.enabled = false;
 	}
 	
@@ -36,12 +43,17 @@ public class OpenBookAnim : MonoBehaviour
 
     private void OnMouseDown()
     {
+
         cam.IsMovementAllowed = true;
         anim.enabled = true;
+
+        audio.Play();
 
         Popups.SetActive(true);
         Player.SetActive(true);
         Goal.SetActive(true);
         Particle.SetActive(false);
+
+        col.enabled = false;
     }
 }

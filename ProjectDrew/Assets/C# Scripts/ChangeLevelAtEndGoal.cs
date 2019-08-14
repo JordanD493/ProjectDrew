@@ -8,29 +8,21 @@ public class ChangeLevelAtEndGoal : MonoBehaviour {
     [SerializeField]
     private string LevelName;
 
-    private MaterialColor Mat_Color;
+    private MaterialColor Mat;
+   
 
     private void Awake()
     {
-        Mat_Color = GetComponent<MaterialColor>();
+        Mat = FindObjectOfType<MaterialColor>();
     }
 
     private void Update()
     {
-            if(Mat_Color.IsChangingScene == true)
-            {
-               
-
-            }
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "Player")
+        if(Mat.IsFolding == true)
         {
-
-            SceneManager.LoadScene(LevelName, LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync(LevelName, LoadSceneMode.Single);
         }
     }
+
+  
 }

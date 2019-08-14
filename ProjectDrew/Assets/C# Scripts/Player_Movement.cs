@@ -92,7 +92,7 @@ public class Player_Movement : MonoBehaviour
         {
             if (rb.velocity.magnitude <= maxSpeed)
             {
-                rb.AddForce(new Vector2(-1, 0) * acceleration);
+                rb.AddForce(new Vector2(1, 0) * acceleration);
 
             }
         }
@@ -109,17 +109,27 @@ public class Player_Movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ramp")
-        {
-            maxSpeed = RampSpeed;
-        }
+        //if (collision.gameObject.tag == "Ramp")
+        //{
+        //    maxSpeed = RampSpeed;
+        //}
 
-        else if (collision.gameObject.tag == "Slow")
+        if (collision.gameObject.tag == "Slow")
         {
             acceleration = 0;
             maxSpeed = SlowDownSpeed;
             print("Slow");
 
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Ramp")
+        {
+            maxSpeed = RampSpeed;
+
+            print("Collided with Ramp");
         }
     }
 
@@ -150,7 +160,7 @@ public class Player_Movement : MonoBehaviour
     private void OnMouseDown()
     {
         movementActivated = true;
-        acceleration = -9;
+        acceleration = 9;
         anim.SetBool("isWalking", true);
     }
 

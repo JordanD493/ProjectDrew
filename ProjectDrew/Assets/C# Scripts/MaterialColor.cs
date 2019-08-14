@@ -19,7 +19,7 @@ public class MaterialColor : MonoBehaviour
 
     internal bool IsFading = false;
 
-    internal bool IsChangingScene = false;
+    internal bool IsFolding = false;
    
     // Use this for initialization
     void Start ()
@@ -62,7 +62,7 @@ public class MaterialColor : MonoBehaviour
             if (ShaderColorValue >= 100f)
             {
                 ShaderColorValue = 100f;
-                IsChangingScene = true;
+                IsFolding = true;
 
             }
         }

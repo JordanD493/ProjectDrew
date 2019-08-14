@@ -466,6 +466,7 @@ MonoBehaviour:
   Popups: {fileID: 0}
   Player: {fileID: 0}
   Goal: {fileID: 0}
+  Particle: {fileID: 0}
 --- !u!137 &137450089135891262
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -13,6 +13,15 @@ public class MainMenuCamera : MonoBehaviour {
     [SerializeField]
     private float camMovementSpeed;
 
+    [SerializeField]
+    private float RotX;
+
+    [SerializeField]
+    private float RotY;
+
+    [SerializeField]
+    private float RotZ;
+
     private Camera cam;
 
     internal int waytoGO;
@@ -22,6 +31,8 @@ public class MainMenuCamera : MonoBehaviour {
     private Vector3 camCurrentPosition;
 
     Vector3 p0;
+
+    private bool Is_Cam_Rotating = false;
 
      internal bool IsMovementAllowed;
     // Use this for initialization
@@ -49,6 +60,7 @@ public class MainMenuCamera : MonoBehaviour {
         {
             StartCoroutine(FollowTheRightRoute(waytoGO));
 
+           
 
         }
 
@@ -57,6 +69,10 @@ public class MainMenuCamera : MonoBehaviour {
 
         cam.transform.LookAt(Target);
 
+       if(Is_Cam_Rotating == true)
+        {
+            cam.transform.rotation = Quaternion.Euler(RotX, RotY, RotZ );
+        }
 
         //cam.transform.rotation = Quaternion.LookRotation();
 
@@ -104,7 +120,9 @@ public class MainMenuCamera : MonoBehaviour {
 
 
             yield return new WaitForEndOfFrame();
+            
         }
+
 
 
         tParam = 0;
@@ -114,13 +132,13 @@ public class MainMenuCamera : MonoBehaviour {
         if (waytoGO > wayPoints.Length - 1)
         {
             waytoGO = 0;
-           
 
+            Is_Cam_Rotating = true;
         }
 
 
 
-      
+
 
 
     }

@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SEAN - LAB.unity
-    guid: 03f5d8226036e0c44a812bb09c6bc3d1
+    path: Assets/Elphaba Build/ElphabaBuild_LVL1.unity
+    guid: 870055e5124bcba46907870c36eb50af
   - enabled: 1
-    path: Assets/Scenes/JORDAN - LAB.unity
-    guid: 8fcf0779061cffe4ca163ab6c36b35d1
+    path: Assets/Elphaba Build/ElphabaBuild_LVL2.unity
+    guid: 5f364ab27a016b34db50b204dfdc2ab0
+  - enabled: 1
+    path: Assets/Elphaba Build/ElphabaBuild_LVL3.unity
+    guid: 7388af4720eac324c967b5863039e75b
   m_configObjects: {}
