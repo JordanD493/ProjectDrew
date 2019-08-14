@@ -30442,8 +30442,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2080607327}
   - {fileID: 1124566927}
-  - {fileID: 1283422946}
   - {fileID: 1983313700}
   - {fileID: 480120025}
   - {fileID: 224598396}
@@ -35386,6 +35386,10 @@ Prefab:
         type: 2}
       propertyPath: RampSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280460793583210, guid: 25d09c78b6e1e324a9da7f243af71204, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25d09c78b6e1e324a9da7f243af71204, type: 2}
@@ -45454,7 +45458,7 @@ Transform:
   - {fileID: 438332892}
   - {fileID: 1505893077}
   m_Father: {fileID: 740267868}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -179.962, z: 0}
 --- !u!1 &1127753812
 GameObject:
@@ -55248,13 +55252,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1283422945}
-  m_LocalRotation: {x: -0.025344014, y: -0.96495664, z: 0.24059077, w: -0.10164929}
-  m_LocalPosition: {x: -1.37, y: 13.12, z: 31.23}
+  m_LocalRotation: {x: -0.39364797, y: -0.3075516, z: 0.53333974, w: 0.6826435}
+  m_LocalPosition: {x: 12.173662, y: -2.7747345, z: -7.977745}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 740267868}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 28.000002, y: -192.027, z: 0}
+  m_Father: {fileID: 2080607327}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 64.056}
 --- !u!114 &1283422947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55294,7 +55298,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 55
+  field of view: 60
   orthographic: 0
   orthographic size: 12.1
   m_Depth: -1
@@ -90471,6 +90475,35 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8fad31551aa9f943855912de7dc2dd7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2080607326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2080607327}
+  m_Layer: 0
+  m_Name: CameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2080607327
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2080607326}
+  m_LocalRotation: {x: 0.3694624, y: -0.6029076, z: 0.6029076, w: 0.3694624}
+  m_LocalPosition: {x: 1.93, y: 4.71, z: 17.82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1283422946}
+  m_Father: {fileID: 740267868}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: -117, z: 0}
 --- !u!1001 &2093479440
 Prefab:
   m_ObjectHideFlags: 0
