@@ -91,7 +91,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 112000002, guid: 4249310a6d062bf4ea14086166891161,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -681,6 +681,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &209532884 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114366930140141566, guid: 74babdbdf47239f4a8d28c555c09444b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1656321138}
+  m_Script: {fileID: 11500000, guid: 28b4f860c8292154ebfc203241dd3f2a, type: 3}
 --- !u!4 &260359008 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4923312142981724, guid: 4e3cf9b1b26ba3f49a0ed65ae431e7ac,
@@ -7511,6 +7517,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114405735298954112, guid: 25d09c78b6e1e324a9da7f243af71204,
+        type: 2}
+      propertyPath: tabInputs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4121821794965048, guid: 25d09c78b6e1e324a9da7f243af71204, type: 2}
       propertyPath: m_LocalPosition.x
       value: -5.02
@@ -7553,6 +7564,26 @@ Prefab:
       propertyPath: m_Volume
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 114405735298954112, guid: 25d09c78b6e1e324a9da7f243af71204,
+        type: 2}
+      propertyPath: tabInputs.Array.data[0]
+      value: 
+      objectReference: {fileID: 209532884}
+    - target: {fileID: 114405735298954112, guid: 25d09c78b6e1e324a9da7f243af71204,
+        type: 2}
+      propertyPath: tabInputs.Array.data[1]
+      value: 
+      objectReference: {fileID: 352610008}
+    - target: {fileID: 114405735298954112, guid: 25d09c78b6e1e324a9da7f243af71204,
+        type: 2}
+      propertyPath: tabInputs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1762324957}
+    - target: {fileID: 114405735298954112, guid: 25d09c78b6e1e324a9da7f243af71204,
+        type: 2}
+      propertyPath: tabInputs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1946915489}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25d09c78b6e1e324a9da7f243af71204, type: 2}
   m_IsPrefabParent: 0
@@ -22327,6 +22358,11 @@ GameObject:
 --- !u!4 &1302182075 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4657285320377266, guid: 5b57257f45b7f3e4aab9ae4355092060,
+    type: 2}
+  m_PrefabInternal: {fileID: 663750805}
+--- !u!81 &1302182078 stripped
+AudioListener:
+  m_PrefabParentObject: {fileID: 81691755464493626, guid: 5b57257f45b7f3e4aab9ae4355092060,
     type: 2}
   m_PrefabInternal: {fileID: 663750805}
 --- !u!114 &1302182080
@@ -37129,6 +37165,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114588589474966154, guid: 78f1e05c1fd7d374581e4dd348f32ee7,
+        type: 2}
+      propertyPath: Listner
+      value: 
+      objectReference: {fileID: 1302182078}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78f1e05c1fd7d374581e4dd348f32ee7, type: 2}
   m_IsPrefabParent: 0

@@ -91,7 +91,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 112000002, guid: 4249310a6d062bf4ea14086166891161,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -35988,6 +35988,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114405735298954112, guid: 25d09c78b6e1e324a9da7f243af71204,
+        type: 2}
+      propertyPath: tabInputs.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4121821794965048, guid: 25d09c78b6e1e324a9da7f243af71204, type: 2}
       propertyPath: m_LocalPosition.x
       value: -5.44
@@ -36034,6 +36039,36 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114405735298954112, guid: 25d09c78b6e1e324a9da7f243af71204,
+        type: 2}
+      propertyPath: tabInputs.Array.data[0]
+      value: 
+      objectReference: {fileID: 533794910}
+    - target: {fileID: 114405735298954112, guid: 25d09c78b6e1e324a9da7f243af71204,
+        type: 2}
+      propertyPath: tabInputs.Array.data[1]
+      value: 
+      objectReference: {fileID: 449081513}
+    - target: {fileID: 114405735298954112, guid: 25d09c78b6e1e324a9da7f243af71204,
+        type: 2}
+      propertyPath: tabInputs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1946915489}
+    - target: {fileID: 114405735298954112, guid: 25d09c78b6e1e324a9da7f243af71204,
+        type: 2}
+      propertyPath: tabInputs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1816362517}
+    - target: {fileID: 114405735298954112, guid: 25d09c78b6e1e324a9da7f243af71204,
+        type: 2}
+      propertyPath: tabInputs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1187648346}
+    - target: {fileID: 114405735298954112, guid: 25d09c78b6e1e324a9da7f243af71204,
+        type: 2}
+      propertyPath: tabInputs.Array.data[5]
+      value: 
+      objectReference: {fileID: 906479605}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25d09c78b6e1e324a9da7f243af71204, type: 2}
   m_IsPrefabParent: 0
