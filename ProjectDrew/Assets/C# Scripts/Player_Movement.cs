@@ -38,6 +38,8 @@ public class Player_Movement : MonoBehaviour
     [SerializeField]
     private float rotationSpeed;
 
+    [SerializeField] private List<TabInput> tabInputs;
+
     private MaterialColor Mat;
     
     // Use this for initialization
@@ -94,6 +96,14 @@ public class Player_Movement : MonoBehaviour
             {
                 rb.AddForce(new Vector2(1, 0) * acceleration);
 
+            }
+        }
+        else
+        {
+
+            foreach (TabInput tab in tabInputs)
+            {
+                tab.enabled = true;
             }
         }
 
@@ -162,6 +172,12 @@ public class Player_Movement : MonoBehaviour
         movementActivated = true;
         acceleration = 9;
         anim.SetBool("isWalking", true);
+
+        foreach (TabInput tab in tabInputs)
+        {
+            tab.enabled = false;
+        }
+        
     }
 
    public void RotatePlayerAround()
