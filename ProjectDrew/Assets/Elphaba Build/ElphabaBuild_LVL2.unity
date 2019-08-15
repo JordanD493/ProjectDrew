@@ -24468,6 +24468,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.749824, y: 2.3709962, z: 0.41677234}
   m_Center: {x: -2.275637, y: -0.05306406, z: 0.11338034}
+--- !u!114 &449081517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 449081511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9bf945c5337dc469ccdb6cd09a65ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowMesh: {fileID: 1347892832}
+  minGlow: 0.2
 --- !u!1001 &455010856
 Prefab:
   m_ObjectHideFlags: 0
@@ -25016,7 +25029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowMesh: {fileID: 994948898}
-  minGlow: 0.3
+  minGlow: 0.2
 --- !u!1001 &538505310
 Prefab:
   m_ObjectHideFlags: 0
@@ -40531,7 +40544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowMesh: {fileID: 226968574}
-  minGlow: 0.01
+  minGlow: 0.2
 --- !u!1 &916002157
 GameObject:
   m_ObjectHideFlags: 0
@@ -50539,6 +50552,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.749824, y: 2.3709962, z: 0.41677234}
   m_Center: {x: -2.275637, y: -0.05306406, z: 0.11338034}
+--- !u!114 &1187648348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1187648342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9bf945c5337dc469ccdb6cd09a65ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowMesh: {fileID: 1208706804}
+  minGlow: 0.2
+--- !u!23 &1208706804 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23391933824734278, guid: 74babdbdf47239f4a8d28c555c09444b,
+    type: 2}
+  m_PrefabInternal: {fileID: 309999255}
 --- !u!1 &1226036368
 GameObject:
   m_ObjectHideFlags: 0
@@ -55810,6 +55841,11 @@ Prefab:
     - {fileID: 114749238412270506, guid: 9219975bec1c5014dbbdd096ee0d0eee, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9219975bec1c5014dbbdd096ee0d0eee, type: 2}
   m_IsPrefabParent: 0
+--- !u!23 &1309964578 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23391933824734278, guid: 74babdbdf47239f4a8d28c555c09444b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1816210965}
 --- !u!1001 &1325338436
 Prefab:
   m_ObjectHideFlags: 0
@@ -60662,6 +60698,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!23 &1347892832 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23391933824734278, guid: 74babdbdf47239f4a8d28c555c09444b,
+    type: 2}
+  m_PrefabInternal: {fileID: 979052362}
 --- !u!1 &1380421886
 GameObject:
   m_ObjectHideFlags: 0
@@ -61548,6 +61589,11 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!23 &1730164243 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23391933824734278, guid: 74babdbdf47239f4a8d28c555c09444b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1325338436}
 --- !u!1 &1736648228
 GameObject:
   m_ObjectHideFlags: 0
@@ -66876,6 +66922,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.749824, y: 2.3709962, z: 0.41677234}
   m_Center: {x: -2.275637, y: -0.05306406, z: 0.11338034}
+--- !u!114 &1816362519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816362513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9bf945c5337dc469ccdb6cd09a65ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowMesh: {fileID: 1730164243}
+  minGlow: 0.2
 --- !u!1001 &1830959689
 Prefab:
   m_ObjectHideFlags: 0
@@ -81224,6 +81283,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeGlowChangeSpeed: 2
+  minGlow: 0.2
+--- !u!114 &1946915493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1946915487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9bf945c5337dc469ccdb6cd09a65ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowMesh: {fileID: 1309964578}
   minGlow: 0.2
 --- !u!1001 &1947251504
 Prefab:
