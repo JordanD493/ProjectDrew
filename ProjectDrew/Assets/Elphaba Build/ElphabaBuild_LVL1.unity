@@ -12123,6 +12123,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114215374653470976, guid: efc625b97b1d6664db9a31692a47563d,
+        type: 2}
+      propertyPath: Tabs
+      value: 
+      objectReference: {fileID: 1910782842}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: efc625b97b1d6664db9a31692a47563d, type: 2}
   m_IsPrefabParent: 0
@@ -42219,7 +42224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1910782843
 Transform:
   m_ObjectHideFlags: 0

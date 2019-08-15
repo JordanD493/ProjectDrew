@@ -23,6 +23,9 @@ public class OpenBookAnim : MonoBehaviour
     [SerializeField]
     private GameObject Particle;
 
+    [SerializeField]
+    private GameObject Tabs;
+
     private AudioSource audio;
 
     // Use this for initialization
@@ -53,7 +56,7 @@ public class OpenBookAnim : MonoBehaviour
         Player.SetActive(true);
         Goal.SetActive(true);
         Particle.SetActive(false);
-
+        Tabs.SetActive(true);
         col.enabled = false;
     }
 }
