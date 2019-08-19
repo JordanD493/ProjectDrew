@@ -91,7 +91,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 112000002, guid: 4249310a6d062bf4ea14086166891161,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -201,6 +201,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4247331506853762, guid: f8fad31551aa9f943855912de7dc2dd7,
     type: 2}
   m_PrefabInternal: {fileID: 663183877}
+--- !u!23 &189612123 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23683784897297954, guid: 4a4a2e06b3878f44198b152c97cf92b6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1426753529}
 --- !u!1 &191046818
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +329,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37b13b19264046341b8f47447962d8f6, type: 2}
   m_IsPrefabParent: 0
+--- !u!23 &213925102 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23391933824734278, guid: 74babdbdf47239f4a8d28c555c09444b,
+    type: 2}
+  m_PrefabInternal: {fileID: 309999255}
 --- !u!23 &226968574 stripped
 MeshRenderer:
   m_PrefabParentObject: {fileID: 23697160827015284, guid: 4a4a2e06b3878f44198b152c97cf92b6,
@@ -19624,6 +19634,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffec68eb88b5f054181065d0be99b4db, type: 3}
   m_IsPrefabParent: 0
+--- !u!23 &387541745 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23391933824734278, guid: 74babdbdf47239f4a8d28c555c09444b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1325338436}
 --- !u!1 &410183364
 GameObject:
   m_ObjectHideFlags: 0
@@ -24681,6 +24696,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &449081520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 449081511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9bf945c5337dc469ccdb6cd09a65ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowMesh: {fileID: 1901715545}
+  minGlow: 0.2
 --- !u!1001 &455010856
 Prefab:
   m_ObjectHideFlags: 0
@@ -25443,6 +25471,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &533794916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 533794906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9bf945c5337dc469ccdb6cd09a65ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowMesh: {fileID: 994948898}
+  minGlow: 0.2
 --- !u!1001 &538505310
 Prefab:
   m_ObjectHideFlags: 0
@@ -41027,6 +41068,7 @@ GameObject:
   - component: {fileID: 906479605}
   - component: {fileID: 906479604}
   - component: {fileID: 906479607}
+  - component: {fileID: 906479608}
   m_Layer: 0
   m_Name: RotateTabCollider
   m_TagString: Untagged
@@ -41108,6 +41150,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   glowMesh: {fileID: 226968574}
   minGlow: 0.01
+--- !u!114 &906479608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906479602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9bf945c5337dc469ccdb6cd09a65ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowMesh: {fileID: 189612123}
+  minGlow: 0.2
 --- !u!1 &916002157
 GameObject:
   m_ObjectHideFlags: 0
@@ -51328,6 +51383,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1187648351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1187648342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9bf945c5337dc469ccdb6cd09a65ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowMesh: {fileID: 213925102}
+  minGlow: 0.2
 --- !u!1 &1226036368
 GameObject:
   m_ObjectHideFlags: 0
@@ -67883,6 +67951,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1816362522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816362513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9bf945c5337dc469ccdb6cd09a65ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowMesh: {fileID: 387541745}
+  minGlow: 0.2
 --- !u!1001 &1830959689
 Prefab:
   m_ObjectHideFlags: 0
@@ -77378,6 +77459,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1883257344}
+--- !u!23 &1901715545 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23391933824734278, guid: 74babdbdf47239f4a8d28c555c09444b,
+    type: 2}
+  m_PrefabInternal: {fileID: 979052362}
 --- !u!1 &1901966625 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100018, guid: f33c3463438d2d84aa91fdbba6d5d316, type: 3}
@@ -82445,6 +82531,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1946915496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1946915487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9bf945c5337dc469ccdb6cd09a65ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowMesh: {fileID: 2066278901}
+  minGlow: 0.2
 --- !u!1001 &1947251504
 Prefab:
   m_ObjectHideFlags: 0
@@ -92559,6 +92658,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8fad31551aa9f943855912de7dc2dd7, type: 2}
   m_IsPrefabParent: 0
+--- !u!23 &2066278901 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 23391933824734278, guid: 74babdbdf47239f4a8d28c555c09444b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1816210965}
 --- !u!4 &2080607327 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4854304640018804, guid: f60eb71089b5a154cb0b196031c5c9b0,
