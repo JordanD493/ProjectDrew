@@ -91,7 +91,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 112000002, guid: 4249310a6d062bf4ea14086166891161,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -17736,7 +17736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _candleLight: {fileID: 1631737102}
   scatterIntensity: 0
-  candleMat: {fileID: 2100000, guid: 0d20d3384464cc249b4fe6b101569f30, type: 2}
+  candleMat: {fileID: 2100000, guid: 702fb098355eb434abcd7fcdf4dd07de, type: 2}
   scatterMultiplier: 90
   minIntensity: 1.5
   maxIntensity: 2.5
@@ -17770,7 +17770,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0d20d3384464cc249b4fe6b101569f30, type: 2}
+  - {fileID: 2100000, guid: 702fb098355eb434abcd7fcdf4dd07de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23083,7 +23083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _candleLight: {fileID: 1631737102}
   scatterIntensity: 0
-  candleMat: {fileID: 2100000, guid: 0d20d3384464cc249b4fe6b101569f30, type: 2}
+  candleMat: {fileID: 2100000, guid: 702fb098355eb434abcd7fcdf4dd07de, type: 2}
   scatterMultiplier: 90
   minIntensity: 1.5
   maxIntensity: 2.5
@@ -23117,7 +23117,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0d20d3384464cc249b4fe6b101569f30, type: 2}
+  - {fileID: 2100000, guid: 702fb098355eb434abcd7fcdf4dd07de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33657,7 +33657,12 @@ Prefab:
     - target: {fileID: 114892736979350556, guid: 1575873f5fda47b4e932b48e1a321a45,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114892736979350556, guid: 1575873f5fda47b4e932b48e1a321a45,
+        type: 2}
+      propertyPath: LevelName
+      value: ElphabaBuildThankYou
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1575873f5fda47b4e932b48e1a321a45, type: 2}
@@ -34742,7 +34747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _candleLight: {fileID: 1631737102}
   scatterIntensity: 0
-  candleMat: {fileID: 2100000, guid: 0d20d3384464cc249b4fe6b101569f30, type: 2}
+  candleMat: {fileID: 2100000, guid: 702fb098355eb434abcd7fcdf4dd07de, type: 2}
   scatterMultiplier: 90
   minIntensity: 1.5
   maxIntensity: 2.5
@@ -34776,7 +34781,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0d20d3384464cc249b4fe6b101569f30, type: 2}
+  - {fileID: 2100000, guid: 702fb098355eb434abcd7fcdf4dd07de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35349,7 +35354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _candleLight: {fileID: 1061427178}
   scatterIntensity: 0
-  candleMat: {fileID: 2100000, guid: bb10addfdc53fcf4d9d9c80d93aa891f, type: 2}
+  candleMat: {fileID: 2100000, guid: 702fb098355eb434abcd7fcdf4dd07de, type: 2}
   scatterMultiplier: 90
   minIntensity: 1.5
   maxIntensity: 2.5
@@ -35383,7 +35388,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0d20d3384464cc249b4fe6b101569f30, type: 2}
+  - {fileID: 2100000, guid: 702fb098355eb434abcd7fcdf4dd07de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

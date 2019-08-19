@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Elphaba Build/ElphabaBuild_LVL3.unity
     guid: 7388af4720eac324c967b5863039e75b
+  - enabled: 1
+    path: Assets/Elphaba Build/ElphabaBuildThankYou.unity
+    guid: e9490b975fc7d384ca4f8a646f9a3ea0
   m_configObjects: {}

@@ -44,16 +44,16 @@ public class UITab : MonoBehaviour
         Is_Touching = !Is_Touching;
         if(Is_Touching == true)
         {
+            ExitButton.SetActive(true);       
             AudioButton.SetActive(true);
             ResetButton.SetActive(true);
-            ExitButton.SetActive(true);       
 
         }
         else
         {
+            ExitButton.SetActive(false);
             AudioButton.SetActive(false);
             ResetButton.SetActive(false);
-            ExitButton.SetActive(false);
 
         }
     }

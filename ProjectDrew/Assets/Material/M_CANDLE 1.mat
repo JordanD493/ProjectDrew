@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: M_CANDLE
+  m_Name: M_CANDLE 1
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: _EMISSION _GLOSSYREFLECTIONS_OFF _NORMALMAP _OCCLUSIONMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   m_LightmapFlags: 2
@@ -81,9 +81,5 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 0.88811207, b: 0.5801887, a: 1}
-<<<<<<< HEAD
-    - _EmissionColor: {r: 4.0892034, g: 1.8412119, b: 0, a: 0.02140944}
-=======
-    - _EmissionColor: {r: 4.1857243, g: 1.8846717, b: 0, a: 0.021914788}
->>>>>>> f17d7b025523875649dba9760b763317d7a8cf2f
+    - _EmissionColor: {r: 3.5486581, g: 1.5978252, b: 0, a: 0.018579362}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
