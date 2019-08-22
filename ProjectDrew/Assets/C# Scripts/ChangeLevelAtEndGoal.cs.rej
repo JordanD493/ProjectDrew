@@ -1,0 +1,16 @@
+diff a/ProjectDrew/Assets/C# Scripts/ChangeLevelAtEndGoal.cs b/ProjectDrew/Assets/C# Scripts/ChangeLevelAtEndGoal.cs	(rejected hunks)
+@@ -8,12 +8,12 @@
+     [SerializeField]
+     private string LevelName;
+ 
+-    private MaterialColor Mat;
++    private EndGoalMaterialColor Mat;
+    
+ 
+     private void Awake()
+     {
+-        Mat = FindObjectOfType<MaterialColor>();
++        Mat = FindObjectOfType<EndGoalMaterialColor>();
+     }
+ 
+     private void Update()
