@@ -58,10 +58,10 @@ public class MainMenuCamera : MonoBehaviour {
 
          if(IsMovementAllowed == true)
         {
+
             StartCoroutine(FollowTheRightRoute(waytoGO));
 
            
-
         }
 
       
@@ -98,28 +98,18 @@ public class MainMenuCamera : MonoBehaviour {
         {
 
             tParam += Time.deltaTime * camMovementSpeed;
-            //cam.transform.LookAt(Target);
-            //p0 = camCurrentPosition;
+            
             cam.transform.position = Mathf.Pow(1 - tParam, 3) * p0 +
                                      3 * Mathf.Pow(1 - tParam, 2) * tParam * p1 +
                                      3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p2 +
                                      Mathf.Pow(tParam, 3) * p3;
 
-            //cam.transform.rotation = Quaternion.Euler(0, 0, 0);
+            
 
             cam.transform.rotation = Quaternion.LookRotation(p0);
 
 
-            //    //cam.transform.rotation = Target.rotation;
-
-
-            //if (tParam >= 0.02f)
-            //{
-
-            //}    
-
-
-
+          
             yield return new WaitForEndOfFrame();
             
         }

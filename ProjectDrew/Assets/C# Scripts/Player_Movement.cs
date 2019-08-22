@@ -40,7 +40,7 @@ public class Player_Movement : MonoBehaviour
 
     [SerializeField] private List<TabInput> tabInputs;
 
-    private MaterialColor Mat;
+    private EndGoalMaterialColor Mat;
     
     // Use this for initialization
     void Start()
@@ -48,7 +48,7 @@ public class Player_Movement : MonoBehaviour
         movementActivated = false;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        Mat = FindObjectOfType<MaterialColor>();
+        Mat = FindObjectOfType<EndGoalMaterialColor>();
     }
 
     // Use this for physics related code
