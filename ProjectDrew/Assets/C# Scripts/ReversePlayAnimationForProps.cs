@@ -5,7 +5,7 @@ using UnityEngine;
 public class ReversePlayAnimationForProps : MonoBehaviour
 {
     private Animator anim;
-    private MaterialColor Mat;
+    private EndGoalMaterialColor Mat;
 
     [SerializeField]
     private GameObject Transition;
@@ -16,7 +16,7 @@ public class ReversePlayAnimationForProps : MonoBehaviour
 	void Start ()
     {
         anim = GetComponent<Animator>();
-        Mat = FindObjectOfType<MaterialColor>();
+        Mat = FindObjectOfType<EndGoalMaterialColor>();
 
     }
 	

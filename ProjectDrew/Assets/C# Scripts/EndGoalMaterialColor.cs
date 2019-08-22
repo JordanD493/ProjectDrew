@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class MaterialColor : MonoBehaviour
+public class EndGoalMaterialColor : MonoBehaviour
 {
     [SerializeField]
     private Material Mat;

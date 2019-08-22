@@ -8,12 +8,12 @@ public class ChangeLevelAtEndGoal : MonoBehaviour {
     [SerializeField]
     private string LevelName;
 
-    private MaterialColor Mat;
+    private EndGoalMaterialColor Mat;
    
 
     private void Awake()
     {
-        Mat = FindObjectOfType<MaterialColor>();
+        Mat = FindObjectOfType<EndGoalMaterialColor>();
     }
 
     private void Update()

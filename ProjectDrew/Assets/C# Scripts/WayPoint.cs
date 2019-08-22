@@ -5,7 +5,7 @@ using UnityEngine;
 public class WayPoint : MonoBehaviour
 {
     [SerializeField]
-    private Transform[] controllPoints;
+    private Transform[] controlPoints;
 
     private Vector3 gizmoPosition;
 
@@ -25,20 +25,20 @@ public class WayPoint : MonoBehaviour
     {
         for(float i = 0; i<=1; i += 0.05f )
         {
-            gizmoPosition = Mathf.Pow(1 - i, 3) * controllPoints[0].position +
-                            3 * Mathf.Pow(1 - i, 2) * i * controllPoints[1].position +
-                            3 * (1 - i) * Mathf.Pow(i, 2) * controllPoints[2].position +
-                            Mathf.Pow(i, 3) * controllPoints[3].position;
+            gizmoPosition = Mathf.Pow(1 - i, 3) * controlPoints[0].position +
+                            3 * Mathf.Pow(1 - i, 2) * i * controlPoints[1].position +
+                            3 * (1 - i) * Mathf.Pow(i, 2) * controlPoints[2].position +
+                            Mathf.Pow(i, 3) * controlPoints[3].position;
 
             Gizmos.color = Color.red;
             Gizmos.DrawSphere(gizmoPosition, 0.25f);
         }
 
-        Gizmos.DrawLine(new Vector3(controllPoints[0].position.x, controllPoints[0].position.y, controllPoints[0].position.z),
-                        new Vector3(controllPoints[1].position.x, controllPoints[1].position.y, controllPoints[1].position.z));
+        Gizmos.DrawLine(new Vector3(controlPoints[0].position.x, controlPoints[0].position.y, controlPoints[0].position.z),
+                        new Vector3(controlPoints[1].position.x, controlPoints[1].position.y, controlPoints[1].position.z));
 
-        Gizmos.DrawLine(new Vector3(controllPoints[2].position.x, controllPoints[2].position.y, controllPoints[2].position.z),
-                        new Vector3(controllPoints[3].position.x, controllPoints[3].position.y, controllPoints[3].position.z));
+        Gizmos.DrawLine(new Vector3(controlPoints[2].position.x, controlPoints[2].position.y, controlPoints[2].position.z),
+                        new Vector3(controlPoints[3].position.x, controlPoints[3].position.y, controlPoints[3].position.z));
 
     }
 }

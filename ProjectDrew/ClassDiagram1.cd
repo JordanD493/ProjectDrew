@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CandleSSSIntensity" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIABAAADAAAAAAAAAAAAAABAAAEAAAAAQAIAIAAAg=</HashCode>
+      <FileName>Assets\ArtAssets\CANDLE\CandleSSSIntensity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimationTrigger" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIAAABCAABAAAAAAQAAQAAAAAAAAAAEAIAAgAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\AnimationTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BackgroundMuisc" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\C# Scripts\BackgroundMuisc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamButtonClick" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAACAgCACAEIAQQgAAAAAAAAgAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\C# Scripts\CamButtonClick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraFollow" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAQABBAABCIAAAAABQBAIiggAEIAIAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\CameraFollow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraRotation" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\CameraRotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraShake" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\C# Scripts\CameraShake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraZoom" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAACEAAAAAAAAAAAgAAAAACAIAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\CameraZoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamMoveAtEndGoal" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACQAAgAAwAAAAAABAEAAAAAAAAABIAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\CamMoveAtEndGoal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChangeAlphaLevel" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYBAAAAACAgQAAAAQAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\ChangeAlphaLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChangeLevelAtEndGoal" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEA=</HashCode>
+      <FileName>Assets\C# Scripts\ChangeLevelAtEndGoal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChangePageTransition" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAABAAAAAAAAAQAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\ChangePageTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CrystallBallInput" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAABAAAMAAAAEAAAAAAAEIQAAAAAAAQA=</HashCode>
+      <FileName>Assets\C# Scripts\CrystallBallInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Drag_Objects_Ipad" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Drag_Objects_Ipad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventSystemForFolding" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAEAAAAAAAAAEAAAAQAAgA=</HashCode>
+      <FileName>Assets\C# Scripts\EventSystemForFolding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FadeOutEffectForGameObjects" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\FadeOutEffectForGameObjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jump_Mechanic" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAABACAAAAAAAAAAAAAAAAAAAIAAQQAAAAAAABA=</HashCode>
+      <FileName>Assets\C# Scripts\Jump_Mechanic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LockFps" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\C# Scripts\LockFps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenuCamera">
+    <Position X="20" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQABBAAAKIDAAAAAQAAIiAAAEIAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\MainMenuCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaterialColor" Collapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYBABBAADAAEAAAAAAAAAAAAAAAAAAAACAAAAAAEAA=</HashCode>
+      <FileName>Assets\C# Scripts\MaterialColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenBookAnim" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BQQABAAAACAACAAAAAAAAQABAAAAAEAAIQAAAQAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\OpenBookAnim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayButton" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\PlayButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player_JumpMechanic" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAAAACAAAAAEBAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Player_JumpMechanic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player_Movement" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAjABgAQEQAAAABQAAMAIAAUIIQBgAAAAACA=</HashCode>
+      <FileName>Assets\C# Scripts\Player_Movement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerSelection" Collapsed="true">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\PlayerSelection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PopupAnimate" Collapsed="true">
+    <Position X="15.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAACAAACAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Popups\PopupAnimate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PopupMove" Collapsed="true">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAQCAAACAAAAAAAAAAAAAgAAAAAAAAAAAAAACBAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Popups\PopupMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PopupsManager" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Popups\PopupsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PropsRotation" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\PropsRotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RampSpeedUp" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAJAQAEAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\RampSpeedUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RayCastForPlayer" Collapsed="true">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAACAAAAAAAAAAAAAAAEAAAAABAAABAgAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\RayCastForPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestartLevel" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\RestartLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReversePlayAnimationForProps" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAADAAAAAAAAAAAAAAAABAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\ReversePlayAnimationForProps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RotateCamera" Collapsed="true">
+    <Position X="15.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAACCAAAAAAAAAABCAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\RotateCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RotateProps" Collapsed="true">
+    <Position X="17.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgSAAAAAACAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\RotateProps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnableDisableCrown" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAADCAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Assets\C# Scripts\Scripts of Shame\EnableDisableCrown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MakeChildofTabAfterAnimation" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Scripts of Shame\MakeChildofTabAfterAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformAnimateWhenFrogCollides" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAMAAAAAAAAACAAAAAAAAgAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Scripts of Shame\PlatformAnimateWhenFrogCollides.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RotateTabGlow" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAEAQAAABAAAAAEAEAIAgAAAAAAAAEAAiA=</HashCode>
+      <FileName>Assets\C# Scripts\Scripts of Shame\RotateTabGlow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shadow_Moveemnt" Collapsed="true">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAoAAAiAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Shadow_Moveemnt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SlowDown" Collapsed="true">
+    <Position X="8.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAIAgAAAQAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\SlowDown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tab_operatePopup" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\OLD Tabs\BaseClasses\Tab_operatePopup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tab_operateTab" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAgCAEAAIAAAAACAAAAAAAAAAAAAAAAgAQAiA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\OLD Tabs\BaseClasses\Tab_operateTab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MouseControl" Collapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAEEAAACIAAAIAAAAQCACAAAAgAAAAIAAAAgKQIAA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\OLD Tabs\MouseControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tab_animatePopup" Collapsed="true">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABQAAICAAAAIAAAAAAAAAAAAIAAAAAQAACAAAAgA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\OLD Tabs\Tab_animatePopup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tab_rotatePopup" Collapsed="true">
+    <Position X="10.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAGAAAAAAAEAAAAAAABAAAAAAAABASABAAgA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\OLD Tabs\Tab_rotatePopup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tab_rotateTab" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAACIAAAIAAAgAAIAAAAEAgCAAAAAAIAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\OLD Tabs\Tab_rotateTab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tab_slidePopup" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACIAAAAAACgAAAAAgAEICAAIAIAAKAAAAgA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\OLD Tabs\Tab_slidePopup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tab_slideTab" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACIACIQAiIAAAgAAAAAAAEAgACIAAAAIAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\OLD Tabs\Tab_slideTab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TabAudio" Collapsed="true">
+    <Position X="12.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAoBAAOAAAAIhABAAAAAEAAAIAAAAAADgBQAAAgA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\Tabs\TabAudio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TabDisableCollider" Collapsed="true">
+    <Position X="14" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAABAAAAAAAAAAAAAAAAAAAAAAIgA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\Tabs\TabDisableCollider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TabDragEventArgs" Collapsed="true">
+    <Position X="15.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\Tabs\TabInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TabInput" Collapsed="true">
+    <Position X="17.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAKAAAAIEAAMAAIAEAAAAAAAAABABAgEQASA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\Tabs\TabInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TabMovement" Collapsed="true">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkCASAAAACAAAQIAABAAAAAgAAAIIAEIAJAAAACBACA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\Tabs\TabMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TabParticleEffects" Collapsed="true">
+    <Position X="7" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJAgAAAAKAAEAIAABAAACAEABAIYAIABAAAAAAQAgI=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\Tabs\TabParticleEffects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TabRuneGlow" Collapsed="true">
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAKAAAQIAIBAAAAAEAAAIQgAAAAgAAABAAiA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\Tabs\TabRuneGlow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TabsManager" Collapsed="true">
+    <Position X="10.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\Tabs\TabsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConditionalHideAttribute" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAAAAAAAAAAIAAAACAAAAgEAABBAEAAAAAgA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\Utils\ConditionalHideAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Touch_Input" Collapsed="true">
+    <Position X="12.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAiAAAAAEAAAAAAAAAAAAAAAAAAAEIAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Touch_Input.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UITab" Collapsed="true">
+    <Position X="14" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAACAgAAAIAAAAAIIAAAAgAAEAIEAEAgAQAAA=</HashCode>
+      <FileName>Assets\C# Scripts\UITab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WalkLimitController" Collapsed="true">
+    <Position X="15.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAADCAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\WalkLimitController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WayPoint">
+    <Position X="20.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAACAAAAAAAAAAAAAAAAAAAAAABAAAAAACAAA=</HashCode>
+      <FileName>Assets\C# Scripts\WayPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="PopupSlideDirection" Collapsed="true">
+    <Position X="5.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C# Scripts\Tab Scripts\OLD Tabs\Tab_slidePopup.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
